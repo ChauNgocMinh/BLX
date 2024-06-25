@@ -1,0 +1,183 @@
+﻿@page "/vao_thi"
+@using System.Timers
+@implements IDisposable
+<style>
+    .main {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .box-left {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+
+    .img {
+        flex: 1;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .img img {
+        max-height: 100%;
+        width: auto;
+    }
+
+    .custom-box {
+        flex-shrink: 0;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 63%);
+        background-color: #fff; 
+    }
+
+    .info-user {
+        padding: 1rem;
+    }
+
+    .question-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+    }
+
+    .radio-group p, input {
+        font-size: 18px
+    }
+
+    .radio-group .form-check{
+        padding: 0 5px;
+    }
+
+    .question-item {
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 63%);
+        background-color: #fff;
+        padding: 10px;
+        height: auto;
+        margin: 10px 10px 0 10px;
+    }
+
+    .time-box{
+        background-color: #5b9bd6;
+        border-radius: 15px 15px 0 0;
+        font-size: 35px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<div class="row main justify-content-between">
+    <div class="col-10 box-left">
+        <div class="img custom-box">
+            <img src="./img/600 cau hoi126.jpg" alt="Example Image" />
+        </div>
+        <div class="custom-box info-user d-flex justify-content-between align-items-center">
+            <div>
+                <div>Họ tên:</div>
+                <div class="mt-2">Ngày sinh:</div>
+                <div class="mt-2">CCCD/CMT:</div>
+            </div>
+            <div>
+                <button type="button" style="font-size: 20px; padding: 10px 20px;" class="mt-2 btn btn-primary btn-block check-info">Nộp bài</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-2 custom-box question-box p-0">
+        <div class="time-box">
+            @timeString
+        </div>
+        <div class="row p-2 justify-content-between">
+
+            <div class="question-item col-5">
+                <label>
+                    Câu 2
+                </label>
+                <div class="radio-group d-flex">
+                    <div class="form-check">
+                        <div class="form-check-label p-0" for="option1">
+                            1
+                        </div>
+                        <input class="form-check-input m-0" type="radio" name="options" id="option1" value="1">
+                    </div>
+                    <div class="form-check">
+                        <div class="form-check-label p-0" for="option2">
+                            2
+                        </div>
+                        <input class="form-check-input m-0" type="radio" name="options" id="option2" value="2">
+                    </div>
+                    <div class="form-check">
+                        <div class="form-check-label p-0" for="option3">
+                            3
+                        </div>
+                        <input class="form-check-input m-0" type="radio" name="options" id="option3" value="3">
+                    </div>
+                    <div class="form-check">
+                        <div class="form-check-label p-0" for="option4">
+                            4
+                        </div>
+                        <input class="form-check-input m-0" type="radio" name="options" id="option4" value="4">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+@code {
+    private Timer timer;
+    private DateTime endTime;
+    private string timeString;
+
+    protected override void OnInitialized()
+    {
+        endTime = DateTime.Now.AddMinutes(30);
+        timeString = "30:00";
+        timer = new Timer(1000); 
+        timer.Elapsed += OnTimerElapsed;
+        timer.Start();
+    }
+
+    private void OnTimerElapsed(object sender, ElapsedEventArgs e)
+    {
+        var remainingTime = endTime - DateTime.Now;
+        if (remainingTime.TotalSeconds <= 0)
+        {
+            timer.Stop();
+            timeString = "00:00";
+            OnTimerEnded();
+        }
+        else
+        {
+            timeString = remainingTime.ToString(@"mm\:ss");
+        }
+
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void OnTimerEnded()
+    {
+        TimerEndedFunction();
+    }
+
+    private void TimerEndedFunction()
+    {
+        Console.WriteLine("Timer has ended!");
+    }
+
+    public void Dispose()
+    {
+        timer?.Dispose();
+    }
+}

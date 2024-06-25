@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLX", "BLX\BLX.csproj", "{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C575211-0E8D-404C-B960-0300FC3F5C83}
+	EndGlobalSection
+EndGlobal
