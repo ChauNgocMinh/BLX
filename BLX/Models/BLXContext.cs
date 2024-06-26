@@ -83,12 +83,18 @@ namespace BLX.Models
                     .IsUnicode(false)
                     .HasColumnName("CCCD");
 
+                entity.Property(e => e.Name)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Name");
+
                 entity.Property(e => e.NamSinh).HasColumnType("date");
 
                 entity.Property(e => e.Rank).HasMaxLength(15);
 
                 entity.Property(e => e.Sbd).HasColumnName("SBD");
 
+                entity.Property(e => e.Score).HasColumnName("Score");
                 entity.HasOne(d => d.Semester)
                     .WithMany(p => p.Users)
                     .HasForeignKey(d => d.SemesterId)
@@ -101,6 +107,8 @@ namespace BLX.Models
                 entity.ToTable("UserQuestion");
 
                 entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.Property(e => e.Reply).HasColumnName("Reply");
 
                 entity.HasOne(d => d.IdQuestionNavigation)
                     .WithMany(p => p.UserQuestions)

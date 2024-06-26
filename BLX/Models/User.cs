@@ -12,11 +12,13 @@ namespace BLX.Models
 
         public Guid Id { get; set; }
         public int Sbd { get; set; }
+        public string Name { get; set; } = null!;
         public string Cccd { get; set; } = null!;
         public DateTime? NamSinh { get; set; }
         public Guid SemesterId { get; set; }
         public bool Status { get; set; }
         public string Rank { get; set; } = null!;
+        public int? Score { get; set; }
 
         public virtual Semester Semester { get; set; } = null!;
         public virtual ICollection<UserQuestion> UserQuestions { get; set; }

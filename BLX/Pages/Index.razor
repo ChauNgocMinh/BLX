@@ -1,4 +1,9 @@
 ﻿@page "/"
+@using BLX.Models;
+@using Microsoft.EntityFrameworkCore;
+@inject HttpClient Http
+@inject BLXContext _context
+@inject NavigationManager NavigationManager
 <PageTitle>Index</PageTitle>
 <style>
     .form-container {
@@ -10,7 +15,6 @@
         background-color: #fff;
     }
 
-    
     .form-container h3 {
         background-color: #1b6ec2;
         border-radius: 15px 15px 10px 10px;
@@ -20,7 +24,7 @@
         font-size: 27px;
     }
 
-	.form-container .check-info{
+    .form-container .check-info{
         background-color: #5b9bd6;
         border: none;
         width: 100px;
@@ -49,33 +53,36 @@
         <div class="col-md-6">
             <div class="form-container p-0 card">
                 <form>
-                    <h3 class="text-center d-flex align-items-center justify-content-center">KIỂM TRA KẾT THÚC MÔN HỌC LÝ THYẾT</h3>
+                    <h3 class="text-center d-flex align-items-center justify-content-center">KIỂM TRA KẾT THÚC MÔN HỌC LÝ THUYẾT</h3>
                     <div class="form-info">
                         <div class="row">
                             <div class="col-9">
                                 <div class="form-group">
-                                    <label for="dropdown">Địa điểm:</label>
-                                    <select class="form-control" id="dropdown">
+                                    <label for="location">Địa điểm:</label>
+                                    <select class="form-control" id="location">
                                         <option value="option1">Trường trung cấp nghề giao thông vận tải Quảng Trị</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="dropdown">Khóa học:</label>
-                                    <select class="form-control" id="dropdown">
-                                        <option value="option1">Tự luyện Ô Tô</option>
+                                    <label for="course">Khóa học:</label>
+                                    <select class="form-control" @bind="selectedSemester">
+                                        @foreach (var semester in semesters)
+                                        {
+                                            <option value="@semester.Id">@semester.Name</option>
+                                        }
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="message">Số báo dannh:</label>
-                                    <input type="text" class="form-control">
+                                    <label for="SBD">Số báo danh:</label>
+                                    <input type="text" class="form-control" @bind="SBD">
                                 </div>
                                 <div class="form-group">
-                                    <label for="dropdown">Hạng GPLX:</label>
-                                    <select class="form-control" id="dropdown">
-                                        <option value="option1">Hạng B1, B11</option>
-                                        <option value="option1">Hạng B2</option>
-                                        <option value="option1">Hạng C</option>
-                                        <option value="option1">Hạng D, E, F</option>
+                                    <label for="licenseClass">Hạng GPLX:</label>
+                                    <select class="form-control" @bind="Rank">
+                                        <option value="B1_B11">Hạng B1, B11</option>
+                                        <option value="B2">Hạng B2</option>
+                                        <option value="C">Hạng C</option>
+                                        <option value="D_E_F">Hạng D, E, F</option>
                                     </select>
                                 </div>
                             </div>
@@ -84,20 +91,26 @@
                             </div>
                         </div>
                         <div class="form-group info-user">
-                                <div>
-                                    <label>Họ tên: Nguyễn Văn A</label>
-                                </div>
-                            <div class="row p-0 mt-2 ">
+                            <div>
+                                <label>Họ tên: @user.Name</label>
+                            </div>
+                            <div class="row p-0 mt-2">
                                 <div class="col-6">
-                                    <label>Ngày sinh: 10/10/1999</label>
+                                    <label>
+                                        Ngày sinh: 
+                                        @if (user.NamSinh != null)
+                                        {
+                                            @DateTime.Parse(user.NamSinh.ToString()).ToString("dd/MM/yyyy")
+                                        }
+                                    </label>
                                 </div>
-								<div class="col-6">
-                                    <label>CCCD/CMT: 044202004603</label>
+                                <div class="col-6">
+                                    <label>CCCD/CMT: @user.Cccd</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group d-flex align-items-center justify-content-center">
-                            <button type="button" @onclick="HandleButtonClick" class="mt-2 btn btn-primary btn-block btn-submit">Vào kiểm tra</button>
+                            <button type="button" disabled="@(!isButtonEnabled)" @onclick="HandleButtonClick" class="mt-2 btn btn-primary btn-block btn-submit">Vào kiểm tra</button>
                         </div>
                     </div>
                 </form>
@@ -105,17 +118,33 @@
         </div>
     </div>
 </div>
+
 @code {
-    [Inject]
-    private NavigationManager NavigationManager { get; set; }
+    private List<Semester> semesters = new List<Semester>();
+    private Guid selectedSemester;
+    private int SBD;
+    private string Rank = "B1_B11";
+    private User user = new User();
+    private bool isButtonEnabled = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        semesters = await _context.Semesters.ToListAsync();
+        if (semesters.Any())
+        {
+            selectedSemester = semesters.First().Id;
+        }
+    }
 
     private void HandleButtonClick()
     {
         NavigationManager.NavigateTo("/vao_thi");
     }
 
-    private void CheckInformation()
+    private async void CheckInformation()
     {
+        user = await _context.Users.FirstOrDefaultAsync(x => x.SemesterId == selectedSemester && x.Sbd == SBD && x.Rank == Rank);
+        isButtonEnabled = user != null;
+        this.StateHasChanged();
     }
-
 }
