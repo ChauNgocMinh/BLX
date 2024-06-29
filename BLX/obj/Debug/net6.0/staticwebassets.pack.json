@@ -1,6 +1,182 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+    },
+    {
       "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BLX.bundle.scp.css",
       "PackagePath": "staticwebassets\\BLX.bundle.scp.css"
     },
@@ -59,6 +235,2262 @@
     {
       "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\600 cau hoi126.jpg",
       "PackagePath": "staticwebassets\\img\\600 cau hoi126.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi1.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi10.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi11.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi12.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi13.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi14.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi15.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi16.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi2.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi3.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi4.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi5.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi6.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi7.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi8.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi9.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_01\\600 cau hoi9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi101.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi101.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi109.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi109.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi112.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi112.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi114.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi114.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi118.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi118.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi119.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi119.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi143.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi143.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi145.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi145.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi147.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi147.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi150.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi150.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi153.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi153.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi154.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi154.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi161.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi161.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi17.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi18.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi19.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi20.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi21.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi22.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi23.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi24.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi25.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi26.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi27.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi28.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi29.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi30.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi30.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi33.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi33.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi35.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi35.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi36.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi36.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi37.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi37.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi40.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi40.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi43.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi43.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi45.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi45.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi46.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi46.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi47.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi47.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi48.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi48.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi49.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi49.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi50.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi50.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi51.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi51.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi52.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi52.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi53.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi53.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi84.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi84.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi91.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi91.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_02\\600 cau hoi99.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_02\\600 cau hoi99.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi100.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi100.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi102.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi102.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi103.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi103.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi104.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi104.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi105.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi105.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi106.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi106.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi107.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi107.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi108.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi108.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi110.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi110.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi111.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi111.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi113.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi113.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi115.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi115.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi116.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi116.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi117.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi117.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi120.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi120.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi121.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi121.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi122.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi122.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi123.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi123.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi141.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi141.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi142.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi142.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi144.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi144.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi146.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi146.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi148.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi148.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi149.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi149.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi151.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi151.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi152.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi152.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi156.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi156.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi157.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi157.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi158.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi158.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi159.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi159.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi160.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi160.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi162.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi162.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi163.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi163.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi164.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi164.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi165.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi165.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi166.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi166.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi31.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi31.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi32.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi32.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi34.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi34.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi38.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi38.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi39.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi39.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi41.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi41.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi42.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi42.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi44.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi44.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi54.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi54.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi55.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi55.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi56.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi56.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi57.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi57.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi58.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi58.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi59.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi59.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi60.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi60.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi61.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi61.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi62.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi62.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi63.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi63.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi64.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi64.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi65.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi65.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi66.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi66.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi67.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi67.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi68.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi68.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi69.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi69.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi70.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi70.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi71.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi71.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi72.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi72.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi73.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi73.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi74.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi74.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi75.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi75.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi76.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi76.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi77.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi77.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi78.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi78.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi79.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi79.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi80.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi80.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi81.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi81.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi82.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi82.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi83.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi83.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi85.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi85.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi86.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi86.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi87.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi87.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi88.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi88.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi89.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi89.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi90.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi90.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi92.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi92.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi93.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi93.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi94.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi94.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi95.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi95.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi96.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi96.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi97.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi97.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_03\\600 cau hoi98.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_03\\600 cau hoi98.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi124.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi124.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi125.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi125.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi126.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi126.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi127.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi127.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi128.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi128.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi129.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi129.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi130.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi130.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi131.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi131.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi132.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi132.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi133.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi133.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi134.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi134.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi135.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi135.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi136.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi136.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi137.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi137.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi138.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi138.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi139.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi139.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi140.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi140.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_04\\600 cau hoi155.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_04\\600 cau hoi155.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi167.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi167.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi168.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi168.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi169.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi169.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi170.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi170.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi171.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi171.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi172.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi172.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi173.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi173.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi174.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi174.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi175.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi175.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi176.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi176.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi177.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi177.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi178.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi178.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi179.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi179.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi180.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi180.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi181.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi181.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi182.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi182.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi183.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi183.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi184.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi184.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi185.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi185.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi186.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi186.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi187.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi187.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi188.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi188.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi189.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi189.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi190.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi190.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi191.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi191.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_05\\600 cau hoi192.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_05\\600 cau hoi192.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi193.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi193.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi194.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi194.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi195.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi195.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi196.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi196.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi197.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi197.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi198.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi198.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi199.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi199.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi200.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi200.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi201.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi201.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi202.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi202.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi203.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi203.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi204.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi204.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi205.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi205.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi206.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi206.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi207.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi207.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi208.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi208.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi209.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi209.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi210.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi210.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi211.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi211.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi212.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi212.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_06\\600 cau hoi213.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_06\\600 cau hoi213.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\601.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\601.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\602.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\602.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\603.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\603.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\604.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\604.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\605.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\605.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\606.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\606.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\607.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\607.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\608.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\608.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\609.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\609.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\610.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\610.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\611.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\611.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\612.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\612.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\613.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\613.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\614.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\614.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\615.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\615.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\616.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\616.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\617.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\617.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\618.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\618.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\619.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\619.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_07\\620.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_07\\620.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi270.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi270.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi271.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi271.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi272.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi272.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi273.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi273.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi274.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi274.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi275.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi275.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi276.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi276.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi277.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi277.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi278.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi278.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi279.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi279.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi280.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi281.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi281.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi282.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi282.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi283.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi283.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi284.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi284.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi285.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi285.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi286.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi286.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi287.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi287.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi288.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi288.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi289.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi289.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi290.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi290.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi291.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi291.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi292.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi292.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi293.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi293.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi294.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi294.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi295.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi295.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi296.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi296.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi297.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi297.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi298.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi298.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi299.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi299.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi300.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi300.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi301.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi301.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi302.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi302.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi303.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi303.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_08\\600 cau hoi304.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_08\\600 cau hoi304.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi305.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi305.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi306.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi306.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi307.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi307.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi308.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi308.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi309.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi309.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi310.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi310.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi311.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi311.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi312.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi312.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi313.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi313.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi314.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi314.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi315.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi315.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi316.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi316.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi317.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi317.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi318.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi318.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi319.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi319.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi320.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi320.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi321.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi321.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi322.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi322.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi323.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi323.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi324.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi324.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi325.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi325.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi326.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi326.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi327.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi327.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi328.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi328.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi329.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi329.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi330.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi330.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi331.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi331.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi332.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi332.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi333.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi333.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi334.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi334.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi335.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi335.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi336.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi336.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi337.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi337.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi338.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi338.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi339.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi339.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi340.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi340.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi341.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi341.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi342.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi342.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi343.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi343.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi344.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi344.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi345.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi345.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi346.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi346.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi347.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi347.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi348.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi348.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi349.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi349.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi350.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi350.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi351.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi351.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi352.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi352.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi353.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi353.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi354.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi354.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi355.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi355.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi356.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi356.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi357.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi357.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi358.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi358.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi359.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi359.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi360.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi360.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi361.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi361.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi362.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi362.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi363.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi363.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi364.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi364.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi365.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi365.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi366.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi366.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi367.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi367.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi368.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi368.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi369.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi369.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi370.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi370.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi371.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi371.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi372.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi372.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi373.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi373.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi374.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi374.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi375.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi375.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi376.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi376.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi377.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi377.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi378.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi378.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi379.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi379.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi380.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi380.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi381.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi381.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi382.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi382.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi383.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi383.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi384.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi384.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi385.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi385.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi386.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi386.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi387.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi387.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi388.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi388.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi389.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi389.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi390.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi390.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi391.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi391.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi392.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi392.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi393.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi393.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi394.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi394.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi395.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi395.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi396.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi396.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi397.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi397.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi398.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi398.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi399.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi399.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi400.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi400.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi401.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi401.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi402.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi402.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi403.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi403.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi404.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi404.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi405.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi405.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi406.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi406.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi407.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi407.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi408.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi408.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi409.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi409.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi410.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi410.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi411.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi411.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi412.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi412.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi413.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi413.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi414.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi414.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi415.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi415.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi416.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi416.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi417.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi417.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi418.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi418.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi419.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi419.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi420.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi420.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi421.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi421.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi422.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi422.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi423.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi423.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi424.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi424.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi425.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi425.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi426.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi426.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi427.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi427.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi428.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi428.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi429.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi429.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi430.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi430.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi431.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi431.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi432.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi432.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi433.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi433.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi434.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi434.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi435.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi435.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi436.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi436.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi437.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi437.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi438.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi438.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi439.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi439.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi440.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi440.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi441.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi441.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi442.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi442.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi443.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi443.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi444.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi444.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi445.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi445.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi446.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi446.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi447.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi447.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi448.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi448.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi449.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi449.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi450.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi450.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi451.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi451.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi452.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi452.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi453.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi453.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi454.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi454.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi455.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi455.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi456.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi456.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi457.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi457.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi458.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi458.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi459.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi459.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi460.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi460.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi461.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi461.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi462.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi462.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi463.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi463.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi464.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi464.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi465.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi465.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi466.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi466.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi467.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi467.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi468.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi468.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi469.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi469.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi470.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi470.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi471.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi471.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi472.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi472.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi473.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi473.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi474.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi474.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi475.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi475.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi476.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi476.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi477.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi477.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi478.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi478.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi479.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi479.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi480.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi480.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi481.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi481.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi482.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi482.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi483.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi483.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi484.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi484.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi485.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi485.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_09\\600 cau hoi486.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_09\\600 cau hoi486.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi487.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi487.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi488.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi488.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi489.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi489.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi490.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi490.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi491.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi491.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi492.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi492.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi493.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi493.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi494.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi494.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi495.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi495.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi496.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi496.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi497.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi497.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi498.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi498.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi499.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi499.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi500.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi500.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi501.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi501.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi502.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi502.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi503.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi503.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi504.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi504.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi505.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi505.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi506.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi506.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi507.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi507.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi508.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi508.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi509.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi509.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi510.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi510.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi511.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi511.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi512.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi512.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi513.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi513.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi514.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi514.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi515.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi515.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi516.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi516.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi517.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi517.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi518.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi518.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi519.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi519.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi520.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi520.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi521.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi521.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi522.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi522.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi523.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi523.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi524.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi524.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi525.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi525.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi526.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi526.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi527.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi527.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi528.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi528.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi529.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi529.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi530.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi530.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi531.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi531.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi532.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi532.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi533.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi533.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi534.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi534.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi535.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi535.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi536.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi536.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi537.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi537.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi538.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi538.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi539.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi539.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi540.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi540.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi541.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi541.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi542.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi542.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi543.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi543.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi544.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi544.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi545.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi545.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi546.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi546.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi547.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi547.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi548.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi548.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi549.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi549.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi550.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi550.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi551.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi551.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi552.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi552.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi553.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi553.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi554.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi554.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi555.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi555.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi556.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi556.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi557.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi557.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi558.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi558.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi559.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi559.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi560.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi560.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi561.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi561.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi562.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi562.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi563.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi563.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi564.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi564.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi565.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi565.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi566.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi566.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi567.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi567.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi568.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi568.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi569.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi569.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi570.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi570.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi571.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi571.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi572.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi572.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi573.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi573.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi574.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi574.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi575.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi575.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi576.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi576.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi577.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi577.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi578.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi578.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi579.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi579.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi580.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi580.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi581.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi581.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi582.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi582.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi583.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi583.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi584.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi584.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi585.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi585.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi586.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi586.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi587.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi587.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi588.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi588.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi589.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi589.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi590.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi590.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi591.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi591.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi592.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi592.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi593.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi593.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi594.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi594.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi595.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi595.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi596.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi596.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi597.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi597.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi598.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi598.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi599.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi599.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\BLX\\BLX\\BLX\\wwwroot\\img\\id_monhoc_10\\600 cau hoi600.jpg",
+      "PackagePath": "staticwebassets\\img\\id_monhoc_10\\600 cau hoi600.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BLX.Microsoft.AspNetCore.StaticWebAssets.props",

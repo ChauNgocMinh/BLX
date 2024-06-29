@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace BLX.Models
 {
@@ -85,7 +82,7 @@ namespace BLX.Models
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(50)
-                    .IsUnicode(false)
+                    .IsUnicode(true)
                     .HasColumnName("Name");
 
                 entity.Property(e => e.NamSinh).HasColumnType("date");
@@ -109,6 +106,9 @@ namespace BLX.Models
                 entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.Property(e => e.Reply).HasColumnName("Reply");
+
+                entity.Property(e => e.Number).HasColumnName("Number");
+
 
                 entity.HasOne(d => d.IdQuestionNavigation)
                     .WithMany(p => p.UserQuestions)

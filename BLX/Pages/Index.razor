@@ -4,7 +4,8 @@
 @inject HttpClient Http
 @inject BLXContext _context
 @inject NavigationManager NavigationManager
-<PageTitle>Index</PageTitle>
+@inject IHttpContextAccessor HttpContextAccessor
+
 <style>
     .form-container {
         max-width: 600px;
@@ -79,10 +80,9 @@
                                 <div class="form-group">
                                     <label for="licenseClass">Hạng GPLX:</label>
                                     <select class="form-control" @bind="Rank">
-                                        <option value="B1_B11">Hạng B1, B11</option>
+                                        <option value="B11">Hạng B11</option>
                                         <option value="B2">Hạng B2</option>
                                         <option value="C">Hạng C</option>
-                                        <option value="D_E_F">Hạng D, E, F</option>
                                     </select>
                                 </div>
                             </div>
@@ -90,27 +90,30 @@
                                 <button @onclick="CheckInformation" type="button" class="mt-2 btn btn-primary btn-block check-info">Kiểm tra thông tin</button>
                             </div>
                         </div>
-                        <div class="form-group info-user">
-                            <div>
-                                <label>Họ tên: @user.Name</label>
-                            </div>
-                            <div class="row p-0 mt-2">
-                                <div class="col-6">
-                                    <label>
-                                        Ngày sinh: 
-                                        @if (user.NamSinh != null)
-                                        {
-                                            @DateTime.Parse(user.NamSinh.ToString()).ToString("dd/MM/yyyy")
-                                        }
-                                    </label>
+                        @if(user != null)
+                        {
+                            <div class="form-group info-user">
+                                <div>
+                                    <label>Họ tên: @user.Name</label>
                                 </div>
-                                <div class="col-6">
-                                    <label>CCCD/CMT: @user.Cccd</label>
+                                <div class="row p-0 mt-2">
+                                    <div class="col-6">
+                                        <label>
+                                            Ngày sinh:
+                                            @if (user.NamSinh != null)
+                                            {
+                                                @DateTime.Parse(user.NamSinh.ToString()).ToString("dd/MM/yyyy")
+                                            }
+                                        </label>
+                                    </div>
+                                    <div class="col-6">
+                                        <label>CCCD/CMT: @user.Cccd</label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        }
                         <div class="form-group d-flex align-items-center justify-content-center">
-                            <button type="button" disabled="@(!isButtonEnabled)" @onclick="HandleButtonClick" class="mt-2 btn btn-primary btn-block btn-submit">Vào kiểm tra</button>
+                            <button type="button" disabled="@(!isButtonEnabled)" @onmousedown="HandleButtonClick" class="mt-2 btn btn-primary btn-block btn-submit">Vào kiểm tra</button>
                         </div>
                     </div>
                 </form>
@@ -119,14 +122,17 @@
     </div>
 </div>
 
+<MessageBox Title="Cảnh báo" Message="@Message" Show="@showOkMessageBox" OnOk="HandleOkClick" />
 @code {
     private List<Semester> semesters = new List<Semester>();
     private Guid selectedSemester;
     private int SBD;
-    private string Rank = "B1_B11";
-    private User user = new User();
+    private string Rank = "B11";
+    private User user;
     private bool isButtonEnabled = false;
-
+    private bool showOkMessageBox = false;
+    public string UserId;
+    public string Message;
     protected override async Task OnInitializedAsync()
     {
         semesters = await _context.Semesters.ToListAsync();
@@ -136,15 +142,40 @@
         }
     }
 
-    private void HandleButtonClick()
+    private async void HandleButtonClick()
     {
-        NavigationManager.NavigateTo("/vao_thi");
+        var item = await _context.Users.FirstOrDefaultAsync(x => x.Id == Guid.Parse(UserId));
+        if (item.Status == true)
+        {
+            showOkMessageBox = true;
+            Message = "Thí sinh đã tham gia dự thi, nếu có vấn đề về kỹ thuật vui lòng liên hệ giáo viên!!";
+        }
+        if (item.Status == false)
+        {
+            item.Status = true;
+            _context.Update(item);
+            _context.SaveChanges();
+            NavigationManager.NavigateTo($"/vao_thi/{UserId}");
+        }
     }
 
     private async void CheckInformation()
     {
         user = await _context.Users.FirstOrDefaultAsync(x => x.SemesterId == selectedSemester && x.Sbd == SBD && x.Rank == Rank);
+        if (user == null)
+        {
+            showOkMessageBox = true;
+            Message = "Thông tin thí sinh không chính xác";
+            this.StateHasChanged();
+            return;
+        }
+        UserId = user.Id.ToString();
         isButtonEnabled = user != null;
         this.StateHasChanged();
+    }
+
+    private void HandleOkClick(bool result)
+    {
+        showOkMessageBox = false;
     }
 }

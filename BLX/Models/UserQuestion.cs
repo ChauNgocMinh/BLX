@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace BLX.Models
+﻿namespace BLX.Models
 {
     public partial class UserQuestion
     {
@@ -10,6 +7,7 @@ namespace BLX.Models
         public Guid IdQuestion { get; set; }
         public bool Status { get; set; }
         public int? Reply { get; set; }
+        public int Number { get; set; }
 
         public virtual Question IdQuestionNavigation { get; set; } = null!;
         public virtual User IdUserNavigation { get; set; } = null!;

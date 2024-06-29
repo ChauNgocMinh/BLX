@@ -20,12 +20,28 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/AdminManage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NYW5hZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/Admin/QuestionManage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUXVlc3Rpb25NYW5hZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/Admin/UserManage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlck1hbmFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/VaoThi.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmFvVGhpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Downloads/BLX/BLX/BLX/Shared/MessageBox.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1lc3NhZ2VCb3gucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/PC/Downloads/BLX/BLX/BLX/_Imports.razor]

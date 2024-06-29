@@ -10,3 +10,12 @@
         </LayoutView>
     </NotFound>
 </Router>
+@code{
+    private RenderFragment SetLayout(RouteData routeData) => builder =>
+    {
+        var layout = routeData.PageType.Name.StartsWith("AdminManage") ? typeof(AdminManage) : typeof(MainLayout);
+        builder.OpenComponent<LayoutView>(0);
+        builder.AddAttribute(1, "Layout", layout);
+        builder.CloseComponent();
+    };
+}

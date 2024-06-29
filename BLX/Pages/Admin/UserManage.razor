@@ -1,0 +1,203 @@
+﻿@page "/admin/usermanage"
+@using BLX.Models
+@using Microsoft.EntityFrameworkCore;
+@inject BLXContext _context
+@layout AdminManage
+@using OfficeOpenXml 
+@using Microsoft.AspNetCore.Components.Forms
+
+<style>
+    .btn {
+        margin: 0 3px;
+    }
+</style>
+@* <div class="mb-3">
+    <input type="text" @bind="searchTerm" placeholder="Search by Name or SBD" class="form-control" @oninput="FilterUsers" />
+</div> *@
+<button class="btn btn-primary mb-3" @onclick="ShowAddUserModal">+ Thêm thí sinh</button>
+<button class="btn btn-primary mb-3" @onclick="ImportExcel">Import Excel</button>
+<InputFile OnChange="HandleFileSelected" />
+
+@if (users == null)
+{
+    <p><em>Không có thí sinh nào</em></p>
+}
+else
+{
+    <div style="height: 75vh; overflow-y: auto;">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Họ tên</th>
+                    <th>Số báo danh</th>
+                    <th>CCCD</th>
+                    <th>Ngày sinh</th>
+                    <th>Lớp</th>
+                    <th>Trạng thái</th>
+                    <th>Hạng GPLX</th>
+                    <th>Điểm</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in users)
+                {
+                    <tr>
+                        <td>@user.Name</td>
+                        <td>@user.Sbd</td>
+                        <td>@user.Cccd</td>
+                        <td>@DateTime.Parse(user.NamSinh.ToString()).ToString("dd/MM/yyyy")</td>
+                        <td>@user.Semester.Name</td>
+                        <td>
+                            @if (user.Status)
+                            {
+                                <span>Đã thi</span>
+                            }
+                            else
+                            {
+                                <span>Chưa thi</span>
+                            }
+                        </td>
+                        <td>@user.Rank</td>
+                        <td>@user.Score</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm" @onclick="() => ShowEditUserModal()">Sửa</button>
+                            <button class="btn btn-secondary btn-sm" @onclick="() => RestUser(user.Id)">Tạo lại</button>
+                            <button class="btn btn-info btn-sm">Xuất pdf</button>
+                        </td>
+                    </tr>   
+                }
+            </tbody>
+        </table>
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            @for (int i = 1; i <= Math.Ceiling((decimal)users.Count / pageSize); i++)
+            {
+                int pageNumber = i;
+                <li class="page-item @(i == currentPage ? "active" : "")">
+                    <button class="page-link" @onclick="() => ChangePage(pageNumber)">@i</button>
+                </li>
+            }
+        </ul>
+    </nav>
+}
+<MessageBox Title="Cảnh báo" Message="Chức năng không hoạt động vì thí sinh chưa thi" Show="@showOkMessageBox" OnOk="HandleOkClick" />
+
+@code {
+    private List<User> users;
+    private List<User> filteredUsers;
+    private string searchTerm = string.Empty;
+    private bool showOkMessageBox = false;
+    private User selectedUser;
+    private bool showModal;
+    private int currentPage = 1;
+    private int pageSize = 10;
+    private IBrowserFile file;
+
+    protected override async Task OnInitializedAsync()
+    {
+        int skip = (currentPage - 1) * pageSize;
+        users = _context.Users.Include(x => x.Semester).Skip(skip).Take(pageSize).ToList();
+        //FilterUsers();
+    }
+
+    private void ChangePage(int pageNumber)
+    {
+        currentPage = pageNumber;
+        OnInitializedAsync();
+    }
+
+    private void FilterUsers(ChangeEventArgs e)
+    {
+        searchTerm = e.Value.ToString();
+        filteredUsers = users.Where(u => u.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || u.Sbd.ToString().Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
+    }
+
+    private void ShowAddUserModal()
+    { }
+    private void ShowEditUserModal()
+    { }
+    private void RestUser(Guid Id)
+    { 
+        var user = _context.Users.Include(x => x.Semester).FirstOrDefault(x => x.Id == Id);
+        @if (user.Status == true)
+        {
+            user.Status = false;
+            _context.Update(user);
+            _context.SaveChanges();
+
+            var userQuestions = _context.UserQuestions.Where(x => x.IdUser == user.Id).ToList();
+            _context.UserQuestions.RemoveRange(userQuestions);
+            _context.SaveChanges();
+        }
+        else
+        {
+            showOkMessageBox = true;
+        }
+    }
+
+    public void HandleOkClick()
+    {
+        showOkMessageBox = false;
+    }
+    private void HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        file = e.File;
+    }
+    private async Task ImportExcel()
+    {
+        if (file != null)
+        {
+            using (var stream = new MemoryStream())
+            {
+                await file.OpenReadStream().CopyToAsync(stream);
+
+                var dataTable = ReadExcelToUsers(stream);
+
+                await SaveToSql(dataTable);
+            }
+        }
+    }
+
+    private List<User> ReadExcelToUsers(Stream stream)
+    {
+        List<User> users = new List<User>();
+        using (var package = new ExcelPackage(stream))
+        {
+            var worksheet = package.Workbook.Worksheets.FirstOrDefault();
+            if (worksheet == null)
+                throw new Exception("No worksheet found in Excel file.");
+
+            // Assuming the first row contains column names
+            for (int rowNumber = 2; rowNumber <= worksheet.Dimension.End.Row; rowNumber++)
+            {
+                var row = worksheet.Cells[rowNumber, 1, rowNumber, worksheet.Dimension.End.Column];
+                var user = new User
+                {
+                    Id = Guid.NewGuid(),
+                    Sbd = int.Parse(row[rowNumber, 1].Text),
+                    Name = row[rowNumber, 2].Text,
+                    Cccd = row[rowNumber, 3].Text,
+                    NamSinh = DateTime.TryParse(row[rowNumber, 4].Text, out var dob) ? (DateTime?)dob : null,
+                    SemesterId = Guid.Parse(row[rowNumber, 5].Text),
+                    Status = false,
+                    Rank = row[rowNumber, 6].Text,
+                    Score =  null
+                };
+
+                users.Add(user);
+            }
+        }
+        return users;
+    }
+
+    private async Task SaveToSql(List<User> users)
+    {
+        foreach (var item in users)
+        {
+            _context.Add(item);
+            _context.SaveChanges();
+        }
+    }
+}

@@ -1,0 +1,98 @@
+﻿@page "/admin"
+@inject NavigationManager Navigation
+@inherits LayoutComponentBase
+<div class="admin-layout">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">Admin Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <div class="d-flex">
+        <div class="sidebar bg-light p-3">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="/admin/usermanage">
+                        <i class="fas fa-users"></i> Thí sinh
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="/admin/questionmanage">
+                        <i class="fas fa-cogs"></i> Câu hỏi
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content p-3">
+            @Body
+        </div>
+    </div>
+</div>
+
+<style>
+    .admin-layout {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .navbar{
+        padding: .5rem 1.5rem !important;
+    }
+
+    .d-flex {
+        flex: 1;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: #f8f9fa;
+    }
+
+    .list-group{
+        padding: 5px 0;
+        border-radius: 10px;
+        border-radius: 10px;
+    }
+    .list-group-item + .list-group-item{
+        border-top-width: 0;
+    }
+
+    .list-group-item {
+        border: none;
+        padding: 15px 20px;
+        transition: background-color 0.3s;
+        margin: 10px 0;
+        border: none;
+        padding: 15px 20px;
+        transition: background-color 0.3s;
+        box-shadow: -3px 4px 13px #9b9b9b;
+        border-radius: 10px;
+    }
+
+    .list-group-item a {
+        display: flex;
+        align-items: center;
+        color: #495057;
+        text-decoration: none;
+    }
+
+    .list-group-item:hover {
+        background-color: #e9ecef;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .list-group-item i {
+        margin-right: 10px;
+    }
+
+    .content {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+    }
+</style>
+@code {
+}
+    
