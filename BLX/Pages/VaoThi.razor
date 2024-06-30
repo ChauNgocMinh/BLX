@@ -597,7 +597,10 @@
             timer.Start();
             user.Status = true;
             user.Score = 0;
+            user.TestDay = DateTime.Now;
             _context.Entry(user).Property(x => x.Status).IsModified = true;
+            _context.Entry(user).Property(x => x.Score).IsModified = true;
+            _context.Entry(user).Property(x => x.TestDay).IsModified = true;
             _context.SaveChanges();
             userQuestions = _context.UserQuestions.Include(x => x.IdQuestionNavigation).Where(x => x.IdUser == Guid.Parse(UserId)).OrderBy(x => x.Number).ToList();
             return;

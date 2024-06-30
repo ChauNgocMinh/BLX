@@ -5,12 +5,18 @@
 @layout AdminManage
 @using OfficeOpenXml 
 @using Microsoft.AspNetCore.Components.Forms
-@using PdfSharpCore.Drawing
-@using PdfSharpCore.Pdf
 @using System
 @using System.IO
-@using Xceed.Document.NET
-@using Xceed.Words.NET
+@using iTextSharp.text;
+@using iTextSharp.text.pdf;
+@* @using iTextSharp.Kernel.Font;
+@using iTextSharp.Kernel.Pdf;
+@using iTextSharp.Layout;
+@using iTextSharp.Layout.Element;
+@using iTextSharp.Layout.Properties;
+@using iTextSharp.IO.Font.Constants;
+@using iTextSharp.Layout.Borders; *@
+@inject IWebHostEnvironment _env
 @inject IJSRuntime jsRuntime
 @inject NavigationManager NavigationManager
 @inject IHttpClientFactory Http
@@ -160,99 +166,184 @@ else
     { }
     private async void ExportPDF(Guid Id)
     {
-        string wordFileName = "IN BÀI KTRA.doc";
-        string wwwRootPath = webHostEnvironment.WebRootPath;
-        string wordFilePath = Path.Combine(wwwRootPath, "doc", wordFileName);
-        if (!File.Exists(wordFilePath))
+        var user = _context.Users.Include(x => x.Semester).Include(x => x.UserQuestions).ThenInclude(x => x.IdQuestionNavigation).FirstOrDefault(x => x.Id == Id && x.Semester.Status == true);
+        if (user != null && user.Status)
         {
-            throw new FileNotFoundException("Không tìm thấy tệp Word.");
-        }
+            user.UserQuestions = user.UserQuestions.OrderBy(uq => uq.Number).ToList();
+            string fileName = $"{user.Name}_{DateTime.Now:yyyyMMddHHmmss}.pdf"; 
+            string dest = Path.Combine(Path.GetTempPath(), fileName);
 
-        using (DocX doc = DocX.Load(wordFilePath))
-        {
-            string outputPdfFileName = $"Converted_{Id}.pdf";
-            string outputPdfFilePath = Path.Combine(wwwRootPath, "doc", outputPdfFileName);
-            PdfDocument document = new PdfDocument();
-            PdfPage page = document.AddPage();
-            XGraphics gfx = XGraphics.FromPdfPage(page);
-            XFont font = new XFont("Arial", 12, XFontStyle.Regular);
-            int yOffset = 50; 
-            foreach (Paragraph paragraph in doc.Paragraphs)
+            using (FileStream fs = new FileStream(dest, FileMode.Create, FileAccess.Write, FileShare.None))
             {
-                gfx.DrawString(paragraph.Text, font, XBrushes.Black, new XPoint(50, yOffset));
-                yOffset += 20;
+                Document document = new Document();
+                PdfWriter writer = PdfWriter.GetInstance(document, fs);
+                document.Open();
+                string fontPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "font", "times.ttf"); 
+
+                // Load the font
+                BaseFont baseFont = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                Font font = new Font(baseFont, 14, Font.NORMAL);
+                Font fontTable = new Font(baseFont, 10, Font.NORMAL);
+                Font fontItalic = new Font(baseFont, 14, Font.NORMAL);
+                Font fontNormal = new Font(baseFont, 14, Font.BOLD);
+                Font fontBold = new Font(baseFont, 12, Font.BOLD);
+                Font fontTitle = new Font(baseFont, 20, Font.BOLD);
+                Font fontColor = new Font(baseFont, 12, Font.BOLDITALIC, BaseColor.BLACK);
+                // Add header
+                PdfPTable table1 = new PdfPTable(2);
+                table1.WidthPercentage = 100;
+                table1.SetWidths(new float[] { 1f, 1f });
+
+                PdfPCell cell1 = new PdfPCell();
+                cell1.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell1.Border = PdfPCell.NO_BORDER;
+                Phrase phrase1 = new Phrase();
+                phrase1.Add(new Chunk("SỞ GIAO THÔNG VẬN TẢI QUẢNG TRỊ\n", fontBold));
+                phrase1.Add(new Chunk("TRƯỜNG TCN GTVT", fontBold).SetUnderline(0.1f, -1));
+                Paragraph p1 = new Paragraph(phrase1);
+                p1.Alignment = Element.ALIGN_CENTER;
+                cell1.AddElement(p1);
+                table1.AddCell(cell1);
+
+                PdfPCell cell2 = new PdfPCell();
+                cell2.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell2.Border = PdfPCell.NO_BORDER;
+                Phrase phrase2 = new Phrase();
+                phrase2.Add(new Chunk("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\n", fontBold));
+                phrase2.Add(new Chunk("Độc lập - Tự do - Hạnh phúc", fontBold).SetUnderline(0.1f, -1));
+                Paragraph p2 = new Paragraph(phrase2);
+                p2.Alignment = Element.ALIGN_CENTER;
+                cell2.AddElement(p2);
+                table1.AddCell(cell2);
+
+                document.Add(table1);
+
+                // Add the title
+                Paragraph titleParagraph = new Paragraph("BÀI KIỂM TRA KẾT THÚC MÔN HỌC", fontTitle);
+                titleParagraph.Alignment = Element.ALIGN_CENTER;
+                document.Add(titleParagraph);
+
+                // Add personal information
+                document.Add(new Paragraph("\nHọ và tên: " + user.Name, fontNormal));
+                document.Add(new Paragraph("Ngày sinh: " + DateTime.Parse(user.NamSinh.ToString()).ToString("dd/MM/yyyy"), fontNormal));
+                document.Add(new Paragraph("Số CCCD: " + user.Cccd, fontNormal));
+                document.Add(new Paragraph("Hạng GPLX: " + user.Rank, fontNormal));
+                document.Add(new Paragraph("Khóa đào tạo: " + user.Semester.Name, fontNormal));
+                document.Add(new Paragraph("Ngày kiểm tra: " + DateTime.Parse(user.TestDay.ToString()).ToString("dd/MM/yyyy"), fontNormal));
+                document.Add(new Paragraph("Số báo danh: " + user.Sbd, fontNormal));
+                document.Add(new Paragraph("Tại: Trường TCN GTVT Quảng Trị\n\n", fontNormal));
+
+                Chunk chunk = new Chunk("(Trả lời sai Câu mất an toàn giao thông nghiêm trọng câu số X)", fontColor);
+                chunk.SetBackground(BaseColor.YELLOW);
+                Paragraph p3 = new Paragraph(chunk);
+                document.Add(p3);
+
+                document.Add(new Paragraph("Ghi chú:     Đ: Đáp án đúng     X: Ý trả lời đúng     S: Ý trả lời sai\n\n", fontItalic));
+
+                int maxHorizontal = user.UserQuestions.Count(); // Maximum number of columns per table
+                int maxVertical = 4;    // Maximum number of rows per table
+
+                int totalColumns = user.UserQuestions.Count();  // Number of columns to render
+                int totalRows = 4;      // Number of rows to render
+
+                // Create a main table
+                PdfPTable mainTable = new PdfPTable(totalColumns);
+                mainTable.WidthPercentage = 100;
+
+                // Header row for questions
+                for (int col = 1; col <= totalColumns; col++)
+                {
+                    PdfPCell cell = new PdfPCell(new Phrase($"{col}", new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
+                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                    mainTable.AddCell(cell);
+                }
+
+                // Body rows for answers
+                for (int row = 1; row <= totalRows; row++)
+                {
+                    foreach (var item in user.UserQuestions)
+                    {
+
+                        if (item.Reply == row)
+                        {
+                            if (item.IdQuestionNavigation.Answers == row)
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase("X", fontTable));
+                                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                mainTable.AddCell(cell);
+                            }
+                            else
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase("S", fontTable));
+                                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                mainTable.AddCell(cell);
+                            }
+                        }
+                        else
+                        {
+                            if (item.IdQuestionNavigation.Answers == row)
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase("Đ", fontTable));
+                                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                mainTable.AddCell(cell);
+                            }
+                            else
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase(" ", fontTable));
+                                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                mainTable.AddCell(cell);
+                            }
+                        }
+                    }
+                }
+
+                // Add the main table to the document
+                document.Add(mainTable);
+
+                // Add conclusion section
+                PdfPTable table2 = new PdfPTable(2);
+                table2.WidthPercentage = 100;
+                table2.SetWidths(new float[] { 1f, 1f });
+
+                // Cell 3 (left-aligned)
+                PdfPCell cell3 = new PdfPCell();
+                cell3.HorizontalAlignment = Element.ALIGN_LEFT;
+                cell3.Border = PdfPCell.NO_BORDER;
+                Phrase phrase3 = new Phrase();
+                phrase3.Add(new Chunk("\nKết luận:\n", fontNormal));
+                phrase3.Add(new Chunk("Số điểm đạt được: " + user.Score + " điểm\n", fontNormal));
+                phrase3.Add(new Chunk("Đạt       ", fontNormal));
+                phrase3.Add(new Chunk("", fontNormal));
+                phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
+                phrase3.Add(new Chunk("X", fontNormal));
+                phrase3.Add(new Chunk("\nGiáo viên", fontNormal)); 
+                Paragraph p4 = new Paragraph(phrase3);
+                p4.Alignment = Element.ALIGN_LEFT;
+                cell3.AddElement(p4);
+                table2.AddCell(cell3);
+
+                // Cell 4 (right-aligned)
+                PdfPCell cell4 = new PdfPCell();
+                cell4.HorizontalAlignment = Element.ALIGN_RIGHT; // Căn phải
+                cell4.Border = PdfPCell.NO_BORDER;
+                Phrase phrase4 = new Phrase();
+                phrase4.Add(new Chunk("\nHọc viên xác nhận kết quả", fontNormal));
+                Paragraph p5 = new Paragraph(phrase4);
+                p5.Alignment = Element.ALIGN_RIGHT;
+                cell4.AddElement(p5);
+                table2.AddCell(cell4);
+                document.Add(table2);
+                document.Close();
+                writer.Close();
             }
-
-            document.Save(outputPdfFilePath);
-            Console.WriteLine($"Đã xuất file PDF thành công: {outputPdfFilePath}");
+            byte[] fileBytes = await File.ReadAllBytesAsync(dest);
+            await jsRuntime.InvokeAsync<object>("saveAsFile", fileName, Convert.ToBase64String(fileBytes));
         }
-        // var user = _context.Users
-        //     .Include(u => u.Semester)
-        //     .FirstOrDefault(u => u.Id == Id);
-
-        // if (user != null)
-        // {
-        //     // Create a PDF document
-        //     PdfDocument document = new PdfDocument();
-        //     PdfPage page = document.AddPage();
-        //     XGraphics gfx = XGraphics.FromPdfPage(page);
-        //     XFont titleFont = new XFont("Times New Roman", 20, XFontStyle.Bold);
-        //     XFont contentFont = new XFont("Times New Roman", 10, XFontStyle.Bold);
-        //     XFont content1Font = new XFont("Times New Roman", 12, XFontStyle.Bold);
-        //     XFont content2Font = new XFont("Times New Roman", 10, XFontStyle.Bold | XFontStyle.Underline);
-        //     XBrush brush = XBrushes.Black;
-
-        //     XPoint startPoint = new XPoint(50, 50);
-        //     double lineHeight = 20;
-        //     gfx.DrawString("SỞ GIAO THÔNG VẬN TẢI QUẢNG TRỊ", contentFont, brush, new XPoint(startPoint.X, startPoint.Y));
-        //     gfx.DrawString("TRƯỜNG TCN GTVT", content2Font, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 1));
-        //     double midPointX = page.Width / 2;
-        //     XSize rightColumnSize1 = gfx.MeasureString("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", contentFont);
-        //     XSize rightColumnSize2 = gfx.MeasureString("Độc lập - Tự do - Hạnh phúc", content2Font);
-        //     gfx.DrawString("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", contentFont, brush, new XPoint(page.Width - rightColumnSize1.Width, startPoint.Y));
-        //     gfx.DrawString("Độc lập - Tự do - Hạnh phúc", content2Font, brush, new XPoint(page.Width - rightColumnSize2.Width, startPoint.Y + lineHeight * 1));
-        //     XSize titleSize = gfx.MeasureString("BÀI KIỂM TRA KẾT THÚC MÔN HỌC", titleFont);
-        //     double titleX = (page.Width - titleSize.Width) / 2;
-
-        //     gfx.DrawString("BÀI KIỂM TRA KẾT THÚC MÔN HỌC", titleFont, brush, new XPoint(titleX, startPoint.Y + lineHeight * 6));
-
-
-        //     // Draw user information
-        //     gfx.DrawString("Họ và tên:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 8));
-        //     gfx.DrawString(user.Name, contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 8));
-        //     gfx.DrawString("Ngày sinh:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 9));
-        //     gfx.DrawString(@DateTime.Parse(user.NamSinh.ToString()).ToString("dd/MM/yyyy"), contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 9));
-        //     gfx.DrawString("Số CCCD:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 10));
-        //     gfx.DrawString(user.Cccd, contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 10));
-        //     gfx.DrawString("Hạng GPLX:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 11));
-        //     gfx.DrawString(user.Rank, contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 11));
-        //     gfx.DrawString("Khóa đào tạo:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 12));
-        //     gfx.DrawString(user.Semester.Name, contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 12));
-        //     gfx.DrawString("Ngày kiểm tra:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 13));
-        //     gfx.DrawString(DateTime.Now.ToString("dd/MM/yyyy"), contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 13));
-        //     gfx.DrawString("Số báo danh:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 14));
-        //     gfx.DrawString("1", contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 14));
-
-        //     // Draw conclusion and signatures
-        //     gfx.DrawString("Kết luận:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 16));
-        //     gfx.DrawString("Đạt", contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 16));
-        //     gfx.DrawString("Không đạt", contentFont, brush, new XPoint(startPoint.X + 200, startPoint.Y + lineHeight * 16));
-        //     gfx.DrawString("X", contentFont, brush, new XPoint(startPoint.X + 250, startPoint.Y + lineHeight * 16));
-        //     gfx.DrawString("Giáo viên", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 17));
-
-        //     using (MemoryStream memoryStream = new MemoryStream())
-        //     {
-        //         document.Save(memoryStream, false);
-        //         byte[] fileBytes = memoryStream.ToArray();
-
-        //         // Clean up resources
-        //         document.Dispose();
-
-        //         // Trigger download
-        //         await jsRuntime.InvokeVoidAsync("saveAsFile", $"UserExamInfo_{Id}.pdf", Convert.ToBase64String(fileBytes), "application/pdf");
-        //     }
-        // }
-
+        else
+        {
+            message = "Chức năng không hoạt động vì thí sinh chưa thi";
+            showOkMessageBox = true;
+        }
     }
 
     private void RestUser(Guid Id)
@@ -261,6 +352,7 @@ else
         @if (user.Status == true)
         {
             user.Status = false;
+            user.Score = null;
             _context.Update(user);
             _context.SaveChanges();
 
@@ -352,5 +444,8 @@ else
             _context.Add(item);
             _context.SaveChanges();
         }
+        message = "Import thông tin thí sinh thành công!!";
+        showOkMessageBox = true;
+        OnInitializedAsync();
     }
 }

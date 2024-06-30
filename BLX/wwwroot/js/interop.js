@@ -6,20 +6,6 @@
     downloadLink.click();
 }
 
-//window.saveAsFile = (fileName, fileContent, fileType) => {
-//    const blob = base64ToBlob(fileContent, fileType);
-//    const url = window.URL.createObjectURL(blob);
-
-//    const a = document.createElement("a");
-//    a.style.display = "none";
-//    a.href = url;
-//    a.download = fileName;
-//    document.body.appendChild(a);
-//    a.click();
-
-//    window.URL.revokeObjectURL(url);
-//};
-
 function base64ToBlob(base64, contentType) {
     contentType = contentType || '';
     const sliceSize = 1024;

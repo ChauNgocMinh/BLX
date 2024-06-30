@@ -15,6 +15,7 @@ namespace BLX.Models
         public string Name { get; set; } = null!;
         public string Cccd { get; set; } = null!;
         public DateTime? NamSinh { get; set; }
+        public DateTime? TestDay { get; set; }
         public Guid SemesterId { get; set; }
         public bool Status { get; set; }
         public string Rank { get; set; } = null!;

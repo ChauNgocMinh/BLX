@@ -10,7 +10,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddDbContext<BLXContext>(options =>
-        options.UseSqlServer("Data Source=LAPTOP-V6B0S12C;Initial Catalog=BLX;Integrated Security=True"));
+        options.UseSqlServer("Data Source=DESKTOP-Q8H8790;Initial Catalog=BLX;Integrated Security=True"));
 builder.Services.AddHttpClient();
 var app = builder.Build();
 
