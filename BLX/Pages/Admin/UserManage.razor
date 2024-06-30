@@ -11,12 +11,19 @@
         margin: 0 3px;
     }
 </style>
-@* <div class="mb-3">
-    <input type="text" @bind="searchTerm" placeholder="Search by Name or SBD" class="form-control" @oninput="FilterUsers" />
-</div> *@
 <button class="btn btn-primary mb-3" @onclick="ShowAddUserModal">+ Thêm thí sinh</button>
 <button class="btn btn-primary mb-3" @onclick="ImportExcel">Import Excel</button>
 <InputFile OnChange="HandleFileSelected" />
+
+<div class="form-group">
+    <label for="classFilter">Lọc theo lớp:</label>
+    <select id="classFilter" class="form-control" @onchange="FilterUsersByClass">
+        @foreach (var item in semesters)
+        {
+            <option value="@item.Id">@item.Name</option>
+        } 
+    </select>
+</div>
 
 @if (users == null)
 {
@@ -24,7 +31,7 @@
 }
 else
 {
-    <div style="height: 75vh; overflow-y: auto;">
+    <div style="height: 70vh; overflow-y: auto;">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -59,7 +66,9 @@ else
                             }
                         </td>
                         <td>@user.Rank</td>
-                        <td>@user.Score</td>
+                        <td>
+                            @user.Score
+                        </td>
                         <td>
                             <button class="btn btn-warning btn-sm" @onclick="() => ShowEditUserModal()">Sửa</button>
                             <button class="btn btn-secondary btn-sm" @onclick="() => RestUser(user.Id)">Tạo lại</button>
@@ -87,6 +96,7 @@ else
 @code {
     private List<User> users;
     private List<User> filteredUsers;
+    private List<Semester> semesters;
     private string searchTerm = string.Empty;
     private bool showOkMessageBox = false;
     private User selectedUser;
@@ -94,24 +104,28 @@ else
     private int currentPage = 1;
     private int pageSize = 10;
     private IBrowserFile file;
-
+    private Guid selectedClassId;
     protected override async Task OnInitializedAsync()
     {
+        semesters = _context.Semesters.ToList();
+        selectedClassId = semesters.FirstOrDefault().Id;
+
         int skip = (currentPage - 1) * pageSize;
-        users = _context.Users.Include(x => x.Semester).Skip(skip).Take(pageSize).ToList();
+        users = _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId).Skip(skip).Take(pageSize).ToList();
+
         //FilterUsers();
     }
+    private void FilterUsersByClass(ChangeEventArgs e)
+    {
+        selectedClassId = Guid.Parse(e.Value?.ToString());
+        int skip = (currentPage - 1) * pageSize;
+        users = _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId).Skip(skip).Take(pageSize).ToList();
 
+    }
     private void ChangePage(int pageNumber)
     {
         currentPage = pageNumber;
         OnInitializedAsync();
-    }
-
-    private void FilterUsers(ChangeEventArgs e)
-    {
-        searchTerm = e.Value.ToString();
-        filteredUsers = users.Where(u => u.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || u.Sbd.ToString().Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
     }
 
     private void ShowAddUserModal()

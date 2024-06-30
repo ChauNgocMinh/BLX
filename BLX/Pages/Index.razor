@@ -152,9 +152,6 @@
         }
         if (item.Status == false)
         {
-            item.Status = true;
-            _context.Update(item);
-            _context.SaveChanges();
             NavigationManager.NavigateTo($"/vao_thi/{UserId}");
         }
     }

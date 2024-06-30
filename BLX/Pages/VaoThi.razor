@@ -111,30 +111,33 @@
             @timeString
         </div>
         <div class="row m-0 justify-content-between">
-            @foreach (var item in userQuestions)
+            @if (userQuestions != null)
             {
-                <button @onclick="() => ChangeImage(item.IdQuestionNavigation.Id)" class="question-item col-5">
-                    <label>
-                        Câu @item.Number
-                    </label>
-                    <div class="radio-group d-flex">
+                @foreach (var item in userQuestions)
+                {
+                    <button @onclick="() => ChangeImage(item.IdQuestionNavigation.Id)" class="question-item col-5">
+                        <label>
+                            Câu @item.Number
+                        </label>
+                        <div class="radio-group d-flex">
 
-                        @for (int i = 1; i <= item.IdQuestionNavigation.NumberAnswers; i++)
-                        {
-                            var answerValue = i; // Biến tạm để capture giá trị của i
-                            <div class="form-check">
-                                <label class="form-check-label p-0" for="option@answerValue_@item.IdQuestionNavigation.Id">
-                                    @answerValue
-                                </label>
-                                <input class="form-check-input m-0" type="radio"
-                                       name="options_@item.IdQuestionNavigation.Id"
-                                       id="option@answerValue_@item.IdQuestionNavigation.Id"
-                                       value="@answerValue"
-                                @onchange="() => OnRadioChange(item.Number, answerValue)">
-                            </div>
-                        }
-                    </div>
-                </button>
+                            @for (int i = 1; i <= item.IdQuestionNavigation.NumberAnswers; i++)
+                            {
+                                var answerValue = i; // Biến tạm để capture giá trị của i
+                                <div class="form-check">
+                                    <label class="form-check-label p-0" for="option@answerValue_@item.IdQuestionNavigation.Id">
+                                        @answerValue
+                                    </label>
+                                    <input class="form-check-input m-0" type="radio"
+                                           name="options_@item.IdQuestionNavigation.Id"
+                                           id="option@answerValue_@item.IdQuestionNavigation.Id"
+                                           value="@answerValue"
+                                    @onchange="() => OnRadioChange(item.Number, answerValue)">
+                                </div>
+                            }
+                        </div>
+                    </button>
+                }
             }
         </div>
     </div>
@@ -165,423 +168,450 @@
     List<UserQuestion> userQuestions;
     private Dictionary<int, int?> selectedAnswers = new Dictionary<int, int?>();
     int Numbers = 1;
+    private bool shouldNavigate = false;
+    private string navigationError = null;
     protected override void OnInitialized()
     {
         user = _context.Users.FirstOrDefault(x => x.Id == Guid.Parse(UserId));
-        if (user.Rank == "B11")
+        if(user.Status == false)
         {
-            id_monhoc_01 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_01")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            urlImage = "./img/" + id_monhoc_01.TypeNavigation.Domain + "/" + id_monhoc_01.Name + "";
-            userQuestion.Id= Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_01.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_02 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_02")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_02.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_03 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_03")
-                .OrderBy(x => Guid.NewGuid())
-                .Take(6)
-                .ToList();
-            foreach (var item in id_monhoc_03)
+            if (user.Rank == "B11")
             {
+                id_monhoc_01 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_01")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                urlImage = "./img/" + id_monhoc_01.TypeNavigation.Domain + "/" + id_monhoc_01.Name + "";
+                userQuestion.Id= Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_01.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_02 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_02")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
                 userQuestion.Id = Guid.NewGuid();
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
+                userQuestion.IdQuestion = id_monhoc_02.Id;
                 userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
                 _context.SaveChanges();
-            }
 
-            id_monhoc_04 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_04")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_04.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
+                id_monhoc_03 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_03")
+                    .OrderBy(x => Guid.NewGuid())
+                    .Take(6)
+                    .ToList();
+                foreach (var item in id_monhoc_03)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
 
-            id_monhoc_06 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_06")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_06.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_07 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_07")
-                .OrderBy(x => Guid.NewGuid())
-                .Take(1)
-                .ToList();
-            foreach (var item in id_monhoc_07)
-            {
+                id_monhoc_04 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_04")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
                 userQuestion.Id = Guid.NewGuid();
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
+                userQuestion.IdQuestion = id_monhoc_04.Id;
                 userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
                 _context.SaveChanges();
+
+                id_monhoc_06 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_06")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_06.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_07 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_07")
+                    .OrderBy(x => Guid.NewGuid())
+                    .Take(1)
+                    .ToList();
+                foreach (var item in id_monhoc_07)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
+
+                id_monhoc_08 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_08")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_08.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_09 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
+                    .OrderBy(x => Guid.NewGuid())
+                    .Take(9)
+                    .ToList();
+                foreach (var item in id_monhoc_09)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
+
+                id_monhoc_10 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
+                    .OrderBy(x => Guid.NewGuid())
+                    .Take(9)
+                    .ToList();
+                foreach (var item in id_monhoc_10)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
+            }
+            if (user.Rank == "B2")
+            {
+                id_monhoc_01 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_01")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                urlImage = "./img/" + id_monhoc_01.TypeNavigation.Domain + "/" + id_monhoc_01.Name + "";
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_01.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_02 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_02")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_02.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_03 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_03")
+                    .OrderBy(x => Guid.NewGuid())
+                    .Take(7)
+                    .ToList();
+                foreach (var item in id_monhoc_03)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
+
+                id_monhoc_04 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_04")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault(); 
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_04.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_05 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_05")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_05.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_06 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_06")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_06.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_07 = _context.Questions
+                   .Include(x => x.TypeNavigation)
+                   .Where(x => x.TypeNavigation.Domain == "id_monhoc_07")
+                   .OrderBy(x => Guid.NewGuid())
+                   .Take(2)
+                   .ToList();
+                foreach (var item in id_monhoc_07)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
+
+                id_monhoc_08 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_08")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_08.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_09 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
+                    .OrderBy(x => Guid.NewGuid())
+                    .Take(10)
+                    .ToList();
+                foreach (var item in id_monhoc_09)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
+
+                id_monhoc_10 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
+                    .OrderBy(x => Guid.NewGuid())
+                    .Take(10)
+                    .ToList();
+                foreach (var item in id_monhoc_10)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
+            }
+            if (user.Rank == "C")
+            {
+                id_monhoc_01 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_01")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                urlImage = "./img/" + id_monhoc_01.TypeNavigation.Domain + "/" + id_monhoc_01.Name + "";
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_01.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_02 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_02")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_02.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_03 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_03")
+                    .OrderBy(x => Guid.NewGuid())
+                    .Take(7)
+                    .ToList();
+                foreach (var item in id_monhoc_03)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
+
+                id_monhoc_04 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_04")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_04.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_05 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_05")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_05.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_06 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_06")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_06.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_07 = _context.Questions
+                   .Include(x => x.TypeNavigation)
+                   .Where(x => x.TypeNavigation.Domain == "id_monhoc_07")
+                   .OrderBy(x => Guid.NewGuid())
+                   .Take(2)
+                   .ToList();
+                foreach (var item in id_monhoc_07)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
+                id_monhoc_08 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_08")
+                    .OrderBy(x => Guid.NewGuid())
+                    .FirstOrDefault();
+                userQuestion.Id = Guid.NewGuid();
+                userQuestion.IdUser = Guid.Parse(UserId);
+                userQuestion.Status = false;
+                userQuestion.IdQuestion = id_monhoc_08.Id;
+                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                _context.SaveChanges();
+
+                id_monhoc_09 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
+                    .OrderBy(x => Guid.NewGuid())
+                    .Take(14)
+                    .ToList();
+                foreach (var item in id_monhoc_09)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
+
+                id_monhoc_10 = _context.Questions
+                    .Include(x => x.TypeNavigation)
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
+                    .OrderBy(x => Guid.NewGuid())
+                    .Take(11)
+                    .ToList();
+                foreach (var item in id_monhoc_10)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
             }
 
-            id_monhoc_08 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_08")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_08.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+            endTime = DateTime.Now.AddMinutes(30);
+            timeString = "30:00";
+            timer = new Timer(1000);
+            timer.Elapsed += OnTimerElapsed;
+            timer.Start();
+            user.Status = true;
+            user.Score = 0;
+            _context.Entry(user).Property(x => x.Status).IsModified = true;
             _context.SaveChanges();
-
-            id_monhoc_09 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
-                .OrderBy(x => Guid.NewGuid())
-                .Take(9)
-                .ToList();
-            foreach (var item in id_monhoc_09)
-            {
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-                _context.SaveChanges();
-            }
-
-            id_monhoc_10 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
-                .OrderBy(x => Guid.NewGuid())
-                .Take(9)
-                .ToList();
-            foreach (var item in id_monhoc_10)
-            {
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-                _context.SaveChanges();
-            }
+            userQuestions = _context.UserQuestions.Include(x => x.IdQuestionNavigation).Where(x => x.IdUser == Guid.Parse(UserId)).OrderBy(x => x.Number).ToList();
+            return;
         }
-        if (user.Rank == "B2")
+        else
         {
-            id_monhoc_01 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_01")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            urlImage = "./img/" + id_monhoc_01.TypeNavigation.Domain + "/" + id_monhoc_01.Name + "";
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_01.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_02 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_02")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_02.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_03 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_03")
-                .OrderBy(x => Guid.NewGuid())
-                .Take(7)
-                .ToList();
-            foreach (var item in id_monhoc_03)
-            {
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-                _context.SaveChanges();
-            }
-
-            id_monhoc_04 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_04")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault(); 
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_04.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_05 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_05")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_05.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_06 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_06")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_06.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_07 = _context.Questions
-               .Include(x => x.TypeNavigation)
-               .Where(x => x.TypeNavigation.Domain == "id_monhoc_07")
-               .OrderBy(x => Guid.NewGuid())
-               .Take(2)
-               .ToList();
-            foreach (var item in id_monhoc_07)
-            {
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-                _context.SaveChanges();
-            }
-
-            id_monhoc_08 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_08")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_08.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_09 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
-                .OrderBy(x => Guid.NewGuid())
-                .Take(10)
-                .ToList();
-            foreach (var item in id_monhoc_09)
-            {
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-                _context.SaveChanges();
-            }
-
-            id_monhoc_10 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
-                .OrderBy(x => Guid.NewGuid())
-                .Take(10)
-                .ToList();
-            foreach (var item in id_monhoc_10)
-            {
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-                _context.SaveChanges();
-            }
+            shouldNavigate = true;
         }
-        if (user.Rank == "C")
-        {
-            id_monhoc_01 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_01")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            urlImage = "./img/" + id_monhoc_01.TypeNavigation.Domain + "/" + id_monhoc_01.Name + "";
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_01.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_02 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_02")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_02.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_03 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_03")
-                .OrderBy(x => Guid.NewGuid())
-                .Take(7)
-                .ToList();
-            foreach (var item in id_monhoc_03)
-            {
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-                _context.SaveChanges();
-            }
-
-            id_monhoc_04 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_04")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_04.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_05 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_05")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_05.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_06 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_06")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_06.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_07 = _context.Questions
-               .Include(x => x.TypeNavigation)
-               .Where(x => x.TypeNavigation.Domain == "id_monhoc_07")
-               .OrderBy(x => Guid.NewGuid())
-               .Take(2)
-               .ToList();
-            foreach (var item in id_monhoc_07)
-            {
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-                _context.SaveChanges();
-            }
-            id_monhoc_08 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_08")
-                .OrderBy(x => Guid.NewGuid())
-                .FirstOrDefault();
-            userQuestion.Id = Guid.NewGuid();
-            userQuestion.IdUser = Guid.Parse(UserId);
-            userQuestion.Status = false;
-            userQuestion.IdQuestion = id_monhoc_08.Id;
-            userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-            _context.SaveChanges();
-
-            id_monhoc_09 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
-                .OrderBy(x => Guid.NewGuid())
-                .Take(14)
-                .ToList();
-            foreach (var item in id_monhoc_09)
-            {
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-                _context.SaveChanges();
-            }
-
-            id_monhoc_10 = _context.Questions
-                .Include(x => x.TypeNavigation)
-                .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
-                .OrderBy(x => Guid.NewGuid())
-                .Take(11)
-                .ToList();
-            foreach (var item in id_monhoc_10)
-            {
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = item.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
-                _context.SaveChanges();
-            }
-        }
-
-        endTime = DateTime.Now.AddMinutes(30);
-        timeString = "30:00";
-        timer = new Timer(1000);
-        timer.Elapsed += OnTimerElapsed;
-        timer.Start();
-
-        userQuestions = _context.UserQuestions.Include(x => x.IdQuestionNavigation).Where(x => x.IdUser == Guid.Parse(UserId)).OrderBy(x => x.Number).ToList();
     }
 
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender && shouldNavigate)
+        {
+            try
+            {
+                NavigationManager.NavigateTo("/");
+            }
+            catch (Exception ex)
+            {
+                navigationError = $"Error during navigation: {ex.Message}";
+            }
+        }
+    }
     public void ChangeImage(Guid Id)
     {
         var questions = _context.Questions.Include(x => x.TypeNavigation)
@@ -636,6 +666,9 @@
                 _context.SaveChanges();
             }
         }
+        user.Score = userQuestions.Where(x => x.IdUser == user.Id).Count(i => i.Status == true);
+        _context.Update(user);
+        _context.SaveChanges();
         NavigationManager.NavigateTo("/");
     }
     private void HandleOkClick()
