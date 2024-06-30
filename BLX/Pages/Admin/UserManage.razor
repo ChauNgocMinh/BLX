@@ -5,10 +5,30 @@
 @layout AdminManage
 @using OfficeOpenXml 
 @using Microsoft.AspNetCore.Components.Forms
+@using PdfSharpCore.Drawing
+@using PdfSharpCore.Pdf
+@using System
+@using System.IO
+@using Xceed.Document.NET
+@using Xceed.Words.NET
+@inject IJSRuntime jsRuntime
+@inject NavigationManager NavigationManager
+@inject IHttpClientFactory Http
+@inject IWebHostEnvironment webHostEnvironment
 
 <style>
     .btn {
         margin: 0 3px;
+    }
+
+    .table-data{
+        height: 70vh; 
+        overflow-y: auto;
+    }
+    @@media (min-width: 1366px){
+        .table-data {
+            height: 64vh; 
+        }
     }
 </style>
 <button class="btn btn-primary mb-3" @onclick="ShowAddUserModal">+ Thêm thí sinh</button>
@@ -31,7 +51,7 @@
 }
 else
 {
-    <div style="height: 70vh; overflow-y: auto;">
+    <div class="table-data">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -72,7 +92,7 @@ else
                         <td>
                             <button class="btn btn-warning btn-sm" @onclick="() => ShowEditUserModal()">Sửa</button>
                             <button class="btn btn-secondary btn-sm" @onclick="() => RestUser(user.Id)">Tạo lại</button>
-                            <button class="btn btn-info btn-sm">Xuất pdf</button>
+                            <button class="btn btn-info btn-sm" @onclick="() => ExportPDF(user.Id)">Xuất pdf</button>
                         </td>
                     </tr>   
                 }
@@ -81,7 +101,7 @@ else
     </div>
     <nav aria-label="Page navigation example">
         <ul class="pagination">
-            @for (int i = 1; i <= Math.Ceiling((decimal)users.Count / pageSize); i++)
+            @for (int i = 1; i <= Math.Ceiling((decimal)totalUsersCount / pageSize); i++)
             {
                 int pageNumber = i;
                 <li class="page-item @(i == currentPage ? "active" : "")">
@@ -91,7 +111,7 @@ else
         </ul>
     </nav>
 }
-<MessageBox Title="Cảnh báo" Message="Chức năng không hoạt động vì thí sinh chưa thi" Show="@showOkMessageBox" OnOk="HandleOkClick" />
+<MessageBox Title="Cảnh báo" Message="@message" Show="@showOkMessageBox" OnOk="HandleOkClick" />
 
 @code {
     private List<User> users;
@@ -103,23 +123,29 @@ else
     private bool showModal;
     private int currentPage = 1;
     private int pageSize = 10;
+    private int totalUsersCount = 0;
     private IBrowserFile file;
     private Guid selectedClassId;
+    private string message;
     protected override async Task OnInitializedAsync()
     {
-        semesters = _context.Semesters.ToList();
-        selectedClassId = semesters.FirstOrDefault().Id;
+        semesters = _context.Semesters.Where(x => x.Status == true).ToList();
+        if (selectedClassId == Guid.Empty)
+        {
+            selectedClassId = semesters.FirstOrDefault().Id;
+        }
+        totalUsersCount = _context.Users.Count(x => x.SemesterId == selectedClassId && x.Semester.Status == true);
 
         int skip = (currentPage - 1) * pageSize;
-        users = _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId).Skip(skip).Take(pageSize).ToList();
-
-        //FilterUsers();
+        users = _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId && x.Semester.Status == true).Skip(skip).Take(pageSize).ToList();
     }
     private void FilterUsersByClass(ChangeEventArgs e)
     {
         selectedClassId = Guid.Parse(e.Value?.ToString());
-        int skip = (currentPage - 1) * pageSize;
-        users = _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId).Skip(skip).Take(pageSize).ToList();
+        currentPage = 1;
+        OnInitializedAsync();
+        // int skip = (currentPage - 1) * pageSize;
+        // users = _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId).Skip(skip).Take(pageSize).ToList();
 
     }
     private void ChangePage(int pageNumber)
@@ -132,9 +158,106 @@ else
     { }
     private void ShowEditUserModal()
     { }
+    private async void ExportPDF(Guid Id)
+    {
+        string wordFileName = "IN BÀI KTRA.doc";
+        string wwwRootPath = webHostEnvironment.WebRootPath;
+        string wordFilePath = Path.Combine(wwwRootPath, "doc", wordFileName);
+        if (!File.Exists(wordFilePath))
+        {
+            throw new FileNotFoundException("Không tìm thấy tệp Word.");
+        }
+
+        using (DocX doc = DocX.Load(wordFilePath))
+        {
+            string outputPdfFileName = $"Converted_{Id}.pdf";
+            string outputPdfFilePath = Path.Combine(wwwRootPath, "doc", outputPdfFileName);
+            PdfDocument document = new PdfDocument();
+            PdfPage page = document.AddPage();
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+            XFont font = new XFont("Arial", 12, XFontStyle.Regular);
+            int yOffset = 50; 
+            foreach (Paragraph paragraph in doc.Paragraphs)
+            {
+                gfx.DrawString(paragraph.Text, font, XBrushes.Black, new XPoint(50, yOffset));
+                yOffset += 20;
+            }
+
+            document.Save(outputPdfFilePath);
+            Console.WriteLine($"Đã xuất file PDF thành công: {outputPdfFilePath}");
+        }
+        // var user = _context.Users
+        //     .Include(u => u.Semester)
+        //     .FirstOrDefault(u => u.Id == Id);
+
+        // if (user != null)
+        // {
+        //     // Create a PDF document
+        //     PdfDocument document = new PdfDocument();
+        //     PdfPage page = document.AddPage();
+        //     XGraphics gfx = XGraphics.FromPdfPage(page);
+        //     XFont titleFont = new XFont("Times New Roman", 20, XFontStyle.Bold);
+        //     XFont contentFont = new XFont("Times New Roman", 10, XFontStyle.Bold);
+        //     XFont content1Font = new XFont("Times New Roman", 12, XFontStyle.Bold);
+        //     XFont content2Font = new XFont("Times New Roman", 10, XFontStyle.Bold | XFontStyle.Underline);
+        //     XBrush brush = XBrushes.Black;
+
+        //     XPoint startPoint = new XPoint(50, 50);
+        //     double lineHeight = 20;
+        //     gfx.DrawString("SỞ GIAO THÔNG VẬN TẢI QUẢNG TRỊ", contentFont, brush, new XPoint(startPoint.X, startPoint.Y));
+        //     gfx.DrawString("TRƯỜNG TCN GTVT", content2Font, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 1));
+        //     double midPointX = page.Width / 2;
+        //     XSize rightColumnSize1 = gfx.MeasureString("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", contentFont);
+        //     XSize rightColumnSize2 = gfx.MeasureString("Độc lập - Tự do - Hạnh phúc", content2Font);
+        //     gfx.DrawString("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", contentFont, brush, new XPoint(page.Width - rightColumnSize1.Width, startPoint.Y));
+        //     gfx.DrawString("Độc lập - Tự do - Hạnh phúc", content2Font, brush, new XPoint(page.Width - rightColumnSize2.Width, startPoint.Y + lineHeight * 1));
+        //     XSize titleSize = gfx.MeasureString("BÀI KIỂM TRA KẾT THÚC MÔN HỌC", titleFont);
+        //     double titleX = (page.Width - titleSize.Width) / 2;
+
+        //     gfx.DrawString("BÀI KIỂM TRA KẾT THÚC MÔN HỌC", titleFont, brush, new XPoint(titleX, startPoint.Y + lineHeight * 6));
+
+
+        //     // Draw user information
+        //     gfx.DrawString("Họ và tên:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 8));
+        //     gfx.DrawString(user.Name, contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 8));
+        //     gfx.DrawString("Ngày sinh:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 9));
+        //     gfx.DrawString(@DateTime.Parse(user.NamSinh.ToString()).ToString("dd/MM/yyyy"), contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 9));
+        //     gfx.DrawString("Số CCCD:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 10));
+        //     gfx.DrawString(user.Cccd, contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 10));
+        //     gfx.DrawString("Hạng GPLX:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 11));
+        //     gfx.DrawString(user.Rank, contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 11));
+        //     gfx.DrawString("Khóa đào tạo:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 12));
+        //     gfx.DrawString(user.Semester.Name, contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 12));
+        //     gfx.DrawString("Ngày kiểm tra:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 13));
+        //     gfx.DrawString(DateTime.Now.ToString("dd/MM/yyyy"), contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 13));
+        //     gfx.DrawString("Số báo danh:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 14));
+        //     gfx.DrawString("1", contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 14));
+
+        //     // Draw conclusion and signatures
+        //     gfx.DrawString("Kết luận:", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 16));
+        //     gfx.DrawString("Đạt", contentFont, brush, new XPoint(startPoint.X + 150, startPoint.Y + lineHeight * 16));
+        //     gfx.DrawString("Không đạt", contentFont, brush, new XPoint(startPoint.X + 200, startPoint.Y + lineHeight * 16));
+        //     gfx.DrawString("X", contentFont, brush, new XPoint(startPoint.X + 250, startPoint.Y + lineHeight * 16));
+        //     gfx.DrawString("Giáo viên", contentFont, brush, new XPoint(startPoint.X, startPoint.Y + lineHeight * 17));
+
+        //     using (MemoryStream memoryStream = new MemoryStream())
+        //     {
+        //         document.Save(memoryStream, false);
+        //         byte[] fileBytes = memoryStream.ToArray();
+
+        //         // Clean up resources
+        //         document.Dispose();
+
+        //         // Trigger download
+        //         await jsRuntime.InvokeVoidAsync("saveAsFile", $"UserExamInfo_{Id}.pdf", Convert.ToBase64String(fileBytes), "application/pdf");
+        //     }
+        // }
+
+    }
+
     private void RestUser(Guid Id)
     { 
-        var user = _context.Users.Include(x => x.Semester).FirstOrDefault(x => x.Id == Id);
+        var user = _context.Users.Include(x => x.Semester).FirstOrDefault(x => x.Id == Id && x.Semester.Status == true);
         @if (user.Status == true)
         {
             user.Status = false;
@@ -147,6 +270,7 @@ else
         }
         else
         {
+            message = "Chức năng không hoạt động vì thí sinh chưa thi";
             showOkMessageBox = true;
         }
     }
@@ -157,7 +281,18 @@ else
     }
     private void HandleFileSelected(InputFileChangeEventArgs e)
     {
-        file = e.File;
+        var allowedExtensions = new[] { ".xls", ".xlsx" };
+        var fileExtension = System.IO.Path.GetExtension(e.File.Name);
+        if (allowedExtensions.Contains(fileExtension))
+        {
+            file = e.File;
+        }
+        else
+        {
+            message = "Vui lòng chỉ chọn file excel!!";
+            showOkMessageBox = true;
+            file = null;
+        }
     }
     private async Task ImportExcel()
     {
@@ -172,6 +307,11 @@ else
                 await SaveToSql(dataTable);
             }
         }
+        else
+        {
+            message = "Vui lòng chọn một excel file để import";
+            showOkMessageBox = true;
+        }
     }
 
     private List<User> ReadExcelToUsers(Stream stream)
@@ -183,7 +323,6 @@ else
             if (worksheet == null)
                 throw new Exception("No worksheet found in Excel file.");
 
-            // Assuming the first row contains column names
             for (int rowNumber = 2; rowNumber <= worksheet.Dimension.End.Row; rowNumber++)
             {
                 var row = worksheet.Cells[rowNumber, 1, rowNumber, worksheet.Dimension.End.Column];

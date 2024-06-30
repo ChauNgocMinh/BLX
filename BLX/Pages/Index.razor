@@ -135,7 +135,7 @@
     public string Message;
     protected override async Task OnInitializedAsync()
     {
-        semesters = await _context.Semesters.ToListAsync();
+        semesters = await _context.Semesters.Where(x => x.Status == true).ToListAsync();
         if (semesters.Any())
         {
             selectedSemester = semesters.First().Id;
@@ -144,7 +144,7 @@
 
     private async void HandleButtonClick()
     {
-        var item = await _context.Users.FirstOrDefaultAsync(x => x.Id == Guid.Parse(UserId));
+        var item = await _context.Users.FirstOrDefaultAsync(x => x.Id == Guid.Parse(UserId) && x.Semester.Status == true);
         if (item.Status == true)
         {
             showOkMessageBox = true;
@@ -158,7 +158,7 @@
 
     private async void CheckInformation()
     {
-        user = await _context.Users.FirstOrDefaultAsync(x => x.SemesterId == selectedSemester && x.Sbd == SBD && x.Rank == Rank);
+        user = await _context.Users.FirstOrDefaultAsync(x => x.SemesterId == selectedSemester && x.Sbd == SBD && x.Rank == Rank && x.Semester.Status == true);
         if (user == null)
         {
             showOkMessageBox = true;

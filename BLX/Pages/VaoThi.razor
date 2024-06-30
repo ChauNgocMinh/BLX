@@ -64,13 +64,14 @@
 
     .radio-group .form-check{
         padding: 0 5px;
+        max-width: 20px;
     }
 
     .question-item {
         border-radius: 15px;
         box-shadow: 0px 0px 10px rgb(0 0 0 / 63%);
         background-color: #fff;
-        padding: 10px;
+        padding: 10px 0;
         height: auto;
         margin: 10px 10px 0 10px;
     }
@@ -83,6 +84,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    @@media (min-width: 1366px) {
+        .question-item {
+            margin: 10px 5px 0 5px;
+        }
+        .radio-group .form-check{
+            padding: 0;
+        }
     }
 </style>
 <div class="row main justify-content-between">
@@ -119,13 +129,13 @@
                         <label>
                             Câu @item.Number
                         </label>
-                        <div class="radio-group d-flex">
+                        <div class="radio-group d-flex justify-content-evenly">
 
                             @for (int i = 1; i <= item.IdQuestionNavigation.NumberAnswers; i++)
                             {
                                 var answerValue = i; // Biến tạm để capture giá trị của i
                                 <div class="form-check">
-                                    <label class="form-check-label p-0" for="option@answerValue_@item.IdQuestionNavigation.Id">
+                                    <label class="form-check-label p-0 d-flex justify-content-center" for="option@answerValue_@item.IdQuestionNavigation.Id">
                                         @answerValue
                                     </label>
                                     <input class="form-check-input m-0" type="radio"

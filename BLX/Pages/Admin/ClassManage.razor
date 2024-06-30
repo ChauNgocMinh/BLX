@@ -1,0 +1,120 @@
+﻿@page "/admin/classmanage"
+@using Microsoft.EntityFrameworkCore;
+@using BLX.Models
+@layout AdminManage
+@inject BLXContext _context
+
+<style>
+    .btn {
+        margin: 0 3px;
+    }
+
+    .table-data {
+        height: 70vh;
+        overflow-y: auto;
+    }
+
+    @@media (min-width: 1366px) {
+        .table-data {
+            height: 64vh;
+        }
+    }
+</style>
+<button class="btn btn-primary mb-3" >+ Thêm lớp mới</button>
+
+@if (semesters == null)
+{
+    <p><em>Không có lớp nào...</em></p>
+}
+else
+{
+    <div class="table-data">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Mã lớp</th>
+                    <th>Tên lớp</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in semesters)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>
+                            @if (item.Status == true)
+                            {
+                                <span>Đang hoạt động</span>
+                            }
+                            else
+                            {
+                                <span>Đã đóng</span>
+                            }
+                        </td>
+                        <td>
+                            <button class="btn btn-success btn-sm" @onclick="() => ChangeStatus(true, item.Id)">Mở lớp</button>
+                            <button class="btn btn-danger btn-sm" @onclick="() => ChangeStatus(false, item.Id)">Đóng lớp</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            @for (int i = 1; i <= Math.Ceiling((decimal)totalUsersCount / pageSize); i++)
+            {
+                int pageNumber = i;
+                <li class="page-item @(i == currentPage ? "active" : "")">
+                    <button class="page-link" @onclick="() => ChangePage(pageNumber)">@i</button>
+                </li>
+            }
+        </ul>
+    </nav>
+}
+@* <MessageBox Title="Cảnh báo" Message="@message" Show="@showOkMessageBox" OnNo="HandleNoClick" OnYes="() => HandleYesClick()" /> *@
+ 
+@code {
+    private List<Semester> semesters;
+    private string searchTerm = string.Empty;
+    private bool showOkMessageBox = false;
+    private int currentPage = 1;
+    private int pageSize = 10;
+    private int totalUsersCount = 0;
+    private string message;
+
+    protected override async Task OnInitializedAsync()
+    {
+        totalUsersCount = _context.Semesters.Count();
+
+        int skip = (currentPage - 1) * pageSize;
+        semesters = _context.Semesters.Skip(skip).Take(pageSize).ToList();
+    }
+    private void ChangePage(int pageNumber)
+    {
+        currentPage = pageNumber;
+        OnInitializedAsync();
+    }
+
+    // private void HandleYesClick(bool status, Guid Id)
+    // {
+    //     showOkMessageBox = false;
+    // }
+    // private void HandleNoClick()
+    // {
+    //     showOkMessageBox = false;
+    // }
+    private void ChangeStatus(bool status, Guid Id)
+    {
+        // message = "Bạn có thực sự muốn thực hiện thao tác này?";
+        // showOkMessageBox = true;
+        var item = _context.Semesters.FirstOrDefault(x => x.Id == Id);
+        item.Status = status;
+        _context.Update(item);
+        _context.SaveChanges();
+        OnInitializedAsync();
+    }
+}
