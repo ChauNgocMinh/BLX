@@ -1,0 +1,137 @@
+﻿@using Microsoft.EntityFrameworkCore;
+@using BLX.Models
+@layout AdminManage
+@inject BLXContext _context
+
+<style>
+    .modal {
+        display: block;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+        padding-top: 60px;
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 25%;
+        border-radius: 10px; /* Bo tròn góc */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Đổ bóng */
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    form div {
+        margin-bottom: 15px; /* Khoảng cách giữa các input */
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: calc(100% - 22px); /* Chiều rộng input */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    button[type="button"]:first-child {
+        background-color: #28a745;
+        color: white;
+    }
+
+    button[type="button"]:last-child {
+        background-color: #dc3545;
+        color: white;
+    }
+</style>
+
+@if (IsVisible)
+{
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close" @onclick="Hide">&times;</span>
+            <h2>Thêm mới</h2>
+            <form>
+                <div>
+                    <label for="name">Tên khóa học:</label>
+                    <input type="text" id="name" @bind="Name" />
+                </div>
+                <div>
+                    <button type="button" @onclick="Save">Lưu</button>
+                    <button type="button" @onclick="Hide">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+<MessageBox Title="Cảnh báo" Message="Tạo mới lớp học thành công" Show="@showOkMessageBox" OnOk="HandleOkClick" />
+
+@code {
+    private bool IsVisible { get; set; }
+    private string Name { get; set; }
+    private Semester semester = new Semester();
+    [Parameter] public EventCallback OnClose { get; set; }
+    private bool showOkMessageBox = false;
+    public void Show()
+    {
+        IsVisible = true;
+        this.StateHasChanged();
+    }
+
+    public async void Hide()
+    {
+        IsVisible = false;
+        await OnClose.InvokeAsync(null);
+        StateHasChanged();
+    }
+
+    private void Save()
+    {
+        semester.Id = Guid.NewGuid();
+        semester.Name = Name;
+        semester.Status = true;
+        _context.Add(semester);
+        _context.SaveChanges();
+        showOkMessageBox = true;
+        Hide();
+    }
+
+    public void HandleOkClick()
+    {
+        showOkMessageBox = false;
+    }
+}

@@ -9,13 +9,6 @@
 @using System.IO
 @using iTextSharp.text;
 @using iTextSharp.text.pdf;
-@* @using iTextSharp.Kernel.Font;
-@using iTextSharp.Kernel.Pdf;
-@using iTextSharp.Layout;
-@using iTextSharp.Layout.Element;
-@using iTextSharp.Layout.Properties;
-@using iTextSharp.IO.Font.Constants;
-@using iTextSharp.Layout.Borders; *@
 @inject IWebHostEnvironment _env
 @inject IJSRuntime jsRuntime
 @inject NavigationManager NavigationManager
@@ -312,10 +305,63 @@ else
                 Phrase phrase3 = new Phrase();
                 phrase3.Add(new Chunk("\nKết luận:\n", fontNormal));
                 phrase3.Add(new Chunk("Số điểm đạt được: " + user.Score + " điểm\n", fontNormal));
-                phrase3.Add(new Chunk("Đạt       ", fontNormal));
-                phrase3.Add(new Chunk("", fontNormal));
-                phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
-                phrase3.Add(new Chunk("X", fontNormal));
+                bool allQuestionsValid = user.UserQuestions
+                        .Where(x => x.IdQuestionNavigation.TypeNavigation.Name == "id_monhoc_02")
+                        .All(x => x.Status != false);
+
+                if (user.Rank == "B11")
+                {
+                    if (user.Score > 27 && allQuestionsValid)
+                    {
+                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
+                        phrase3.Add(new Chunk("X", fontNormal));
+                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
+                        phrase3.Add(new Chunk("", fontNormal));
+                    }
+                    else
+                    {
+                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
+                        phrase3.Add(new Chunk("", fontNormal));
+                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
+                        phrase3.Add(new Chunk("X", fontNormal));
+                    }
+                }
+                if (user.Rank == "B2")
+                {
+                    if (user.Score > 32 && allQuestionsValid)
+                    {
+                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
+                        phrase3.Add(new Chunk("X", fontNormal));
+                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
+                        phrase3.Add(new Chunk("", fontNormal));
+                    }
+                    else
+                    {
+                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
+                        phrase3.Add(new Chunk("", fontNormal));
+                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
+                        phrase3.Add(new Chunk("X", fontNormal));
+                    }
+                }
+                if (user.Rank == "C")
+                { 
+                    if (user.Score > 36 && allQuestionsValid)
+                    {
+                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
+                        phrase3.Add(new Chunk("X", fontNormal));
+                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
+                        phrase3.Add(new Chunk("", fontNormal));
+                    }
+                    else
+                    {
+                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
+                        phrase3.Add(new Chunk("", fontNormal));
+                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
+                        phrase3.Add(new Chunk("X", fontNormal));
+                    }
+                }
+
+
                 phrase3.Add(new Chunk("\nGiáo viên", fontNormal)); 
                 Paragraph p4 = new Paragraph(phrase3);
                 p4.Alignment = Element.ALIGN_LEFT;

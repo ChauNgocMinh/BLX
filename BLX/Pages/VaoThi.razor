@@ -311,6 +311,12 @@
                     userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
+
+                endTime = DateTime.Now.AddMinutes(20);
+                timeString = "20:00";
+                timer = new Timer(1000);
+                timer.Elapsed += OnTimerElapsed;
+                timer.Start();
             }
             if (user.Rank == "B2")
             {
@@ -450,6 +456,12 @@
                     userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
+
+                endTime = DateTime.Now.AddMinutes(22);
+                timeString = "22:00";
+                timer = new Timer(1000);
+                timer.Elapsed += OnTimerElapsed;
+                timer.Start();
             }
             if (user.Rank == "C")
             {
@@ -588,13 +600,15 @@
                     userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
+
+                endTime = DateTime.Now.AddMinutes(24);
+                timeString = "24:00";
+                timer = new Timer(1000);
+                timer.Elapsed += OnTimerElapsed;
+                timer.Start();
             }
 
-            endTime = DateTime.Now.AddMinutes(30);
-            timeString = "30:00";
-            timer = new Timer(1000);
-            timer.Elapsed += OnTimerElapsed;
-            timer.Start();
+           
             user.Status = true;
             user.Score = 0;
             user.TestDay = DateTime.Now;

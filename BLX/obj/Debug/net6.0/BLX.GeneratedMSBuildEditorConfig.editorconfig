@@ -9,57 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BLX
 build_property.RootNamespace = BLX
-build_property.ProjectDir = C:\Users\PC\Downloads\BLX\BLX\BLX\
+build_property.ProjectDir = C:\Users\ASUS\OneDrive\Máy tính\BLX\BLX\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\PC\Downloads\BLX\BLX\BLX
+build_property.MSBuildProjectDirectory = C:\Users\ASUS\OneDrive\Máy tính\BLX\BLX
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/App.razor]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/AdminManage.razor]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/Pages/AdminManage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NYW5hZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/Admin/ClassManage.razor]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/Pages/Admin/ClassManage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2xhc3NNYW5hZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/Admin/QuestionManage.razor]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/Pages/Admin/CreateSemesterPopup.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3JlYXRlU2VtZXN0ZXJQb3B1cC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/Pages/Admin/QuestionManage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUXVlc3Rpb25NYW5hZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/Admin/UserManage.razor]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/Pages/Admin/UserManage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlck1hbmFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/Index.razor]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/VaoThi.razor]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/Pages/VaoThi.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmFvVGhpLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/Shared/MessageBox.razor]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/Shared/MessageBox.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1lc3NhZ2VCb3gucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/_Imports.razor]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/Shared/MainLayout.razor]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-5u4r7dp30c
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/_Host.cshtml]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Downloads/BLX/BLX/BLX/Pages/_Layout.cshtml]
+[C:/Users/ASUS/OneDrive/Máy tính/BLX/BLX/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

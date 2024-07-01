@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BLX")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee525c1be8f75d2641dbef585d02c62649d427ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("BLX")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BLX")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -20,7 +20,7 @@
         }
     }
 </style>
-<button class="btn btn-primary mb-3" >+ Thêm lớp mới</button>
+<button class="btn btn-primary mb-3" @onclick="ShowPopup">+ Thêm lớp mới</button>
 
 @if (semesters == null)
 {
@@ -75,8 +75,8 @@ else
         </ul>
     </nav>
 }
-@* <MessageBox Title="Cảnh báo" Message="@message" Show="@showOkMessageBox" OnNo="HandleNoClick" OnYes="() => HandleYesClick()" /> *@
- 
+<CreateSemesterPopup @ref="createSemesterPopup" OnClose="Reload"></CreateSemesterPopup>
+
 @code {
     private List<Semester> semesters;
     private string searchTerm = string.Empty;
@@ -99,22 +99,24 @@ else
         OnInitializedAsync();
     }
 
-    // private void HandleYesClick(bool status, Guid Id)
-    // {
-    //     showOkMessageBox = false;
-    // }
-    // private void HandleNoClick()
-    // {
-    //     showOkMessageBox = false;
-    // }
     private void ChangeStatus(bool status, Guid Id)
     {
-        // message = "Bạn có thực sự muốn thực hiện thao tác này?";
-        // showOkMessageBox = true;
         var item = _context.Semesters.FirstOrDefault(x => x.Id == Id);
         item.Status = status;
         _context.Update(item);
         _context.SaveChanges();
         OnInitializedAsync();
+    }
+    CreateSemesterPopup createSemesterPopup;
+
+    void ShowPopup()
+    {
+        createSemesterPopup.Show();
+    }
+
+    void Reload()
+    {
+        OnInitializedAsync();
+        StateHasChanged();
     }
 }
