@@ -1,0 +1,41 @@
+# Thư mục bin và obj
+bin/
+obj/
+
+# Thư mục .vs
+.vs/
+
+# File user-specific
+*.user
+
+# File log
+*.log
+
+# Thư mục tạm thời
+*.tmp
+
+# Thư mục cache
+.vscode/
+.idea/
+.DS_Store
+
+# File môi trường
+.env
+
+# File thư viện
+lib/
+packages/
+node_modules/
+
+# File cấu hình build
+.vscode/
+*.suo
+*.psess
+*.userprefs
+*.userosscache
+*.sln.docstates
+*.swp
+
+# File hệ điều hành
+Thumbs.db
+desktop.ini
