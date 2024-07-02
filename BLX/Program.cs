@@ -5,12 +5,15 @@ using OfficeOpenXml;
 var builder = WebApplication.CreateBuilder(args);
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
+builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSession();
-builder.Services.AddHttpContextAccessor();
+builder.Services.AddHttpContextAccessor(); 
 builder.Services.AddDbContext<BLXContext>(options =>
-        options.UseSqlServer("Data Source=LAPTOP-V6B0S12C;Initial Catalog=BLX;Integrated Security=True"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddHttpClient();
 var app = builder.Build();
 

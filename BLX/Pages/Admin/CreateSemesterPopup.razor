@@ -52,7 +52,7 @@
     }
 
     input[type="text"],
-    input[type="email"] {
+    input[type="date"] {
         width: calc(100% - 22px); /* Chiều rộng input */
         padding: 10px;
         border: 1px solid #ccc;
@@ -88,7 +88,11 @@
             <form>
                 <div>
                     <label for="name">Tên khóa học:</label>
-                    <input type="text" id="name" @bind="Name" />
+                    <input type="text" id="name" @bind="Name" placeholder="Khóa học mới"/>
+                </div>
+                <div>
+                    <label for="testDay">Ngày thi:</label>
+                    <input type="date" id="date" @bind="TestDay" />
                 </div>
                 <div>
                     <button type="button" @onclick="Save">Lưu</button>
@@ -103,6 +107,7 @@
 @code {
     private bool IsVisible { get; set; }
     private string Name { get; set; }
+    private DateTime TestDay { get; set; }
     private Semester semester = new Semester();
     [Parameter] public EventCallback OnClose { get; set; }
     private bool showOkMessageBox = false;
@@ -123,6 +128,7 @@
     {
         semester.Id = Guid.NewGuid();
         semester.Name = Name;
+        semester.TestDay = TestDay;
         semester.Status = true;
         _context.Add(semester);
         _context.SaveChanges();

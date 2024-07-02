@@ -35,7 +35,7 @@
     }
 
     .img img {
-        max-height: 100%;
+        max-height: 80vh;
         width: auto;
     }
 
@@ -55,7 +55,6 @@
         flex-direction: column;
         gap: 10px;
         height: 100%;
-        overflow-y: auto;
     }
 
     .radio-group p, input {
@@ -71,7 +70,7 @@
         border-radius: 15px;
         box-shadow: 0px 0px 10px rgb(0 0 0 / 63%);
         background-color: #fff;
-        padding: 10px 0;
+        padding: 5px;
         height: auto;
         margin: 10px 10px 0 10px;
     }
@@ -95,21 +94,21 @@
         }
     }
 </style>
-<div class="row main justify-content-between">
+<div class="row main justify-content-center">
     <div class="col-10 box-left">
         <div class="img custom-box">
             <img src="@urlImage" alt="Example Image" />
         </div>
         <div class="custom-box info-user d-flex justify-content-between align-items-center">
             <div>
-                <div>Họ tên: @user.Name</div>
-                <div class="mt-2">
+                <div style="font-weight: bold;">Họ tên: @user.Name</div>
+                <div class="mt-2" style="font-weight: bold;">
                     Ngày sinh:@if (user.NamSinh != null)
                     {
                         @DateTime.Parse(user.NamSinh.ToString()).ToString("dd/MM/yyyy")
                     }
                 </div>
-                <div class="mt-2">CCCD/CMT: @user.Cccd</div>
+                <div class="mt-2" style="font-weight: bold;">CCCD/CMT: @user.Cccd</div>
             </div>
             <div>
                 <button @onclick="Submit" type="button" style="font-size: 20px; padding: 10px 20px;" class="mt-2 btn btn-primary btn-block check-info">Nộp bài</button>
@@ -120,20 +119,20 @@
         <div class="time-box">
             @timeString
         </div>
-        <div class="row m-0 justify-content-between">
+        <div style="overflow-y: auto" class="row m-0 justify-content-center">
             @if (userQuestions != null)
             {
                 @foreach (var item in userQuestions)
                 {
-                    <button @onclick="() => ChangeImage(item.IdQuestionNavigation.Id)" class="question-item col-5">
-                        <label>
-                            Câu @item.Number
+                    <button @onclick="() => ChangeImage(item.IdQuestionNavigation.Id)" class="question-item col-11 d-flex align-content-center">
+                        <label style="min-width: 65px;">
+                            Câu @item.Number:
                         </label>
-                        <div class="radio-group d-flex justify-content-evenly">
+                        <div class="radio-group d-flex justify-content-evenly w-100">
 
                             @for (int i = 1; i <= item.IdQuestionNavigation.NumberAnswers; i++)
                             {
-                                var answerValue = i; // Biến tạm để capture giá trị của i
+                                var answerValue = i; 
                                 <div class="form-check">
                                     <label class="form-check-label p-0 d-flex justify-content-center" for="option@answerValue_@item.IdQuestionNavigation.Id">
                                         @answerValue
@@ -154,6 +153,7 @@
 </div>
 
 <MessageBox Title="Thông báo" Message="Bạn có chắc chắn muốn nộp bài?" Show="@showYesNoMessageBox" OnYes="HandleYesClick" OnNo="HandleNoClick" />
+<MessageBox Title="Thông báo" Message="@Message" Show="@showYesNoMessageBox2" OnOk="HandleOkClick1" />
 <MessageBox Title="Thông báo" Message="Đã hết thời gian làm bài!" Show="@showYesNoMessageBox1" OnOk="HandleOkClick" />
 
 @code {
@@ -164,6 +164,7 @@
     private DateTime endTime;
     private string timeString;
     public string urlImage = "";
+    public string Message = "";
     UserQuestion userQuestion = new UserQuestion();
     Question id_monhoc_01 = new Question();
     Question id_monhoc_02 = new Question();
@@ -298,7 +299,7 @@
 
                 id_monhoc_10 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_10")
                     .OrderBy(x => Guid.NewGuid())
                     .Take(9)
                     .ToList();
@@ -443,7 +444,7 @@
 
                 id_monhoc_10 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_10")
                     .OrderBy(x => Guid.NewGuid())
                     .Take(10)
                     .ToList();
@@ -587,7 +588,7 @@
 
                 id_monhoc_10 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
+                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_10")
                     .OrderBy(x => Guid.NewGuid())
                     .Take(11)
                     .ToList();
@@ -608,13 +609,11 @@
                 timer.Start();
             }
 
-           
+
             user.Status = true;
             user.Score = 0;
-            user.TestDay = DateTime.Now;
             _context.Entry(user).Property(x => x.Status).IsModified = true;
             _context.Entry(user).Property(x => x.Score).IsModified = true;
-            _context.Entry(user).Property(x => x.TestDay).IsModified = true;
             _context.SaveChanges();
             userQuestions = _context.UserQuestions.Include(x => x.IdQuestionNavigation).Where(x => x.IdUser == Guid.Parse(UserId)).OrderBy(x => x.Number).ToList();
             return;
@@ -680,6 +679,45 @@
     private void HandleYesClick(bool result)
     {
         showYesNoMessageBox = false;
+        bool allQuestionsValid = user.UserQuestions
+                        .Where(x => x.IdQuestionNavigation.TypeNavigation.Name == "id_monhoc_02")
+                        .All(x => x.Status != false);
+        if (user.Rank == "B11")
+        {
+            if (user.Score > 27 && allQuestionsValid)
+            {
+                user.Result = true;
+            }
+            else
+            {
+                user.Result = false;
+            }
+        }
+        if (user.Rank == "B2")
+        {
+            if (user.Score > 32 && allQuestionsValid)
+            {
+                user.Result = true;
+            }
+            else
+            {
+                user.Result = false;
+            }
+        }
+        if (user.Rank == "C")
+        {
+            if (user.Score > 36 && allQuestionsValid)
+            {
+                user.Result = true;
+            }
+            else
+            {
+                user.Result = false;
+            }
+        }
+        _context.Update(user);
+        _context.SaveChanges();
+
         foreach (var item in userQuestions)
         {
             if (selectedAnswers.TryGetValue(item.Number, out int? selectedAnswer) && selectedAnswer.HasValue)
@@ -696,11 +734,79 @@
         user.Score = userQuestions.Where(x => x.IdUser == user.Id).Count(i => i.Status == true);
         _context.Update(user);
         _context.SaveChanges();
+        showYesNoMessageBox2 = true;
+        string result1 = "";
+        if (user.Result == true)
+        {
+            result1 = "Đạt";
+
+        }
+        else
+        {
+            result1 = "Không đạt";
+        }
+        string score = "";
+        if (user.Rank == "B11")
+        {
+            score = user.Score + "/30";
+        }
+        if (user.Rank == "B2")
+        {
+            score = user.Score + "/35";
+        }
+        if (user.Rank == "C")
+        {
+            score = user.Score + "/40";
+        }
+        Message = "Học viên: " + user.Name + " đạt được số điểm là: " + score + "\n Kết luận: " + result1;
+    }
+    private bool showYesNoMessageBox2 = false;
+    private void HandleOkClick1()
+    {
         NavigationManager.NavigateTo("/");
     }
     private void HandleOkClick()
     {
         showYesNoMessageBox = false;
+        bool allQuestionsValid = user.UserQuestions
+                        .Where(x => x.IdQuestionNavigation.TypeNavigation.Name == "id_monhoc_02")
+                        .All(x => x.Status != false);
+        if (user.Rank == "B11")
+        {
+            if (user.Score > 27 && allQuestionsValid)
+            {
+                user.Result = true;
+            }
+            else
+            {
+                user.Result = false;
+            }
+        }
+        if (user.Rank == "B2")
+        {
+            if (user.Score > 32 && allQuestionsValid)
+            {
+                user.Result = true;
+            }
+            else
+            {
+                user.Result = false;
+            }
+        }
+        if (user.Rank == "C")
+        {
+            if (user.Score > 36 && allQuestionsValid)
+            {
+                user.Result = true;
+            }
+            else
+            {
+                user.Result = false;
+            }
+        }
+        _context.Update(user);
+        _context.SaveChanges();
+
         foreach (var item in userQuestions)
         {
             if (selectedAnswers.TryGetValue(item.Number, out int? selectedAnswer) && selectedAnswer.HasValue)
@@ -714,7 +820,31 @@
                 _context.SaveChanges();
             }
         }
-        NavigationManager.NavigateTo("/");
+        showYesNoMessageBox2 = true;
+        string result = "";
+        if (user.Result == true)
+        {
+            result = "Đạt";
+
+        }
+        else
+        {
+            result = "Không đạt";
+        }
+        string score = "";
+        if (user.Rank == "B11")
+        {
+            score = user.Score + "/30";
+        }
+        if (user.Rank == "B2")
+        {
+            score = user.Score + "/35";
+        }
+        if (user.Rank == "C")
+        {
+            score = user.Score + "/40";
+        }
+        Message = "Học viên: " + user.Name + " đạt được số điểm là: " + score + "\n Kết luận: " + result;
     }
     private void HandleNoClick(bool result)
     {

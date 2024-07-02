@@ -34,6 +34,7 @@ else
                 <tr>
                     <th>Mã lớp</th>
                     <th>Tên lớp</th>
+                    <th>Ngày thi</th>
                     <th>Trạng thái</th>
                     <th>Thao tác</th>
                 </tr>
@@ -44,6 +45,7 @@ else
                     <tr>
                         <td>@item.Id</td>
                         <td>@item.Name</td>
+                        <td>@DateTime.Parse(item.TestDay.ToString()).ToString("dd/MM/yyyy")</td>
                         <td>
                             @if (item.Status == true)
                             {

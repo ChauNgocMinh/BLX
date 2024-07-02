@@ -62,6 +62,7 @@ else
                     <th>Trạng thái</th>
                     <th>Hạng GPLX</th>
                     <th>Điểm</th>
+                    <th>Kết quả</th>
                     <th>Thao tác</th>
                 </tr>
             </thead>
@@ -87,6 +88,16 @@ else
                         <td>@user.Rank</td>
                         <td>
                             @user.Score
+                        </td>
+                        <td>
+                            @if (user.Result == true)
+                            {
+                                <span>Đạt</span>
+                            }
+                            @if (user.Result == false)
+                            {
+                                <span>Không đạt</span>
+                            }
                         </td>
                         <td>
                             <button class="btn btn-warning btn-sm" @onclick="() => ShowEditUserModal()">Sửa</button>
@@ -121,7 +132,7 @@ else
     private User selectedUser;
     private bool showModal;
     private int currentPage = 1;
-    private int pageSize = 10;
+    private int pageSize = 20;
     private int totalUsersCount = 0;
     private IBrowserFile file;
     private Guid selectedClassId;
@@ -136,7 +147,7 @@ else
         totalUsersCount = _context.Users.Count(x => x.SemesterId == selectedClassId && x.Semester.Status == true);
 
         int skip = (currentPage - 1) * pageSize;
-        users = _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId && x.Semester.Status == true).Skip(skip).Take(pageSize).ToList();
+        users = _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId && x.Semester.Status == true).OrderBy(x => x.Sbd).Skip(skip).Take(pageSize).ToList();
     }
     private void FilterUsersByClass(ChangeEventArgs e)
     {
@@ -159,7 +170,7 @@ else
     { }
     private async void ExportPDF(Guid Id)
     {
-        var user = _context.Users.Include(x => x.Semester).Include(x => x.UserQuestions).ThenInclude(x => x.IdQuestionNavigation).FirstOrDefault(x => x.Id == Id && x.Semester.Status == true);
+        var user = _context.Users.Include(x => x.Semester).Include(x => x.UserQuestions).ThenInclude(x => x.IdQuestionNavigation).ThenInclude(x => x.TypeNavigation).FirstOrDefault(x => x.Id == Id && x.Semester.Status == true);
         if (user != null && user.Status)
         {
             user.UserQuestions = user.UserQuestions.OrderBy(uq => uq.Number).ToList();
@@ -178,8 +189,9 @@ else
                 Font font = new Font(baseFont, 14, Font.NORMAL);
                 Font fontTable = new Font(baseFont, 10, Font.NORMAL);
                 Font fontItalic = new Font(baseFont, 14, Font.NORMAL);
+
                 Font fontNormal = new Font(baseFont, 14, Font.BOLD);
-                Font fontBold = new Font(baseFont, 12, Font.BOLD);
+                Font fontBold = new Font(baseFont, 14, Font.BOLD);
                 Font fontTitle = new Font(baseFont, 20, Font.BOLD);
                 Font fontColor = new Font(baseFont, 12, Font.BOLDITALIC, BaseColor.BLACK);
                 // Add header
@@ -191,7 +203,7 @@ else
                 cell1.HorizontalAlignment = Element.ALIGN_CENTER;
                 cell1.Border = PdfPCell.NO_BORDER;
                 Phrase phrase1 = new Phrase();
-                phrase1.Add(new Chunk("SỞ GIAO THÔNG VẬN TẢI QUẢNG TRỊ\n", fontBold));
+                phrase1.Add(new Chunk("SỞ GIAO THÔNG VẬN TẢI QUẢNG TRỊ\n", fontNormal));
                 phrase1.Add(new Chunk("TRƯỜNG TCN GTVT", fontBold).SetUnderline(0.1f, -1));
                 Paragraph p1 = new Paragraph(phrase1);
                 p1.Alignment = Element.ALIGN_CENTER;
@@ -217,12 +229,12 @@ else
                 document.Add(titleParagraph);
 
                 // Add personal information
-                document.Add(new Paragraph("\nHọ và tên: " + user.Name, fontNormal));
+                document.Add(new Paragraph("\nHọ và tên: " + user.Name, fontBold));
                 document.Add(new Paragraph("Ngày sinh: " + DateTime.Parse(user.NamSinh.ToString()).ToString("dd/MM/yyyy"), fontNormal));
                 document.Add(new Paragraph("Số CCCD: " + user.Cccd, fontNormal));
                 document.Add(new Paragraph("Hạng GPLX: " + user.Rank, fontNormal));
                 document.Add(new Paragraph("Khóa đào tạo: " + user.Semester.Name, fontNormal));
-                document.Add(new Paragraph("Ngày kiểm tra: " + DateTime.Parse(user.TestDay.ToString()).ToString("dd/MM/yyyy"), fontNormal));
+                document.Add(new Paragraph("Ngày kiểm tra: " + DateTime.Parse(user.Semester.TestDay.ToString()).ToString("dd/MM/yyyy"), fontNormal));
                 document.Add(new Paragraph("Số báo danh: " + user.Sbd, fontNormal));
                 document.Add(new Paragraph("Tại: Trường TCN GTVT Quảng Trị\n\n", fontNormal));
 
@@ -305,63 +317,22 @@ else
                 Phrase phrase3 = new Phrase();
                 phrase3.Add(new Chunk("\nKết luận:\n", fontNormal));
                 phrase3.Add(new Chunk("Số điểm đạt được: " + user.Score + " điểm\n", fontNormal));
-                bool allQuestionsValid = user.UserQuestions
-                        .Where(x => x.IdQuestionNavigation.TypeNavigation.Name == "id_monhoc_02")
-                        .All(x => x.Status != false);
 
-                if (user.Rank == "B11")
+                if(user.Result == true)
                 {
-                    if (user.Score > 27 && allQuestionsValid)
-                    {
-                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
-                        phrase3.Add(new Chunk("X", fontNormal));
-                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
-                        phrase3.Add(new Chunk("", fontNormal));
-                    }
-                    else
-                    {
-                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
-                        phrase3.Add(new Chunk("", fontNormal));
-                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
-                        phrase3.Add(new Chunk("X", fontNormal));
-                    }
+                    phrase3.Add(new Chunk("Đạt       ", fontNormal));
+                    phrase3.Add(new Chunk("X", fontNormal));
+                    phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
+                    phrase3.Add(new Chunk("", fontNormal));
                 }
-                if (user.Rank == "B2")
+                else
                 {
-                    if (user.Score > 32 && allQuestionsValid)
-                    {
-                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
-                        phrase3.Add(new Chunk("X", fontNormal));
-                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
-                        phrase3.Add(new Chunk("", fontNormal));
-                    }
-                    else
-                    {
-                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
-                        phrase3.Add(new Chunk("", fontNormal));
-                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
-                        phrase3.Add(new Chunk("X", fontNormal));
-                    }
+                    phrase3.Add(new Chunk("Đạt       ", fontNormal));
+                    phrase3.Add(new Chunk("", fontNormal));
+                    phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
+                    phrase3.Add(new Chunk("X", fontNormal));
                 }
-                if (user.Rank == "C")
-                { 
-                    if (user.Score > 36 && allQuestionsValid)
-                    {
-                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
-                        phrase3.Add(new Chunk("X", fontNormal));
-                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
-                        phrase3.Add(new Chunk("", fontNormal));
-                    }
-                    else
-                    {
-                        phrase3.Add(new Chunk("Đạt       ", fontNormal));
-                        phrase3.Add(new Chunk("", fontNormal));
-                        phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
-                        phrase3.Add(new Chunk("X", fontNormal));
-                    }
-                }
-
-
+                
                 phrase3.Add(new Chunk("\nGiáo viên", fontNormal)); 
                 Paragraph p4 = new Paragraph(phrase3);
                 p4.Alignment = Element.ALIGN_LEFT;
@@ -399,6 +370,7 @@ else
         {
             user.Status = false;
             user.Score = null;
+            user.Result = null;
             _context.Update(user);
             _context.SaveChanges();
 

@@ -1,16 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SixLabors.ImageSharp;
 
 namespace BLX.Models
 {
     public partial class BLXContext : DbContext
     {
+        private readonly IConfiguration _configuration;
+
         public BLXContext()
         {
         }
 
-        public BLXContext(DbContextOptions<BLXContext> options)
+        public BLXContext(DbContextOptions<BLXContext> options, IConfiguration configuration)
             : base(options)
         {
+            _configuration = configuration;
         }
 
         public virtual DbSet<Question> Questions { get; set; } = null!;
@@ -23,8 +27,8 @@ namespace BLX.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=LAPTOP-V6B0S12C;Initial Catalog=BLX;Integrated Security=True");
+                var connectionString = _configuration.GetConnectionString("DefaultConnection");
+                optionsBuilder.UseSqlServer(connectionString);
             }
         }
 
@@ -54,6 +58,8 @@ namespace BLX.Models
                 entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.Property(e => e.Name).HasMaxLength(150);
+
+                entity.Property(e => e.TestDay).HasColumnType("date");
             });
 
             modelBuilder.Entity<TypeQuestion>(entity =>
@@ -86,8 +92,6 @@ namespace BLX.Models
                     .HasColumnName("Name");
 
                 entity.Property(e => e.NamSinh).HasColumnType("date");
-
-                entity.Property(e => e.TestDay).HasColumnType("date");
 
                 entity.Property(e => e.Rank).HasMaxLength(15);
 
