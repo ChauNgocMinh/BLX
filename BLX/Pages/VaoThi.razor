@@ -679,12 +679,14 @@
     private void HandleYesClick(bool result)
     {
         showYesNoMessageBox = false;
+        var allQuestions = user.UserQuestions
+                        .Where(x => x.IdQuestionNavigation.TypeNavigation.Domain == "id_monhoc_02").ToList();
         bool allQuestionsValid = user.UserQuestions
-                        .Where(x => x.IdQuestionNavigation.TypeNavigation.Name == "id_monhoc_02")
-                        .All(x => x.Status != false);
+                        .Where(x => x.IdQuestionNavigation.TypeNavigation.Domain == "id_monhoc_02")
+                        .All(x => x.Status == true);
         if (user.Rank == "B11")
         {
-            if (user.Score > 27 && allQuestionsValid)
+            if (user.Score > 27 && allQuestionsValid == true)
             {
                 user.Result = true;
             }
@@ -695,7 +697,7 @@
         }
         if (user.Rank == "B2")
         {
-            if (user.Score > 32 && allQuestionsValid)
+            if (user.Score > 32 && allQuestionsValid == true)
             {
                 user.Result = true;
             }
@@ -706,7 +708,7 @@
         }
         if (user.Rank == "C")
         {
-            if (user.Score > 36 && allQuestionsValid)
+            if (user.Score > 36 && allQuestionsValid == true)
             {
                 user.Result = true;
             }
