@@ -678,12 +678,28 @@
     private bool showYesNoMessageBox1 = false;
     private void HandleYesClick(bool result)
     {
+        foreach (var item in userQuestions)
+        {
+            if (selectedAnswers.TryGetValue(item.Number, out int? selectedAnswer) && selectedAnswer.HasValue)
+            {
+                item.Reply = selectedAnswer.Value;
+                if (selectedAnswer.Value == item.IdQuestionNavigation.Answers)
+                {
+                    item.Status = true;
+                }
+                _context.Update(item);
+                _context.SaveChanges();
+            }
+        }
+
+        user.Score = userQuestions.Where(x => x.IdUser == user.Id).Count(i => i.Status == true);
+        _context.Update(user);
+        _context.SaveChanges();
+
         showYesNoMessageBox = false;
         var allQuestions = user.UserQuestions
-                        .Where(x => x.IdQuestionNavigation.TypeNavigation.Domain == "id_monhoc_02").ToList();
-        bool allQuestionsValid = user.UserQuestions
-                        .Where(x => x.IdQuestionNavigation.TypeNavigation.Domain == "id_monhoc_02")
-                        .All(x => x.Status == true);
+                        .FirstOrDefault(x => x.IdQuestionNavigation.TypeNavigation.Domain == "id_monhoc_02");
+        bool allQuestionsValid = allQuestions.Status;
         if (user.Rank == "B11")
         {
             if (user.Score > 27 && allQuestionsValid == true)
@@ -719,23 +735,7 @@
         }
         _context.Update(user);
         _context.SaveChanges();
-
-        foreach (var item in userQuestions)
-        {
-            if (selectedAnswers.TryGetValue(item.Number, out int? selectedAnswer) && selectedAnswer.HasValue)
-            {
-                item.Reply = selectedAnswer.Value;
-                if (selectedAnswer.Value == item.IdQuestionNavigation.Answers)
-                {
-                    item.Status = true;
-                }
-                _context.Update(item);
-                _context.SaveChanges();
-            }
-        }
-        user.Score = userQuestions.Where(x => x.IdUser == user.Id).Count(i => i.Status == true);
-        _context.Update(user);
-        _context.SaveChanges();
+        
         showYesNoMessageBox2 = true;
         string result1 = "";
         if (user.Result == true)
@@ -769,10 +769,28 @@
     }
     private void HandleOkClick()
     {
+        foreach (var item in userQuestions)
+        {
+            if (selectedAnswers.TryGetValue(item.Number, out int? selectedAnswer) && selectedAnswer.HasValue)
+            {
+                item.Reply = selectedAnswer.Value;
+                if (selectedAnswer.Value == item.IdQuestionNavigation.Answers)
+                {
+                    item.Status = true;
+                }
+                _context.Update(item);
+                _context.SaveChanges();
+            }
+        }
+
+        user.Score = userQuestions.Where(x => x.IdUser == user.Id).Count(i => i.Status == true);
+        _context.Update(user);
+        _context.SaveChanges();
+
         showYesNoMessageBox = false;
-        bool allQuestionsValid = user.UserQuestions
-                        .Where(x => x.IdQuestionNavigation.TypeNavigation.Name == "id_monhoc_02")
-                        .All(x => x.Status != false);
+        var allQuestions = user.UserQuestions
+                        .FirstOrDefault(x => x.IdQuestionNavigation.TypeNavigation.Domain == "id_monhoc_02");
+        bool allQuestionsValid = allQuestions.Status;
         if (user.Rank == "B11")
         {
             if (user.Score > 27 && allQuestionsValid)
@@ -809,19 +827,6 @@
         _context.Update(user);
         _context.SaveChanges();
 
-        foreach (var item in userQuestions)
-        {
-            if (selectedAnswers.TryGetValue(item.Number, out int? selectedAnswer) && selectedAnswer.HasValue)
-            {
-                item.Reply = selectedAnswer.Value;
-                if (selectedAnswer.Value == item.IdQuestionNavigation.Answers)
-                {
-                    item.Status = true;
-                }
-                _context.Update(item);
-                _context.SaveChanges();
-            }
-        }
         showYesNoMessageBox2 = true;
         string result = "";
         if (user.Result == true)
