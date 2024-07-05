@@ -14,6 +14,7 @@ namespace BLX.Models
         public string Name { get; set; } = null!;
         public bool Status { get; set; }
         public DateTime TestDay { get; set; }
+        public string Rank { get; set; } = null!;
         public virtual ICollection<User> Users { get; set; }
     }
 }

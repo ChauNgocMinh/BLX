@@ -59,6 +59,8 @@ namespace BLX.Models
 
                 entity.Property(e => e.Name).HasMaxLength(150);
 
+                entity.Property(e => e.Rank).HasMaxLength(15);
+
                 entity.Property(e => e.TestDay).HasColumnType("date");
             });
 
@@ -92,8 +94,6 @@ namespace BLX.Models
                     .HasColumnName("Name");
 
                 entity.Property(e => e.NamSinh).HasColumnType("date");
-
-                entity.Property(e => e.Rank).HasMaxLength(15);
 
                 entity.Property(e => e.Sbd).HasColumnName("SBD");
 

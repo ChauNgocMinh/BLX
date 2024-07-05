@@ -17,7 +17,6 @@ namespace BLX.Models
         public DateTime? NamSinh { get; set; }
         public Guid SemesterId { get; set; }
         public bool Status { get; set; }
-        public string Rank { get; set; } = null!;
         public int? Score { get; set; }
         public bool? Result { get; set; }
         public virtual Semester Semester { get; set; } = null!;
