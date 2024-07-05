@@ -78,14 +78,6 @@
                                     <label for="SBD">Số báo danh:</label>
                                     <input type="text" class="form-control" @bind="SBD">
                                 </div>
-                                <div class="form-group">
-                                    <label for="licenseClass">Hạng GPLX:</label>
-                                    <select class="form-control" @bind="Rank">
-                                        <option value="B11">Hạng B11</option>
-                                        <option value="B2">Hạng B2</option>
-                                        <option value="C">Hạng C</option>
-                                    </select>
-                                </div>
                             </div>
                             <div class="col-3 d-flex justify-content-center align-items-center">
                                 <button @onclick="CheckInformation" type="button" class="mt-2 btn btn-primary btn-block check-info">Kiểm tra thông tin</button>
@@ -94,8 +86,13 @@
                         @if(user != null)
                         {
                             <div class="form-group info-user">
-                                <div>
-                                    <label>Họ tên: @user.Name</label>
+                                <div class="row p-0 mt-2">
+                                    <div class="col-6">
+                                        <label>Họ tên: @user.Name</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Hạng GPLX: @user.Semester.Rank</label>
+                                    </div>
                                 </div>
                                 <div class="row p-0 mt-2">
                                     <div class="col-6">
@@ -128,7 +125,6 @@
     private List<Semester> semesters = new List<Semester>();
     private Guid selectedSemester;
     private int SBD;
-    private string Rank = "B11";
     private User user;
     private bool isButtonEnabled = false;
     private bool showOkMessageBox = false;
@@ -159,7 +155,7 @@
 
     private async void CheckInformation()
     {
-        user = await _context.Users.FirstOrDefaultAsync(x => x.SemesterId == selectedSemester && x.Sbd == SBD && x.Rank == Rank && x.Semester.Status == true);
+        user = await _context.Users.Include(x => x.Semester).FirstOrDefaultAsync(x => x.SemesterId == selectedSemester && x.Sbd == SBD && x.Semester.Status == true);
         if (user == null)
         {
             showOkMessageBox = true;

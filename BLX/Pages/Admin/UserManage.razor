@@ -24,6 +24,26 @@
         height: 70vh; 
         overflow-y: auto;
     }
+
+    .badge-primary {
+        background-color: #007bff; /* Màu nền cho Tổng thí sinh */
+        color: #fff;
+    }
+
+    .badge-info {
+        background-color: #17a2b8; /* Màu nền cho Chưa thi */
+        color: #fff;
+    }
+
+    .badge-success {
+        background-color: #28a745; /* Màu nền cho Đạt */
+        color: #fff;
+    }
+
+    .badge-danger {
+        background-color: #dc3545; /* Màu nền cho Không đạt */
+        color: #fff;
+    }
     @@media (min-width: 1366px){
         .table-data {
             height: 64vh; 
@@ -35,13 +55,21 @@
 <InputFile OnChange="HandleFileSelected" />
 
 <div class="form-group">
-    <label for="classFilter">Lọc theo lớp:</label>
-    <select id="classFilter" class="form-control" @onchange="FilterUsersByClass">
-        @foreach (var item in semesters)
-        {
-            <option value="@item.Id">@item.Name</option>
-        } 
-    </select>
+    <div>
+        <label for="classFilter">Lọc theo lớp:</label>
+        <select id="classFilter" class="form-control" @onchange="FilterUsersByClass">
+            @foreach (var item in semesters)
+            {
+                <option value="@item.Id">@item.Name</option>
+            } 
+        </select>
+    </div>
+    <div class="ml-auto">
+        <span class="badge badge-primary">Tổng thí sinh: @Tong</span>
+        <span class="badge badge-info">Chưa thi: @ChuaThi</span>
+        <span class="badge badge-success">Đạt: @Dat</span>
+        <span class="badge badge-danger">Không đạt: @KhongDat</span>
+    </div>
 </div>
 
 @if (users == null)
@@ -85,7 +113,7 @@ else
                                 <span>Chưa thi</span>
                             }
                         </td>
-                        <td>@user.Rank</td>
+                        <td>@user.Semester.Rank</td>
                         <td>
                             @user.Score
                         </td>
@@ -137,6 +165,10 @@ else
     private IBrowserFile file;
     private Guid selectedClassId;
     private string message;
+    private int KhongDat;
+    private int Dat;
+    private int ChuaThi;
+    private int Tong;
     protected override async Task OnInitializedAsync()
     {
         semesters = _context.Semesters.Where(x => x.Status == true).ToList();
@@ -148,6 +180,11 @@ else
 
         int skip = (currentPage - 1) * pageSize;
         users = _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId && x.Semester.Status == true).OrderBy(x => x.Sbd).Skip(skip).Take(pageSize).ToList();
+        
+        Tong = _context.Users.Where(x => x.SemesterId == selectedClassId).Count();
+        ChuaThi = _context.Users.Where(x => x.SemesterId == selectedClassId).Where(x => x.Result == null).Count();
+        Dat = _context.Users.Where(x => x.SemesterId == selectedClassId).Where(x => x.Result == true).Count();
+        KhongDat = _context.Users.Where(x => x.SemesterId == selectedClassId).Where(x => x.Result == false).Count();
     }
     private void FilterUsersByClass(ChangeEventArgs e)
     {
@@ -187,11 +224,11 @@ else
                 // Load the font
                 BaseFont baseFont = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 Font font = new Font(baseFont, 14, Font.NORMAL);
-                Font fontTable = new Font(baseFont, 10, Font.NORMAL);
+                Font fontTable = new Font(baseFont, 12, Font.NORMAL);
                 Font fontItalic = new Font(baseFont, 14, Font.NORMAL);
 
-                Font fontNormal = new Font(baseFont, 14, Font.BOLD);
-                Font fontBold = new Font(baseFont, 14, Font.BOLD);
+                Font fontNormal = new Font(baseFont, 12, Font.NORMAL);
+                Font fontBold = new Font(baseFont, 12, Font.BOLD);
                 Font fontTitle = new Font(baseFont, 20, Font.BOLD);
                 Font fontColor = new Font(baseFont, 12, Font.BOLDITALIC, BaseColor.BLACK);
                 // Add header
@@ -224,7 +261,7 @@ else
                 document.Add(table1);
 
                 // Add the title
-                Paragraph titleParagraph = new Paragraph("BÀI KIỂM TRA KẾT THÚC MÔN HỌC", fontTitle);
+                Paragraph titleParagraph = new Paragraph("BÀI KIỂM TRA KẾT THÚC MÔN HỌC LÝ THUYẾT", fontTitle);
                 titleParagraph.Alignment = Element.ALIGN_CENTER;
                 document.Add(titleParagraph);
 
@@ -232,16 +269,18 @@ else
                 document.Add(new Paragraph("\nHọ và tên: " + user.Name, fontBold));
                 document.Add(new Paragraph("Ngày sinh: " + DateTime.Parse(user.NamSinh.ToString()).ToString("dd/MM/yyyy"), fontNormal));
                 document.Add(new Paragraph("Số CCCD: " + user.Cccd, fontNormal));
-                document.Add(new Paragraph("Hạng GPLX: " + user.Rank, fontNormal));
+                document.Add(new Paragraph("Hạng GPLX: " + user.Semester.Rank, fontNormal));
                 document.Add(new Paragraph("Khóa đào tạo: " + user.Semester.Name, fontNormal));
                 document.Add(new Paragraph("Ngày kiểm tra: " + DateTime.Parse(user.Semester.TestDay.ToString()).ToString("dd/MM/yyyy"), fontNormal));
                 document.Add(new Paragraph("Số báo danh: " + user.Sbd, fontNormal));
                 document.Add(new Paragraph("Tại: Trường TCN GTVT Quảng Trị\n\n", fontNormal));
 
-                Chunk chunk = new Chunk("(Trả lời sai Câu mất an toàn giao thông nghiêm trọng câu số X)", fontColor);
-                chunk.SetBackground(BaseColor.YELLOW);
-                Paragraph p3 = new Paragraph(chunk);
-                document.Add(p3);
+                if(user.UserQuestions.FirstOrDefault(x => x.Number == 2).Status == false)
+                {
+                    Chunk chunk = new Chunk("(Trả lời sai Câu mất an toàn giao thông nghiêm trọng câu số 2)", fontColor);
+                    Paragraph p3 = new Paragraph(chunk);
+                    document.Add(p3);
+                }
 
                 document.Add(new Paragraph("Ghi chú:     Đ: Đáp án đúng     X: Ý trả lời đúng     S: Ý trả lời sai\n\n", fontItalic));
 
@@ -252,15 +291,17 @@ else
                 int totalRows = 4;      // Number of rows to render
 
                 // Create a main table
-                PdfPTable mainTable = new PdfPTable(totalColumns);
+                PdfPTable mainTable = new PdfPTable(20);
                 mainTable.WidthPercentage = 100;
-
                 // Header row for questions
                 for (int col = 1; col <= totalColumns; col++)
                 {
-                    PdfPCell cell = new PdfPCell(new Phrase($"{col}", new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
-                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                    mainTable.AddCell(cell);
+                    if (col <= 20)
+                    {
+                        PdfPCell cell = new PdfPCell(new Phrase($"{col}", new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
+                        cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                        mainTable.AddCell(cell);
+                    }
                 }
 
                 // Body rows for answers
@@ -268,42 +309,107 @@ else
                 {
                     foreach (var item in user.UserQuestions)
                     {
-
-                        if (item.Reply == row)
+                        if(item.Number <= 20)
                         {
-                            if (item.IdQuestionNavigation.Answers == row)
+                            if (item.Reply == row)
                             {
-                                PdfPCell cell = new PdfPCell(new Phrase("X", fontTable));
-                                cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                mainTable.AddCell(cell);
+                                if (item.IdQuestionNavigation.Answers == row)
+                                {
+                                    PdfPCell cell = new PdfPCell(new Phrase("X", fontTable));
+                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                    mainTable.AddCell(cell);
+                                }
+                                else
+                                {
+                                    PdfPCell cell = new PdfPCell(new Phrase("S", fontTable));
+                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                    mainTable.AddCell(cell);
+                                }
                             }
                             else
                             {
-                                PdfPCell cell = new PdfPCell(new Phrase("S", fontTable));
-                                cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                mainTable.AddCell(cell);
-                            }
-                        }
-                        else
-                        {
-                            if (item.IdQuestionNavigation.Answers == row)
-                            {
-                                PdfPCell cell = new PdfPCell(new Phrase("Đ", fontTable));
-                                cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                mainTable.AddCell(cell);
-                            }
-                            else
-                            {
-                                PdfPCell cell = new PdfPCell(new Phrase(" ", fontTable));
-                                cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                mainTable.AddCell(cell);
+                                if (item.IdQuestionNavigation.Answers == row)
+                                {
+                                    PdfPCell cell = new PdfPCell(new Phrase("Đ", fontTable));
+                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                    mainTable.AddCell(cell);
+                                }
+                                else
+                                {
+                                    PdfPCell cell = new PdfPCell(new Phrase(" ", fontTable));
+                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                    mainTable.AddCell(cell);
+                                }
                             }
                         }
                     }
                 }
-
                 // Add the main table to the document
                 document.Add(mainTable);
+
+                PdfPTable spacerTable = new PdfPTable(1);
+                spacerTable.WidthPercentage = 100;
+                PdfPCell spacerCell = new PdfPCell(new Phrase(" "));
+                spacerCell.Border = PdfPCell.NO_BORDER;
+                spacerCell.FixedHeight = 20f; 
+                spacerTable.AddCell(spacerCell);
+                document.Add(spacerTable);
+
+                // Create a main table
+                PdfPTable mainTable1 = new PdfPTable(totalColumns - 20);
+                mainTable1.WidthPercentage = 100;
+                // Header row for questions
+                for (int col = 1; col <= totalColumns; col++)
+                {
+                    if (col > 20)
+                    {
+                        PdfPCell cell = new PdfPCell(new Phrase($"{col}", new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
+                        cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                        mainTable1.AddCell(cell);
+                    }
+                }
+
+                // Body rows for answers
+                for (int row = 1; row <= totalRows; row++)
+                {
+                    foreach (var item in user.UserQuestions)
+                    {
+                        if(item.Number > 20)
+                        {
+                            if (item.Reply == row)
+                            {
+                                if (item.IdQuestionNavigation.Answers == row)
+                                {
+                                    PdfPCell cell = new PdfPCell(new Phrase("X", fontTable));
+                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                    mainTable1.AddCell(cell);
+                                }
+                                else
+                                {
+                                    PdfPCell cell = new PdfPCell(new Phrase("S", fontTable));
+                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                    mainTable1.AddCell(cell);
+                                }
+                            }
+                            else
+                            {
+                                if (item.IdQuestionNavigation.Answers == row)
+                                {
+                                    PdfPCell cell = new PdfPCell(new Phrase("Đ", fontTable));
+                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                    mainTable1.AddCell(cell);
+                                }
+                                else
+                                {
+                                    PdfPCell cell = new PdfPCell(new Phrase(" ", fontTable));
+                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                    mainTable1.AddCell(cell);
+                                }
+                            }
+                        }
+                    }
+                }
+                document.Add(mainTable1);
 
                 // Add conclusion section
                 PdfPTable table2 = new PdfPTable(2);
@@ -315,25 +421,25 @@ else
                 cell3.HorizontalAlignment = Element.ALIGN_LEFT;
                 cell3.Border = PdfPCell.NO_BORDER;
                 Phrase phrase3 = new Phrase();
-                phrase3.Add(new Chunk("\nKết luận:\n", fontNormal));
+                phrase3.Add(new Chunk("\nKết luận:\n", fontBold));
                 phrase3.Add(new Chunk("Số điểm đạt được: " + user.Score + " điểm\n", fontNormal));
 
                 if(user.Result == true)
                 {
-                    phrase3.Add(new Chunk("Đạt       ", fontNormal));
-                    phrase3.Add(new Chunk("X", fontNormal));
-                    phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
-                    phrase3.Add(new Chunk("", fontNormal));
+                    phrase3.Add(new Chunk("Đạt       ", fontBold));
+                    phrase3.Add(new Chunk("X", fontBold));
+                    phrase3.Add(new Chunk("       Không đạt    ", fontBold));
+                    phrase3.Add(new Chunk("", fontBold));
                 }
                 else
                 {
-                    phrase3.Add(new Chunk("Đạt       ", fontNormal));
-                    phrase3.Add(new Chunk("", fontNormal));
-                    phrase3.Add(new Chunk("       Không đạt    ", fontNormal));
-                    phrase3.Add(new Chunk("X", fontNormal));
+                    phrase3.Add(new Chunk("Đạt:       ", fontBold));
+                    phrase3.Add(new Chunk("", fontBold));
+                    phrase3.Add(new Chunk("       Không đạt:    ", fontBold));
+                    phrase3.Add(new Chunk("X", fontBold));
                 }
                 
-                phrase3.Add(new Chunk("\nGiáo viên", fontNormal)); 
+                phrase3.Add(new Chunk("\n \n         Giáo viên", fontNormal));
                 Paragraph p4 = new Paragraph(phrase3);
                 p4.Alignment = Element.ALIGN_LEFT;
                 cell3.AddElement(p4);
@@ -341,12 +447,12 @@ else
 
                 // Cell 4 (right-aligned)
                 PdfPCell cell4 = new PdfPCell();
-                cell4.HorizontalAlignment = Element.ALIGN_RIGHT; // Căn phải
+                cell4.HorizontalAlignment = Element.ALIGN_LEFT;
                 cell4.Border = PdfPCell.NO_BORDER;
                 Phrase phrase4 = new Phrase();
-                phrase4.Add(new Chunk("\nHọc viên xác nhận kết quả", fontNormal));
+                phrase4.Add(new Chunk("\n \n \n \n \n                                 Học viên xác nhận kết quả", fontNormal));
                 Paragraph p5 = new Paragraph(phrase4);
-                p5.Alignment = Element.ALIGN_RIGHT;
+                p5.Alignment = Element.ALIGN_LEFT;
                 cell4.AddElement(p5);
                 table2.AddCell(cell4);
                 document.Add(table2);
@@ -445,7 +551,6 @@ else
                     NamSinh = DateTime.TryParse(row[rowNumber, 4].Text, out var dob) ? (DateTime?)dob : null,
                     SemesterId = Guid.Parse(row[rowNumber, 5].Text),
                     Status = false,
-                    Rank = row[rowNumber, 6].Text,
                     Score =  null
                 };
 

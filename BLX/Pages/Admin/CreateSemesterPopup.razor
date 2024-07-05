@@ -91,6 +91,14 @@
                     <input type="text" id="name" @bind="Name" placeholder="Khóa học mới"/>
                 </div>
                 <div>
+                    <label for="licenseClass">Hạng GPLX:</label>
+                    <select class="form-control" @bind="Rank">
+                        <option value="B11">Hạng B11</option>
+                        <option value="B2">Hạng B2</option>
+                        <option value="C">Hạng C</option>
+                    </select>
+                </div>
+                <div>
                     <label for="testDay">Ngày thi:</label>
                     <input type="date" id="date" @bind="TestDay" />
                 </div>
@@ -107,6 +115,7 @@
 @code {
     private bool IsVisible { get; set; }
     private string Name { get; set; }
+    private string Rank { get; set; }
     private DateTime TestDay { get; set; }
     private Semester semester = new Semester();
     [Parameter] public EventCallback OnClose { get; set; }
@@ -128,6 +137,7 @@
     {
         semester.Id = Guid.NewGuid();
         semester.Name = Name;
+        semester.Rank = Rank;
         semester.TestDay = TestDay;
         semester.Status = true;
         _context.Add(semester);

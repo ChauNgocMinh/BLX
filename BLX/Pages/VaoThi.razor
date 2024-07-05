@@ -183,10 +183,10 @@
     private string navigationError = null;
     protected override void OnInitialized()
     {
-        user = _context.Users.FirstOrDefault(x => x.Id == Guid.Parse(UserId));
+        user = _context.Users.Include(x => x.Semester).FirstOrDefault(x => x.Id == Guid.Parse(UserId));
         if(user.Status == false)
         {
-            if (user.Rank == "B11")
+            if (user.Semester.Rank == "B11")
             {
                 id_monhoc_01 = _context.Questions
                     .Include(x => x.TypeNavigation)
@@ -319,7 +319,7 @@
                 timer.Elapsed += OnTimerElapsed;
                 timer.Start();
             }
-            if (user.Rank == "B2")
+            if (user.Semester.Rank == "B2")
             {
                 id_monhoc_01 = _context.Questions
                     .Include(x => x.TypeNavigation)
@@ -464,7 +464,7 @@
                 timer.Elapsed += OnTimerElapsed;
                 timer.Start();
             }
-            if (user.Rank == "C")
+            if (user.Semester.Rank == "C")
             {
                 id_monhoc_01 = _context.Questions
                     .Include(x => x.TypeNavigation)
@@ -700,7 +700,7 @@
         var allQuestions = user.UserQuestions
                         .FirstOrDefault(x => x.IdQuestionNavigation.TypeNavigation.Domain == "id_monhoc_02");
         bool allQuestionsValid = allQuestions.Status;
-        if (user.Rank == "B11")
+        if (user.Semester.Rank == "B11")
         {
             if (user.Score > 27 && allQuestionsValid == true)
             {
@@ -711,7 +711,7 @@
                 user.Result = false;
             }
         }
-        if (user.Rank == "B2")
+        if (user.Semester.Rank == "B2")
         {
             if (user.Score > 32 && allQuestionsValid == true)
             {
@@ -722,7 +722,7 @@
                 user.Result = false;
             }
         }
-        if (user.Rank == "C")
+        if (user.Semester.Rank == "C")
         {
             if (user.Score > 36 && allQuestionsValid == true)
             {
@@ -748,15 +748,15 @@
             result1 = "Không đạt";
         }
         string score = "";
-        if (user.Rank == "B11")
+        if (user.Semester.Rank == "B11")
         {
             score = user.Score + "/30";
         }
-        if (user.Rank == "B2")
+        if (user.Semester.Rank == "B2")
         {
             score = user.Score + "/35";
         }
-        if (user.Rank == "C")
+        if (user.Semester.Rank == "C")
         {
             score = user.Score + "/40";
         }
@@ -791,7 +791,7 @@
         var allQuestions = user.UserQuestions
                         .FirstOrDefault(x => x.IdQuestionNavigation.TypeNavigation.Domain == "id_monhoc_02");
         bool allQuestionsValid = allQuestions.Status;
-        if (user.Rank == "B11")
+        if (user.Semester.Rank == "B11")
         {
             if (user.Score > 27 && allQuestionsValid)
             {
@@ -802,7 +802,7 @@
                 user.Result = false;
             }
         }
-        if (user.Rank == "B2")
+        if (user.Semester.Rank == "B2")
         {
             if (user.Score > 32 && allQuestionsValid)
             {
@@ -813,7 +813,7 @@
                 user.Result = false;
             }
         }
-        if (user.Rank == "C")
+        if (user.Semester.Rank == "C")
         {
             if (user.Score > 36 && allQuestionsValid)
             {
@@ -839,15 +839,15 @@
             result = "Không đạt";
         }
         string score = "";
-        if (user.Rank == "B11")
+        if (user.Semester.Rank == "B11")
         {
             score = user.Score + "/30";
         }
-        if (user.Rank == "B2")
+        if (user.Semester.Rank == "B2")
         {
             score = user.Score + "/35";
         }
-        if (user.Rank == "C")
+        if (user.Semester.Rank == "C")
         {
             score = user.Score + "/40";
         }
