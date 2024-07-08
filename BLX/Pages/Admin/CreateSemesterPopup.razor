@@ -60,7 +60,7 @@
         box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
     }
 
-    button {
+    .btn-addd, .btn-cancel {
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
@@ -103,8 +103,8 @@
                     <input type="date" id="date" @bind="TestDay" />
                 </div>
                 <div>
-                    <button type="button" @onclick="Save">Lưu</button>
-                    <button type="button" @onclick="Hide">Hủy</button>
+                    <button class="btn-addd" type="button" @onclick="Save">Lưu</button>
+                    <button class="btn-cancel" type="button" @onclick="Hide">Hủy</button>
                 </div>
             </form>
         </div>

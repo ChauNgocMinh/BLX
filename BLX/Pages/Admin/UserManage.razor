@@ -1,7 +1,5 @@
-﻿@page "/admin/usermanage"
-@using BLX.Models
+﻿@using BLX.Models
 @using Microsoft.EntityFrameworkCore;
-@inject BLXContext _context
 @layout AdminManage
 @using OfficeOpenXml 
 @using Microsoft.AspNetCore.Components.Forms
@@ -14,7 +12,7 @@
 @inject NavigationManager NavigationManager
 @inject IHttpClientFactory Http
 @inject IWebHostEnvironment webHostEnvironment
-
+@inject BLXContext _context
 <style>
     .btn {
         margin: 0 3px;
@@ -50,8 +48,8 @@
         }
     }
 </style>
-<button class="btn btn-primary mb-3" @onclick="ShowAddUserModal">+ Thêm thí sinh</button>
-<button class="btn btn-primary mb-3" @onclick="ImportExcel">Import Excel</button>
+<button class="btn btn-primary mb-2" @onclick="ShowAddUserModal">Reload</button>
+<button class="btn btn-primary mb-2" @onclick="ImportExcel">Import Excel</button>
 <InputFile OnChange="HandleFileSelected" />
 
 <div class="form-group">
@@ -78,7 +76,7 @@
 }
 else
 {
-    <div class="table-data">
+    <div class="table-data mt-1">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -180,11 +178,12 @@ else
 
         int skip = (currentPage - 1) * pageSize;
         users = _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId && x.Semester.Status == true).OrderBy(x => x.Sbd).Skip(skip).Take(pageSize).ToList();
-        
+
         Tong = _context.Users.Where(x => x.SemesterId == selectedClassId).Count();
         ChuaThi = _context.Users.Where(x => x.SemesterId == selectedClassId).Where(x => x.Result == null).Count();
         Dat = _context.Users.Where(x => x.SemesterId == selectedClassId).Where(x => x.Result == true).Count();
         KhongDat = _context.Users.Where(x => x.SemesterId == selectedClassId).Where(x => x.Result == false).Count();
+        StateHasChanged();
     }
     private void FilterUsersByClass(ChangeEventArgs e)
     {
@@ -202,7 +201,9 @@ else
     }
 
     private void ShowAddUserModal()
-    { }
+    {
+        OnInitializedAsync();
+    }
     private void ShowEditUserModal()
     { }
     private async void ExportPDF(Guid Id)
@@ -261,7 +262,7 @@ else
                 document.Add(table1);
 
                 // Add the title
-                Paragraph titleParagraph = new Paragraph("BÀI KIỂM TRA KẾT THÚC MÔN HỌC LÝ THUYẾT", fontTitle);
+                Paragraph titleParagraph = new Paragraph("\nBÀI KIỂM TRA KẾT THÚC MÔN HỌC LÝ THUYẾT", fontTitle);
                 titleParagraph.Alignment = Element.ALIGN_CENTER;
                 document.Add(titleParagraph);
 
@@ -417,7 +418,7 @@ else
                 table2.SetWidths(new float[] { 1f, 1f });
 
                 // Cell 3 (left-aligned)
-                PdfPCell cell3 = new PdfPCell();
+                PdfPCell cell3 = new PdfPCell(); 
                 cell3.HorizontalAlignment = Element.ALIGN_LEFT;
                 cell3.Border = PdfPCell.NO_BORDER;
                 Phrase phrase3 = new Phrase();
@@ -426,9 +427,9 @@ else
 
                 if(user.Result == true)
                 {
-                    phrase3.Add(new Chunk("Đạt       ", fontBold));
+                    phrase3.Add(new Chunk("Đạt:       ", fontBold));
                     phrase3.Add(new Chunk("X", fontBold));
-                    phrase3.Add(new Chunk("       Không đạt    ", fontBold));
+                    phrase3.Add(new Chunk("       Không đạt:    ", fontBold));
                     phrase3.Add(new Chunk("", fontBold));
                 }
                 else
@@ -439,7 +440,7 @@ else
                     phrase3.Add(new Chunk("X", fontBold));
                 }
                 
-                phrase3.Add(new Chunk("\n \n         Giáo viên", fontNormal));
+                phrase3.Add(new Chunk("\n \n                     Giáo viên", fontNormal));
                 Paragraph p4 = new Paragraph(phrase3);
                 p4.Alignment = Element.ALIGN_LEFT;
                 cell3.AddElement(p4);

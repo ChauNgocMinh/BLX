@@ -1,5 +1,4 @@
-﻿@page "/admin"
-@inject NavigationManager Navigation
+﻿@inject NavigationManager Navigation
 @inherits LayoutComponentBase
 <div class="admin-layout">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -12,24 +11,35 @@
         <div class="sidebar bg-light p-3">
             <ul class="list-group">
                 <li class="list-group-item">
-                    <a href="/admin/usermanage">
+                    <button class="btn-page d-flex" @onclick="() => ChangePage(1)">
                         <i class="fas fa-users"></i> Thí sinh
-                    </a>
+                    </button>
                 </li>
                 <li class="list-group-item">
-                    <a href="/admin/questionmanage">
+                    <button class="btn-page d-flex" @onclick="() => ChangePage(2)">
                         <i class="fas fa-cogs"></i> Câu hỏi
-                    </a>
+                    </button>
                 </li>
                 <li class="list-group-item">
-                    <a href="/admin/classmanage">
+                    <button class="btn-page d-flex" @onclick="() => ChangePage(3)">
                         <i class="fas fa-cogs"></i> Lớp học
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>
-        <div class="content p-2">
-            @Body
+        <div class="content">
+            @if (_page == 1)
+            {
+                <BLX.Pages.Admin.UserManage />
+            }
+            @if (_page == 2)
+            {
+                <BLX.Pages.Admin.QuestionManage />
+            }
+            @if (_page == 3)
+            {
+                <BLX.Pages.Admin.ClassManage />
+            }
         </div>
     </div>
 </div>
@@ -39,6 +49,7 @@
         display: flex;
         flex-direction: column;
         height: 100vh;
+        width: 100%;
     }
 
     .navbar{
@@ -47,6 +58,13 @@
 
     .d-flex {
         flex: 1;
+    }
+
+    .btn-page{
+        background: none;
+        border: none;
+        width: 100%;
+        float: left;
     }
 
     .sidebar {
@@ -97,8 +115,14 @@
         flex: 1;
         padding: 20px;
         overflow-y: auto;
+        padding: 5px 10px 0 10px;
     }
 </style>
 @code {
+    public int _page = 1;
+    public void ChangePage(int page)
+    {
+        _page = page;
+    }
 }
     
