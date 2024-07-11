@@ -128,3 +128,32 @@ C:\Users\ASUS\OneDrive\Máy tính\BLX\BLX\obj\Release\net6.0\refint\BLX.dll
 C:\Users\ASUS\OneDrive\Máy tính\BLX\BLX\obj\Release\net6.0\BLX.pdb
 C:\Users\ASUS\OneDrive\Máy tính\BLX\BLX\obj\Release\net6.0\BLX.genruntimeconfig.cache
 C:\Users\ASUS\OneDrive\Máy tính\BLX\BLX\obj\Release\net6.0\ref\BLX.dll
+C:\Users\PC\Downloads\BLX\BLX\BLX\bin\Release\net6.0\appsettings.Development.json
+C:\Users\PC\Downloads\BLX\BLX\BLX\bin\Release\net6.0\appsettings.json
+C:\Users\PC\Downloads\BLX\BLX\BLX\bin\Release\net6.0\BLX.staticwebassets.runtime.json
+C:\Users\PC\Downloads\BLX\BLX\BLX\bin\Release\net6.0\BLX.deps.json
+C:\Users\PC\Downloads\BLX\BLX\BLX\bin\Release\net6.0\BLX.runtimeconfig.json
+C:\Users\PC\Downloads\BLX\BLX\BLX\bin\Release\net6.0\BLX.dll
+C:\Users\PC\Downloads\BLX\BLX\BLX\bin\Release\net6.0\BLX.pdb
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\BLX.csproj.AssemblyReference.cache
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\BLX.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\BLX.AssemblyInfoInputs.cache
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\BLX.AssemblyInfo.cs
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\BLX.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\BLX.RazorAssemblyInfo.cache
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\BLX.RazorAssemblyInfo.cs
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\staticwebassets\msbuild.BLX.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\staticwebassets\msbuild.build.BLX.props
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.BLX.props
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.BLX.props
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\staticwebassets.pack.json
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\staticwebassets.build.json
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\staticwebassets.development.json
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\scopedcss\bundle\BLX.styles.css
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\scopedcss\projectbundle\BLX.bundle.scp.css
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\BLX.dll
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\refint\BLX.dll
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\BLX.pdb
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\BLX.genruntimeconfig.cache
+C:\Users\PC\Downloads\BLX\BLX\BLX\obj\Release\net6.0\ref\BLX.dll
