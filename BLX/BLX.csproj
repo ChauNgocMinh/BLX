@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-	<OutputType>Library</OutputType>
+	<OutputType>Exe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,7 +14,7 @@
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.3.3" />
     <PackageReference Include="DocX" Version="3.0.0" />
-    <PackageReference Include="EPPlus" Version="7.2.0" />
+    <PackageReference Include="EPPlus" Version="6.0.3" />
     <PackageReference Include="itext7" Version="8.0.4" />
     <PackageReference Include="iTextSharp" Version="5.5.13.4" />
     <PackageReference Include="LinqKit.Microsoft.EntityFrameworkCore" Version="6.1.5" />

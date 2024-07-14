@@ -111,7 +111,7 @@
                             </div>
                         }
                         <div class="form-group d-flex align-items-center justify-content-center">
-                            <button type="button" disabled="@(!isButtonEnabled)" @onmousedown="HandleButtonClick" class="mt-2 btn btn-primary btn-block btn-submit">Vào kiểm tra</button>
+                            <button type="button" disabled="@(!isButtonEnabled)" @onclick="HandleButtonClick" class="mt-2 btn btn-primary btn-block btn-submit">Vào kiểm tra</button>
                         </div>
                     </div>
                 </form>
@@ -145,7 +145,7 @@
         if (item.Status == true)
         {
             showOkMessageBox = true;
-            Message = "Thí sinh đã tham gia dự thi, nếu có vấn đề về kỹ thuật vui lòng liên hệ giáo viên!!";
+            Message = "Thí sinh đã kiểm tra, nếu có vấn đề về kỹ thuật vui lòng liên hệ giáo viên!!";
         }
         if (item.Status == false)
         {

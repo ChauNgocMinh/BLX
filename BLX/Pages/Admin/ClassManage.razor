@@ -59,7 +59,8 @@ else
                         </td>
                         <td>
                             <button class="btn btn-success btn-sm" @onclick="() => ChangeStatus(true, item.Id)">Mở lớp</button>
-                            <button class="btn btn-danger btn-sm" @onclick="() => ChangeStatus(false, item.Id)">Đóng lớp</button>
+                            <button class="btn btn-warning btn-sm" @onclick="() => ChangeStatus(false, item.Id)">Đóng lớp</button>
+                            <button class="btn btn-danger btn-sm" @onclick="() => DeleteClass(item.Id)">Xóa lớp</button>
                         </td>
                     </tr>
                 }
@@ -79,6 +80,7 @@ else
     </nav>
 }
 <CreateSemesterPopup @ref="createSemesterPopup" OnClose="Reload"></CreateSemesterPopup>
+<MessageBox Title="Thông báo" Message="Bạn chắc chắn muốn xóa lớp học này?" Show="@showYesNoMessageBox" OnYes="HandleYesClick" OnNo="HandleNoClick" />
 
 @code {
     private List<Semester> semesters;
@@ -88,7 +90,7 @@ else
     private int pageSize = 10;
     private int totalUsersCount = 0;
     private string message;
-
+    private bool showYesNoMessageBox = false;
     protected override async Task OnInitializedAsync()
     {
         totalUsersCount = _context.Semesters.Count();
@@ -121,5 +123,40 @@ else
     {
         OnInitializedAsync();
         StateHasChanged();
+    }
+    public Guid IdClass = new Guid();
+    public void DeleteClass(Guid Id)
+    {
+        showYesNoMessageBox = true;
+        IdClass = Id;
+    }
+    public void HandleYesClick()
+    {
+        if (IdClass == Guid.Empty)
+        {
+            showYesNoMessageBox = false;
+            this.StateHasChanged();
+            return;
+        }
+        var semester = _context.Semesters
+                              .Include(s => s.Users)
+                              .ThenInclude(u => u.UserQuestions)
+                              .FirstOrDefault(s => s.Id == IdClass);
+        if (semester != null)
+        {
+            _context.RemoveRange(semester.Users.SelectMany(u => u.UserQuestions));
+            _context.RemoveRange(semester.Users);
+            _context.Remove(semester);
+            _context.SaveChanges();
+            OnInitializedAsync();
+        }
+
+        showYesNoMessageBox = false;
+        this.StateHasChanged();
+    }
+    public void HandleNoClick()
+    {
+        showYesNoMessageBox = false;
+        this.StateHasChanged();
     }
 }

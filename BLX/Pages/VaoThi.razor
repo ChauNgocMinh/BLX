@@ -65,7 +65,6 @@
         padding: 0 5px;
         max-width: 20px;
     }
-
     .question-item {
         border-radius: 15px;
         box-shadow: 0px 0px 10px rgb(0 0 0 / 63%);
@@ -92,6 +91,10 @@
         .radio-group .form-check{
             padding: 0;
         }
+    }
+
+    .selected-background {
+        background-color: #009900;
     }
 </style>
 <div class="row main justify-content-center">
@@ -124,7 +127,7 @@
             {
                 @foreach (var item in userQuestions)
                 {
-                    <button @onclick="() => ChangeImage(item.IdQuestionNavigation.Id)" class="question-item col-11 d-flex align-content-center">
+                    <button style="background-color:@(selectedButtonId == item.Id ? "#FF0000" : "");" @onclick="() => ChangeImage(item.IdQuestionNavigation.Id,item.Id)" class="question-item col-11 d-flex align-content-center @(GetBackgroundClass(item.Number))">
                         <label style="min-width: 65px;">
                             Câu @item.Number:
                         </label>
@@ -181,6 +184,23 @@
     int Numbers = 1;
     private bool shouldNavigate = false;
     private string navigationError = null;
+    private string selectButton = "";
+    private Guid selectedButtonId = new Guid();
+
+    private void OnButtonClick(Guid buttonId)
+    {
+        selectedButtonId = buttonId;
+    }
+
+    private string GetBackgroundClass(int questionNumber)
+    {
+        return selectedAnswers.ContainsKey(questionNumber) ? "selected-background" : "";
+    }
+    private string GetBackgroundClass1()
+    {
+        return  "selected-background1";
+    }
+
     protected override void OnInitialized()
     {
         user = _context.Users.Include(x => x.Semester).FirstOrDefault(x => x.Id == Guid.Parse(UserId));
@@ -638,8 +658,9 @@
             }
         }
     }
-    public void ChangeImage(Guid Id)
+    public void ChangeImage(Guid Id, Guid itemId)
     {
+        selectedButtonId = itemId;
         var questions = _context.Questions.Include(x => x.TypeNavigation)
                             .FirstOrDefault(x => x.Id == Id);
         urlImage = "./img/" + questions.TypeNavigation.Domain + "/" + questions.Name + "";
@@ -702,7 +723,7 @@
         bool allQuestionsValid = allQuestions.Status;
         if (user.Semester.Rank == "B11")
         {
-            if (user.Score > 27 && allQuestionsValid == true)
+            if (user.Score >= 27 && allQuestionsValid == true)
             {
                 user.Result = true;
             }
@@ -713,7 +734,7 @@
         }
         if (user.Semester.Rank == "B2")
         {
-            if (user.Score > 32 && allQuestionsValid == true)
+            if (user.Score >= 32 && allQuestionsValid == true)
             {
                 user.Result = true;
             }
@@ -724,7 +745,7 @@
         }
         if (user.Semester.Rank == "C")
         {
-            if (user.Score > 36 && allQuestionsValid == true)
+            if (user.Score >= 36 && allQuestionsValid == true)
             {
                 user.Result = true;
             }
