@@ -605,15 +605,23 @@ else
     {
         if (file != null)
         {
-            using (var stream = new MemoryStream())
+            try
             {
-                await file.OpenReadStream().CopyToAsync(stream);
-
-                var dataTable = ReadExcelToUsers(stream);
-                if (dataTable != null)
+                using (var stream = new MemoryStream())
                 {
-                    await SaveToSql(dataTable);
+                    await file.OpenReadStream().CopyToAsync(stream);
+
+                    var dataTable = ReadExcelToUsers(stream);
+                    if (dataTable != null)
+                    {
+                        await SaveToSql(dataTable);
+                    }
                 }
+            }
+            catch
+            {
+                message = "Có lỗi trong quá trình xử lý, chọn 1 file excel mới để import";
+                showOkMessageBox = true;
             }
         }
         else
@@ -635,6 +643,8 @@ else
                 showOkMessageBox = true;
                 return null;
             }
+
+            var existingSbd = new HashSet<int>();
 
             for (int rowNumber = 2; rowNumber <= worksheet.Dimension.End.Row; rowNumber++)
             {
@@ -665,11 +675,10 @@ else
 
                     if (!DateTime.TryParse(dobText, new CultureInfo("en-GB"), DateTimeStyles.None, out var dob))
                     {
-                        message = $"Giá trị NamSinh không hợp lệ ở hàng {rowNumber}. Định dạng phải là dd/MM/yyyy.";
+                        message = $"Giá trị năm sinh không hợp lệ ở hàng {rowNumber}. Định dạng phải là dd/MM/yyyy.";
                         showOkMessageBox = true;
                         return null;
                     }
-
 
                     if (!Guid.TryParse(semesterIdText, out var semesterId))
                     {
@@ -678,13 +687,22 @@ else
                         return null;
                     }
 
-                    var semester = _context.Semesters.FirstOrDefault(x => x.Id == Guid.Parse(semesterIdText));
-                    if(semester == null)
+                    var semester = _context.Semesters.FirstOrDefault(x => x.Id == semesterId);
+                    if (semester == null)
                     {
                         message = $"Mã lớp không tồn tại ở hàng {rowNumber}.";
                         showOkMessageBox = true;
                         return null;
                     }
+
+                    if (existingSbd.Contains(sbdInt))
+                    {
+                        message = $"Số báo danh {sbdInt} đã tồn tại ở hàng {rowNumber}.";
+                        showOkMessageBox = true;
+                        return null;
+                    }
+
+                    existingSbd.Add(sbdInt);
 
                     var user = new User
                         {
@@ -710,6 +728,7 @@ else
         }
         return users;
     }
+
 
 
 

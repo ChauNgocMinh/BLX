@@ -100,7 +100,7 @@
         </div>
     </div>
 }
-<MessageBox Title="Cảnh báo" Message="Tạo mới lớp học thành công" Show="@showOkMessageBox" OnOk="HandleOkClick" />
+<MessageBox Title="Cảnh báo" Message="@message" Show="@showOkMessageBox" OnOk="HandleOkClick" />
 
 @code {
     private bool IsVisible { get; set; }
@@ -110,6 +110,7 @@
     private Semester semester = new Semester();
     [Parameter] public EventCallback OnClose { get; set; }
     private bool showOkMessageBox = false;
+    public string message = "";
     public void Show()
     {
         IsVisible = true;
@@ -125,16 +126,34 @@
 
     private void Save()
     {
-        semester.Id = Guid.NewGuid();
-        semester.Name = Name;
-        semester.Rank = Rank;
-        semester.TestDay = TestDay;
-        semester.Status = true;
-        _context.Add(semester);
-        _context.SaveChanges();
-        showOkMessageBox = true;
-        Hide();
+        if (string.IsNullOrWhiteSpace(Name))
+        {
+            message = "Tên lớp không được để trống.";
+            showOkMessageBox = true;
+            return;
+        }
+        try
+        {
+            semester.Id = Guid.NewGuid();
+            semester.Name = Name;
+            semester.Rank = Rank;
+            semester.TestDay = TestDay;
+            semester.Status = true;
+            _context.Add(semester);
+            _context.SaveChanges();
+
+            message = "Tạo mới lớp học thành công";
+            showOkMessageBox = true;
+            Name = null;
+            Hide();
+        }
+        catch (Exception ex)
+        {
+            message = $"Lỗi khi lưu lớp học: {ex.Message}";
+            showOkMessageBox = true;
+        }
     }
+
 
     public void HandleOkClick()
     {
