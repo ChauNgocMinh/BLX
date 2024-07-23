@@ -105,7 +105,7 @@
 @code {
     private bool IsVisible { get; set; }
     private string Name { get; set; }
-    private string Rank { get; set; }
+    private string Rank = "B11";
     private DateTime TestDay = DateTime.Now;
     private Semester semester = new Semester();
     [Parameter] public EventCallback OnClose { get; set; }

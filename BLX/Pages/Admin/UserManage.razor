@@ -5,6 +5,7 @@
 @using Microsoft.AspNetCore.Components.Forms
 @using System
 @using System.IO
+@using System.Globalization;
 @using iTextSharp.text;
 @using iTextSharp.text.pdf;
 @inject IWebHostEnvironment _env
@@ -587,7 +588,7 @@ else
     }
     private void HandleFileSelected(InputFileChangeEventArgs e)
     {
-        var allowedExtensions = new[] { ".xls", ".xlsx" };
+        var allowedExtensions = new[] {".xlsx" };
         var fileExtension = System.IO.Path.GetExtension(e.File.Name);
         if (allowedExtensions.Contains(fileExtension))
         {
@@ -609,13 +610,15 @@ else
                 await file.OpenReadStream().CopyToAsync(stream);
 
                 var dataTable = ReadExcelToUsers(stream);
-
-                await SaveToSql(dataTable);
+                if (dataTable != null)
+                {
+                    await SaveToSql(dataTable);
+                }
             }
         }
         else
         {
-            message = "Vui lòng chọn một excel file để import";
+            message = "Vui lòng chọn một file Excel(.xlsx) để import";
             showOkMessageBox = true;
         }
     }
@@ -627,28 +630,88 @@ else
         {
             var worksheet = package.Workbook.Worksheets.FirstOrDefault();
             if (worksheet == null)
-                throw new Exception("No worksheet found in Excel file.");
+            {
+                message = "Không tìm thấy bảng tính nào trong tệp Excel.";
+                showOkMessageBox = true;
+                return null;
+            }
 
             for (int rowNumber = 2; rowNumber <= worksheet.Dimension.End.Row; rowNumber++)
             {
-                var row = worksheet.Cells[rowNumber, 1, rowNumber, worksheet.Dimension.End.Column];
-                var user = new User
+                try
                 {
-                    Id = Guid.NewGuid(),
-                    Sbd = int.Parse(row[rowNumber, 1].Text),
-                    Name = row[rowNumber, 2].Text,
-                    Cccd = row[rowNumber, 3].Text,
-                    NamSinh = DateTime.TryParse(row[rowNumber, 4].Text, out var dob) ? (DateTime?)dob : null,
-                    SemesterId = Guid.Parse(row[rowNumber, 5].Text),
-                    Status = false,
-                    Score =  null
-                };
+                    var row = worksheet.Cells[rowNumber, 1, rowNumber, worksheet.Dimension.End.Column];
+                    var sbd = row[rowNumber, 1].Text;
+                    var name = row[rowNumber, 2].Text;
+                    var cccd = row[rowNumber, 3].Text;
+                    var dobText = row[rowNumber, 4].Text;
+                    var semesterIdText = row[rowNumber, 5].Text;
 
-                users.Add(user);
+                    if (string.IsNullOrWhiteSpace(sbd) || string.IsNullOrWhiteSpace(name) ||
+                        string.IsNullOrWhiteSpace(cccd) || string.IsNullOrWhiteSpace(dobText) ||
+                        string.IsNullOrWhiteSpace(semesterIdText))
+                    {
+                        message = $"Thiếu dữ liệu ở hàng {rowNumber}.";
+                        showOkMessageBox = true;
+                        return null;
+                    }
+
+                    if (!int.TryParse(sbd, out var sbdInt))
+                    {
+                        message = $"Giá trị số báo danh không hợp lệ ở hàng {rowNumber}.";
+                        showOkMessageBox = true;
+                        return null;
+                    }
+
+                    if (!DateTime.TryParse(dobText, new CultureInfo("en-GB"), DateTimeStyles.None, out var dob))
+                    {
+                        message = $"Giá trị NamSinh không hợp lệ ở hàng {rowNumber}. Định dạng phải là dd/MM/yyyy.";
+                        showOkMessageBox = true;
+                        return null;
+                    }
+
+
+                    if (!Guid.TryParse(semesterIdText, out var semesterId))
+                    {
+                        message = $"Giá trị mã lớp không hợp lệ ở hàng {rowNumber}.";
+                        showOkMessageBox = true;
+                        return null;
+                    }
+
+                    var semester = _context.Semesters.FirstOrDefault(x => x.Id == Guid.Parse(semesterIdText));
+                    if(semester == null)
+                    {
+                        message = $"Mã lớp không tồn tại ở hàng {rowNumber}.";
+                        showOkMessageBox = true;
+                        return null;
+                    }
+
+                    var user = new User
+                        {
+                            Id = Guid.NewGuid(),
+                            Sbd = sbdInt,
+                            Name = name,
+                            Cccd = cccd,
+                            NamSinh = dob,
+                            SemesterId = semesterId,
+                            Status = false,
+                            Score = null
+                        };
+
+                    users.Add(user);
+                }
+                catch (Exception ex)
+                {
+                    message = $"Lỗi xử lý ở hàng {rowNumber}: {ex.Message}";
+                    showOkMessageBox = true;
+                    return null;
+                }
             }
         }
         return users;
     }
+
+
 
     private async Task SaveToSql(List<User> users)
     {
@@ -659,6 +722,7 @@ else
         }
         message = "Import thông tin thí sinh thành công!!";
         showOkMessageBox = true;
+        file = null;
         OnInitializedAsync();
     }
 }
