@@ -23,6 +23,10 @@
         overflow-y: auto;
     }
 
+    .dropdown-item {
+        cursor: pointer;
+    }
+
     .badge-primary {
         background-color: #007bff; /* Màu nền cho Tổng thí sinh */
         color: #fff;
@@ -126,9 +130,17 @@ else
                             }
                         </td>
                         <td>
-                            <button class="btn btn-warning btn-sm" @onclick="() => ShowEditUserModal()">Sửa</button>
-                            <button class="btn btn-secondary btn-sm" @onclick="() => RestUser(user.Id)">Tạo lại</button>
-                            <button class="btn btn-info btn-sm" @onclick="() => ExportPDF(user.Id)">Xuất pdf</button>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                    Thao tác
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" @onclick="() => ShowEditUserModal()">Sửa</a></li>
+                                    <li><a class="dropdown-item" @onclick="() => RestUser(user.Id)">Tạo lại</a></li>
+                                    <li><a class="dropdown-item" @onclick="() => ExportExcel(user.Id)">Xuất Excel</a></li>
+                                    <li><a class="dropdown-item" @onclick="() => ExportPDF(user.Id)">Xuất Kết quả</a></li>
+                                </ul>
+                            </div>
                         </td>
                     </tr>   
                 }
@@ -181,7 +193,7 @@ else
         totalUsersCount = _context.Users.Count(x => x.SemesterId == selectedClassId && x.Semester.Status == true);
 
         int skip = (currentPage - 1) * pageSize;
-        users = _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId && x.Semester.Status == true).OrderBy(x => x.Sbd).Skip(skip).Take(pageSize).ToList();
+        users = await _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == selectedClassId && x.Semester.Status == true).OrderBy(x => x.Sbd).Skip(skip).Take(pageSize).ToListAsync();
 
         Tong = _context.Users.Where(x => x.SemesterId == selectedClassId).Count();
         ChuaThi = _context.Users.Where(x => x.SemesterId == selectedClassId).Where(x => x.Result == null).Count();
@@ -210,6 +222,79 @@ else
     }
     private void ShowEditUserModal()
     { }
+    public async Task ExportExcel(Guid id)
+    {
+        var userQuestions = _context.UserQuestions
+            .Include(x => x.IdQuestionNavigation)
+            .ThenInclude(x => x.TypeNavigation)
+            .Include(x => x.IdUserNavigation)
+            .Where(x => x.IdUser == id)
+            .OrderBy(x => x.Number)
+            .ToList();
+
+        byte[] fileContents;
+        using (var package = new ExcelPackage())
+        {
+            var worksheet = package.Workbook.Worksheets.Add("Sheet1");
+
+            // Header
+            worksheet.Cells[1, 1].Value = "Câu hỏi";
+            worksheet.Cells[1, 2].Value = "Ảnh";
+            worksheet.Cells[1, 3].Value = "Trả lời";
+            worksheet.Cells[1, 4].Value = "Đáp án";
+            worksheet.Cells[1, 5].Value = "Kết quả";
+
+            using (var range = worksheet.Cells[1, 1, 1, 5])
+            {
+                range.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+                range.Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
+                range.Style.Font.Bold = true;
+            }
+
+            // Data
+            for (int i = 0; i < userQuestions.Count; i++)
+            {
+                var userQuestion = userQuestions[i];
+                var question = userQuestion.IdQuestionNavigation;
+
+                // Fill in data
+                worksheet.Cells[i + 2, 1].Value = userQuestion.Number;
+                worksheet.Cells[i + 2, 3].Value = userQuestion.Reply;
+                worksheet.Cells[i + 2, 4].Value = question.Answers;
+                worksheet.Cells[i + 2, 5].Value = userQuestion.Status ? "Đúng" : "Sai";
+
+                // Image URL and path
+                var imageUrl = $"./img/{question.TypeNavigation.Domain}/{question.Name}";
+                var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imageUrl);
+
+                // Check if file exists
+                if (File.Exists(imagePath))
+                {
+                    var fileInfo = new FileInfo(imagePath);
+                    var image = worksheet.Drawings.AddPicture($"Image{i}", fileInfo);
+                    worksheet.Column(2).Width = 35; 
+                    worksheet.Row(i + 2).Height = 175;
+                    image.SetPosition(i + 1, 0, 1, 0);
+                    image.SetSize(200, 200); // Adjust size as needed
+                }
+
+                // Center-align data
+                using (var range = worksheet.Cells[i + 2, 1, i + 2, 5])
+                {
+                    range.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+                    range.Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
+                }
+            }
+
+            fileContents = package.GetAsByteArray();
+        }
+
+        var base64 = Convert.ToBase64String(fileContents);
+        var fileName = $"{userQuestions.FirstOrDefault()?.IdUserNavigation?.Name}_{DateTime.Now:yyyyMMddHHmmss}.xlsx";
+
+        await jsRuntime.InvokeVoidAsync("downloadFile", fileName, base64);
+    }
+
     private async void ExportPDF(Guid Id)
     {
         var user = _context.Users.Include(x => x.Semester).Include(x => x.UserQuestions).ThenInclude(x => x.IdQuestionNavigation).ThenInclude(x => x.TypeNavigation).FirstOrDefault(x => x.Id == Id && x.Semester.Status == true);

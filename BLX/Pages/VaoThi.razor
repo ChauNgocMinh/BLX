@@ -132,7 +132,6 @@
                             Câu @item.Number:
                         </label>
                         <div class="radio-group d-flex justify-content-evenly w-100">
-
                             @for (int i = 1; i <= item.IdQuestionNavigation.NumberAnswers; i++)
                             {
                                 var answerValue = i; 
@@ -623,7 +622,7 @@
                 }
 
                 endTime = DateTime.Now.AddMinutes(24);
-                timeString = "24:00";
+                timeString = "24:00";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                 timer = new Timer(1000);
                 timer.Elapsed += OnTimerElapsed;
                 timer.Start();
@@ -808,13 +807,13 @@
         _context.Update(user);
         _context.SaveChanges();
 
-        showYesNoMessageBox = false;
+        showYesNoMessageBox1 = false;
         var allQuestions = user.UserQuestions
                         .FirstOrDefault(x => x.IdQuestionNavigation.TypeNavigation.Domain == "id_monhoc_02");
         bool allQuestionsValid = allQuestions.Status;
         if (user.Semester.Rank == "B11")
         {
-            if (user.Score > 27 && allQuestionsValid)
+            if (user.Score >= 27 && allQuestionsValid == true)
             {
                 user.Result = true;
             }
@@ -825,7 +824,7 @@
         }
         if (user.Semester.Rank == "B2")
         {
-            if (user.Score > 32 && allQuestionsValid)
+            if (user.Score >= 32 && allQuestionsValid == true)
             {
                 user.Result = true;
             }
@@ -836,7 +835,7 @@
         }
         if (user.Semester.Rank == "C")
         {
-            if (user.Score > 36 && allQuestionsValid)
+            if (user.Score >= 36 && allQuestionsValid == true)
             {
                 user.Result = true;
             }
@@ -849,15 +848,15 @@
         _context.SaveChanges();
 
         showYesNoMessageBox2 = true;
-        string result = "";
+        string result1 = "";
         if (user.Result == true)
         {
-            result = "Đạt";
+            result1 = "Đạt";
 
         }
         else
         {
-            result = "Không đạt";
+            result1 = "Không đạt";
         }
         string score = "";
         if (user.Semester.Rank == "B11")
@@ -872,7 +871,7 @@
         {
             score = user.Score + "/40";
         }
-        Message = "Học viên: " + user.Name + " đạt được số điểm là: " + score + "\n Kết luận: " + result;
+        Message = "Học viên: " + user.Name + " đạt được số điểm là: " + score + "\n Kết luận: " + result1;
     }
     private void HandleNoClick(bool result)
     {

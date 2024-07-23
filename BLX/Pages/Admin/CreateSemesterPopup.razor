@@ -53,11 +53,11 @@
 
     input[type="text"],
     input[type="date"] {
-        width: calc(100% - 22px); /* Chiều rộng input */
+        width: calc(100% - 22px); 
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+        box-sizing: border-box;
     }
 
     .btn-addd, .btn-cancel {
@@ -66,16 +66,6 @@
         border-radius: 5px;
         cursor: pointer;
         margin-right: 10px;
-    }
-
-    button[type="button"]:first-child {
-        background-color: #28a745;
-        color: white;
-    }
-
-    button[type="button"]:last-child {
-        background-color: #dc3545;
-        color: white;
     }
 </style>
 
@@ -103,8 +93,8 @@
                     <input type="date" id="date" @bind="TestDay" />
                 </div>
                 <div>
-                    <button class="btn-addd" type="button" @onclick="Save">Lưu</button>
-                    <button class="btn-cancel" type="button" @onclick="Hide">Hủy</button>
+                    <button class="btn-addd btn-success" type="button" @onclick="Save">Lưu</button>
+                    <button class="btn-cancel btn-danger" type="button" @onclick="Hide">Hủy</button>
                 </div>
             </form>
         </div>
@@ -116,7 +106,7 @@
     private bool IsVisible { get; set; }
     private string Name { get; set; }
     private string Rank { get; set; }
-    private DateTime TestDay { get; set; }
+    private DateTime TestDay = DateTime.Now;
     private Semester semester = new Semester();
     [Parameter] public EventCallback OnClose { get; set; }
     private bool showOkMessageBox = false;

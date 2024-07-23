@@ -1,8 +1,9 @@
 ﻿@using Microsoft.EntityFrameworkCore;
 @using BLX.Models
+@using OfficeOpenXml;
 @layout AdminManage
 @inject BLXContext _context
-
+@inject IJSRuntime jsRuntime
 <style>
     .btn-sm {
         margin: 0 3px;
@@ -11,6 +12,10 @@
     .table-data {
         height: 70vh;
         overflow-y: auto;
+    }
+
+    .dropdown-item{
+        cursor: pointer;
     }
 
     @@media (min-width: 1366px) {
@@ -36,7 +41,7 @@ else
                     <th>Hạng GPLX</th>
                     <th>Ngày thi</th>
                     <th>Trạng thái</th>
-                    <th>Thao tác</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -58,9 +63,17 @@ else
                             }
                         </td>
                         <td>
-                            <button class="btn btn-success btn-sm" @onclick="() => ChangeStatus(true, item.Id)">Mở lớp</button>
-                            <button class="btn btn-warning btn-sm" @onclick="() => ChangeStatus(false, item.Id)">Đóng lớp</button>
-                            <button class="btn btn-danger btn-sm" @onclick="() => DeleteClass(item.Id)">Xóa lớp</button>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                    Thao tác
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" @onclick="() => ChangeStatus(true, item.Id)">Mở lớp</a></li>
+                                    <li><a class="dropdown-item" @onclick="() => ChangeStatus(false, item.Id)">Đóng lớp</a></li>
+                                    <li><a class="dropdown-item" @onclick="() => ExportExcel(item.Id)">Xuất Excel</a></li>
+                                    <li><a class="dropdown-item" @onclick="() => DeleteClass(item.Id)">Xóa lớp</a></li>
+                                </ul>
+                            </div>
                         </td>
                     </tr>
                 }
@@ -125,6 +138,42 @@ else
         StateHasChanged();
     }
     public Guid IdClass = new Guid();
+    public async void ExportExcel(Guid Id)
+    {
+        byte[] fileContents;
+        var data = await _context.Users.Include(x => x.UserQuestions).Include(x => x.Semester).Where(x => x.SemesterId == Id && x.Semester.Status == true).OrderBy(x => x.Sbd).ToListAsync();
+        using (var package = new ExcelPackage())
+        {
+            var worksheet = package.Workbook.Worksheets.Add("Sheet1");
+
+            // Header
+            worksheet.Cells[1, 1].Value = "Số báo danh";
+            worksheet.Cells[1, 2].Value = "Họ và tên";
+            worksheet.Cells[1, 3].Value = "Cccd";
+            worksheet.Cells[1, 4].Value = "Năm sinh";
+            worksheet.Cells[1, 5].Value = "Lớp";
+            worksheet.Cells[1, 6].Value = "Điểm";
+            worksheet.Cells[1, 7].Value = "Kết quả";
+
+            // Data
+            for (int i = 0; i < data.Count; i++)
+            {
+                worksheet.Cells[i + 2, 1].Value = data[i].Sbd;
+                worksheet.Cells[i + 2, 2].Value = data[i].Name;
+                worksheet.Cells[i + 2, 3].Value = data[i].Cccd;
+                worksheet.Cells[i + 2, 4].Value = data[i].NamSinh.HasValue ? data[i].NamSinh.Value.ToString("yyyy-MM-dd") : "";
+                worksheet.Cells[i + 2, 5].Value = data[i].Semester.Name;
+                worksheet.Cells[i + 2, 6].Value = data[i].Score;
+                worksheet.Cells[i + 2, 7].Value = data[i].Result == true ? "Đạt" : "Không đạt";
+            }
+
+            fileContents = package.GetAsByteArray();
+        }
+        var base64 = Convert.ToBase64String(fileContents);
+        var fileName = $"{data.FirstOrDefault().Semester.Name}_{DateTime.Now:yyyyMMddHHmmss}.xlsx";
+
+        await jsRuntime.InvokeAsync<object>("downloadFile", fileName, base64);
+    }
     public void DeleteClass(Guid Id)
     {
         showYesNoMessageBox = true;
