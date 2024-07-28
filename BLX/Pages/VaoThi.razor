@@ -34,16 +34,16 @@
         margin-bottom: 10px;
     }
 
-    .img img {
-        max-height: 80vh;
-        width: auto;
-    }
+        .img img {
+            max-height: 80vh;
+            width: auto;
+        }
 
     .custom-box {
         flex-shrink: 0;
         border-radius: 15px;
         box-shadow: 0px 0px 10px rgb(0 0 0 / 63%);
-        background-color: #fff; 
+        background-color: #fff;
     }
 
     .info-user {
@@ -61,10 +61,11 @@
         font-size: 18px
     }
 
-    .radio-group .form-check{
+    .radio-group .form-check {
         padding: 0 5px;
         max-width: 20px;
     }
+
     .question-item {
         border-radius: 15px;
         box-shadow: 0px 0px 10px rgb(0 0 0 / 63%);
@@ -74,7 +75,7 @@
         margin: 10px 10px 0 10px;
     }
 
-    .time-box{
+    .time-box {
         background-color: #5b9bd6;
         border-radius: 15px 15px 0 0;
         font-size: 35px;
@@ -88,7 +89,8 @@
         .question-item {
             margin: 10px 5px 0 5px;
         }
-        .radio-group .form-check{
+
+        .radio-group .form-check {
             padding: 0;
         }
     }
@@ -134,7 +136,7 @@
                         <div class="radio-group d-flex justify-content-evenly w-100">
                             @for (int i = 1; i <= item.IdQuestionNavigation.NumberAnswers; i++)
                             {
-                                var answerValue = i; 
+                                var answerValue = i;
                                 <div class="form-check">
                                     <label class="form-check-label p-0 d-flex justify-content-center" for="option@answerValue_@item.IdQuestionNavigation.Id">
                                         @answerValue
@@ -197,13 +199,13 @@
     }
     private string GetBackgroundClass1()
     {
-        return  "selected-background1";
+        return "selected-background1";
     }
 
     protected override void OnInitialized()
     {
         user = _context.Users.Include(x => x.Semester).FirstOrDefault(x => x.Id == Guid.Parse(UserId));
-        if(user.Status == false)
+        if (user.Status == false)
         {
             if (user.Semester.Rank == "B11")
             {
@@ -213,11 +215,11 @@
                     .OrderBy(x => Guid.NewGuid())
                     .FirstOrDefault();
                 urlImage = "./img/" + id_monhoc_01.TypeNavigation.Domain + "/" + id_monhoc_01.Name + "";
-                userQuestion.Id= Guid.NewGuid();
+                userQuestion.Id = Guid.NewGuid();
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_01.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_02 = _context.Questions
@@ -229,7 +231,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_02.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_03 = _context.Questions
@@ -244,7 +246,7 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
 
@@ -257,7 +259,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_04.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_06 = _context.Questions
@@ -269,7 +271,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_06.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_07 = _context.Questions
@@ -284,7 +286,7 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
 
@@ -297,7 +299,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_08.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_09 = _context.Questions
@@ -312,7 +314,7 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
 
@@ -328,7 +330,7 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
 
@@ -350,7 +352,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_01.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_02 = _context.Questions
@@ -362,7 +364,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_02.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_03 = _context.Questions
@@ -377,7 +379,7 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
 
@@ -385,12 +387,12 @@
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Domain == "id_monhoc_04")
                     .OrderBy(x => Guid.NewGuid())
-                    .FirstOrDefault(); 
+                    .FirstOrDefault();
                 userQuestion.Id = Guid.NewGuid();
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_04.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_05 = _context.Questions
@@ -402,7 +404,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_05.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_06 = _context.Questions
@@ -414,7 +416,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_06.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_07 = _context.Questions
@@ -429,7 +431,7 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
 
@@ -442,7 +444,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_08.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_09 = _context.Questions
@@ -457,7 +459,7 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
 
@@ -473,7 +475,7 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
 
@@ -495,7 +497,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_01.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_02 = _context.Questions
@@ -507,7 +509,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_02.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_03 = _context.Questions
@@ -522,7 +524,7 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
 
@@ -535,7 +537,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_04.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_05 = _context.Questions
@@ -547,7 +549,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_05.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_06 = _context.Questions
@@ -559,7 +561,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_06.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_07 = _context.Questions
@@ -574,7 +576,7 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
                 id_monhoc_08 = _context.Questions
@@ -586,7 +588,7 @@
                 userQuestion.IdUser = Guid.Parse(UserId);
                 userQuestion.Status = false;
                 userQuestion.IdQuestion = id_monhoc_08.Id;
-                userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                 _context.SaveChanges();
 
                 id_monhoc_09 = _context.Questions
@@ -601,7 +603,7 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
 
@@ -617,12 +619,12 @@
                     userQuestion.IdUser = Guid.Parse(UserId);
                     userQuestion.Status = false;
                     userQuestion.IdQuestion = item.Id;
-                    userQuestion.Number = Numbers;  Numbers++;  _context.Add(userQuestion);
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
 
                 endTime = DateTime.Now.AddMinutes(24);
-                timeString = "24:00";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                timeString = "24:00";
                 timer = new Timer(1000);
                 timer.Elapsed += OnTimerElapsed;
                 timer.Start();
@@ -755,7 +757,7 @@
         }
         _context.Update(user);
         _context.SaveChanges();
-        
+
         showYesNoMessageBox2 = true;
         string result1 = "";
         if (user.Result == true)

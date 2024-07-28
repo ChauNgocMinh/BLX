@@ -16,27 +16,27 @@
         background-color: #fff;
     }
 
-    .form-container h3 {
-        background-color: #1b6ec2;
-        border-radius: 15px 15px 10px 10px;
-        height: 80px;
-        color: white;
-        font-weight: bold;
-        font-size: 27px;
-    }
+        .form-container h3 {
+            background-color: #1b6ec2;
+            border-radius: 15px 15px 10px 10px;
+            height: 80px;
+            color: white;
+            font-weight: bold;
+            font-size: 27px;
+        }
 
-    .form-container .check-info{
-        background-color: #5b9bd6;
-        border: none;
-        width: 100px;
-        height: fit-content;
-    }
+        .form-container .check-info {
+            background-color: #5b9bd6;
+            border: none;
+            width: 100px;
+            height: fit-content;
+        }
 
-    .form-info{
+    .form-info {
         padding: 30px;
     }
 
-    .info-user{
+    .info-user {
         border-radius: 15px;
         background: #d1d1d1;
         margin: 20px 0;
@@ -44,7 +44,7 @@
         font-weight: bold;
     }
 
-    .btn-submit{
+    .btn-submit {
         background-color: #70ad46;
         border: none;
         padding: 10px 15px;
@@ -83,7 +83,7 @@
                                 <button @onclick="CheckInformation" type="button" class="mt-2 btn btn-primary btn-block check-info">Kiểm tra thông tin</button>
                             </div>
                         </div>
-                        @if(user != null)
+                        @if (user != null)
                         {
                             <div class="form-group info-user">
                                 <div class="row p-0 mt-2">
@@ -119,7 +119,7 @@
         </div>
     </div>
 </div>
-<MessageBox Title="Thông báo" Message="Bạn đã tham dự kỳ thi, bạn có muốn làm lại?" Show="@showYesNoMessageBox3" OnYes="HandleYesClick2" OnNo="HandleNoClick1" />
+
 <MessageBox Title="Cảnh báo" Message="@Message" Show="@showOkMessageBox" OnOk="HandleOkClick" />
 @code {
     private List<Semester> semesters = new List<Semester>();
@@ -128,7 +128,6 @@
     private User user;
     private bool isButtonEnabled = false;
     private bool showOkMessageBox = false;
-    private bool showYesNoMessageBox3 = false;
     public string UserId;
     public string Message;
     protected override async Task OnInitializedAsync()
@@ -145,32 +144,13 @@
         var item = await _context.Users.FirstOrDefaultAsync(x => x.Id == Guid.Parse(UserId) && x.Semester.Status == true);
         if (item.Status == true)
         {
-            showYesNoMessageBox3 = true;
+            showOkMessageBox = true;
+            Message = "Thí sinh đã kiểm tra, nếu có vấn đề về kỹ thuật vui lòng liên hệ giáo viên!!";
         }
         if (item.Status == false)
         {
             NavigationManager.NavigateTo($"/vao_thi/{UserId}");
         }
-    }
-
-    public void HandleNoClick1()
-    {
-        showYesNoMessageBox3 = false;
-    }
-
-    public void HandleYesClick2()
-    {
-        var user = _context.Users.Include(x => x.Semester).FirstOrDefault(x => x.Id == Guid.Parse(UserId));
-        user.Status = false;
-        user.Score = null;
-        user.Result = null;
-        _context.Update(user);
-        _context.SaveChanges();
-
-        var userQuestions = _context.UserQuestions.Where(x => x.IdUser == user.Id).ToList();
-        _context.UserQuestions.RemoveRange(userQuestions);
-        _context.SaveChanges();
-        HandleButtonClick();
     }
 
     private async void CheckInformation()
