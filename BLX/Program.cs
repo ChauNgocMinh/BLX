@@ -1,6 +1,7 @@
-using BLX.Models;
+﻿using BLX.Models;
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
@@ -16,7 +17,7 @@ builder.Services.AddDbContext<BLXContext>(options =>
 
 builder.Services.AddHttpClient();
 
-// Th�m CORS n?u c?n
+// Thêm CORS n?u c?n
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
@@ -28,11 +29,21 @@ builder.Services.AddCors(options =>
         });
 });
 
-// Th�m Authentication v� Authorization n?u c?n
+// Thêm Authentication và Authorization n?u c?n
 builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<BLXContext>();
+
+    // Kiểm tra nếu database chưa tồn tại, sẽ tạo và apply migrations
+    if (dbContext.Database.GetPendingMigrations().Any())
+    {
+        dbContext.Database.Migrate();
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -45,7 +56,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-// S? d?ng CORS n?u c?n
 app.UseCors("AllowAllOrigins");
 
 app.UseAuthentication();

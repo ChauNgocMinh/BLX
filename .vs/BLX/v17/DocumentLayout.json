@@ -1,90 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\",
+  "WorkspaceRootPath": "C:\\Users\\minh.chau\\Desktop\\BLX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\asus\\onedrive\\m\u00E1y t\u00EDnh\\blx\\blx\\pages\\admin\\createsemesterpopup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\admin\\createsemesterpopup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\pages\\admin\\usermanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\admin\\usermanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\pages\\admin\\classmanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\admin\\classmanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\pages\\admin\\questionmanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\admin\\questionmanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\pages\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\shared\\messagebox.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\shared\\messagebox.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\models\\blxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\models\\blxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\models\\blxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\pages\\vaothi.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\vaothi.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\pages\\adminmanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\adminmanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\properties\\publishprofiles\\uat.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\properties\\publishprofiles\\uat.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\pages\\_host.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\_host.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\properties\\publishprofiles\\development.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\properties\\publishprofiles\\development.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\wwwroot\\js\\interop.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\wwwroot\\js\\interop.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\blx.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\blx.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\wwwroot\\css\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\wwwroot\\css\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\blx\\shared\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\shared\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,314 +42,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateSemesterPopup.razor",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\Admin\\CreateSemesterPopup.razor",
-              "RelativeDocumentMoniker": "BLX\\Pages\\Admin\\CreateSemesterPopup.razor",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\Admin\\CreateSemesterPopup.razor",
-              "RelativeToolTip": "BLX\\Pages\\Admin\\CreateSemesterPopup.razor",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAAwIAAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-01T07:02:00.631Z",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "BLX\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\launchSettings.json",
+              "RelativeToolTip": "BLX\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T08:22:25.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "QuestionManage.razor",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\Admin\\QuestionManage.razor",
-              "RelativeDocumentMoniker": "BLX\\Pages\\Admin\\QuestionManage.razor",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\Admin\\QuestionManage.razor",
-              "RelativeToolTip": "BLX\\Pages\\Admin\\QuestionManage.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T06:21:03.444Z",
+              "DocumentIndex": 5,
+              "Title": "Uat.pubxml",
+              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Uat.pubxml",
+              "RelativeDocumentMoniker": "BLX\\Properties\\PublishProfiles\\Uat.pubxml",
+              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Uat.pubxml",
+              "RelativeToolTip": "BLX\\Properties\\PublishProfiles\\Uat.pubxml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-04-08T08:22:23.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Development.pubxml",
+              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Development.pubxml",
+              "RelativeDocumentMoniker": "BLX\\Properties\\PublishProfiles\\Development.pubxml",
+              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Development.pubxml",
+              "RelativeToolTip": "BLX\\Properties\\PublishProfiles\\Development.pubxml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-04-08T08:22:21.021Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ClassManage.razor",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\Admin\\ClassManage.razor",
-              "RelativeDocumentMoniker": "BLX\\Pages\\Admin\\ClassManage.razor",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\Admin\\ClassManage.razor",
-              "RelativeToolTip": "BLX\\Pages\\Admin\\ClassManage.razor",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAjwHYAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T06:46:31.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserManage.razor",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\Admin\\UserManage.razor",
-              "RelativeDocumentMoniker": "BLX\\Pages\\Admin\\UserManage.razor",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\Admin\\UserManage.razor",
-              "RelativeToolTip": "BLX\\Pages\\Admin\\UserManage.razor",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAjwHAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T05:57:51.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\Index.razor",
-              "RelativeDocumentMoniker": "BLX\\Pages\\Index.razor",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\Index.razor",
-              "RelativeToolTip": "BLX\\Pages\\Index.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-25T02:13:36.227Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Program.cs",
-              "RelativeDocumentMoniker": "BLX\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Program.cs",
-              "RelativeToolTip": "BLX\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Title": "BLXContext.cs",
+              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Models\\BLXContext.cs",
+              "RelativeDocumentMoniker": "BLX\\Models\\BLXContext.cs",
+              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Models\\BLXContext.cs",
+              "RelativeToolTip": "BLX\\Models\\BLXContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T02:26:59.637Z",
+              "WhenOpened": "2025-04-08T08:21:01.867Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "BLX\\Pages\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\_Layout.cshtml",
-              "RelativeToolTip": "BLX\\Pages\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-25T02:15:15.722Z",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "BLX\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\appsettings.Development.json*",
+              "RelativeToolTip": "BLX\\appsettings.Development.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T08:20:56.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\appsettings.json",
+              "RelativeDocumentMoniker": "BLX\\appsettings.json",
+              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\appsettings.json",
+              "RelativeToolTip": "BLX\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T08:20:54.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Shared\\MainLayout.razor",
-              "RelativeDocumentMoniker": "BLX\\Shared\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Shared\\MainLayout.razor",
-              "RelativeToolTip": "BLX\\Shared\\MainLayout.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-25T02:13:49.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\appsettings.json",
-              "RelativeDocumentMoniker": "BLX\\appsettings.json",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\appsettings.json",
-              "RelativeToolTip": "BLX\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-27T02:18:18.235Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MessageBox.razor",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Shared\\MessageBox.razor",
-              "RelativeDocumentMoniker": "BLX\\Shared\\MessageBox.razor",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Shared\\MessageBox.razor",
-              "RelativeToolTip": "BLX\\Shared\\MessageBox.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-01T07:05:55.627Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BLXContext.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Models\\BLXContext.cs",
-              "RelativeDocumentMoniker": "BLX\\Models\\BLXContext.cs",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Models\\BLXContext.cs",
-              "RelativeToolTip": "BLX\\Models\\BLXContext.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAjwGUAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T06:57:55.119Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AdminManage.razor",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\AdminManage.razor",
-              "RelativeDocumentMoniker": "BLX\\Pages\\AdminManage.razor",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\AdminManage.razor",
-              "RelativeToolTip": "BLX\\Pages\\AdminManage.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T06:46:48.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_Host.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\_Host.cshtml",
-              "RelativeDocumentMoniker": "BLX\\Pages\\_Host.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\_Host.cshtml",
-              "RelativeToolTip": "BLX\\Pages\\_Host.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-25T02:14:53.758Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "VaoThi.razor",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\VaoThi.razor",
-              "RelativeDocumentMoniker": "BLX\\Pages\\VaoThi.razor",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Pages\\VaoThi.razor",
-              "RelativeToolTip": "BLX\\Pages\\VaoThi.razor",
-              "ViewState": "AQIAALAAAAAAAAAAAAApwHkCAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-25T03:22:43.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "interop.js",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\wwwroot\\js\\interop.js",
-              "RelativeDocumentMoniker": "BLX\\wwwroot\\js\\interop.js",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\wwwroot\\js\\interop.js",
-              "RelativeToolTip": "BLX\\wwwroot\\js\\interop.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-30T07:41:50.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BLX",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\BLX.csproj",
-              "RelativeDocumentMoniker": "BLX\\BLX.csproj",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\BLX.csproj",
-              "RelativeToolTip": "BLX\\BLX.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-30T07:29:49.587Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\App.razor",
+              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\App.razor",
               "RelativeDocumentMoniker": "BLX\\App.razor",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\App.razor",
+              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\App.razor",
               "RelativeToolTip": "BLX\\App.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAgAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-25T02:14:43.951Z"
+              "WhenOpened": "2025-04-08T08:20:54.156Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "MainLayout.razor.css",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Shared\\MainLayout.razor.css",
-              "RelativeDocumentMoniker": "BLX\\Shared\\MainLayout.razor.css",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\Shared\\MainLayout.razor.css",
-              "RelativeToolTip": "BLX\\Shared\\MainLayout.razor.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-25T02:14:22.465Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "bootstrap.min.css",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-              "RelativeDocumentMoniker": "BLX\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-              "RelativeToolTip": "BLX\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABOpwEA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-25T04:23:03.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "BLX\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "BLX\\wwwroot\\css\\site.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-25T04:26:23.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\_Imports.razor",
-              "RelativeDocumentMoniker": "BLX\\_Imports.razor",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\M\u00E1y t\u00EDnh\\BLX\\BLX\\_Imports.razor",
-              "RelativeToolTip": "BLX\\_Imports.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-24T07:39:24.464Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 273,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Program.cs",
+              "RelativeDocumentMoniker": "BLX\\Program.cs",
+              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Program.cs",
+              "RelativeToolTip": "BLX\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T08:18:27.495Z",
+              "EditorCaption": ""
             }
           ]
         }
