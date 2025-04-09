@@ -207,7 +207,7 @@
         user = _context.Users.Include(x => x.Semester).FirstOrDefault(x => x.Id == Guid.Parse(UserId));
         if (user.Status == false)
         {
-            if (user.Semester.Rank == "B11")
+            if (user.Semester.Rank == "B.01")
             {
                 id_monhoc_01 = _context.Questions
                     .Include(x => x.TypeNavigation)
@@ -340,7 +340,7 @@
                 timer.Elapsed += OnTimerElapsed;
                 timer.Start();
             }
-            if (user.Semester.Rank == "B2")
+            if (user.Semester.Rank == "B")
             {
                 id_monhoc_01 = _context.Questions
                     .Include(x => x.TypeNavigation)
@@ -479,13 +479,13 @@
                     _context.SaveChanges();
                 }
 
-                endTime = DateTime.Now.AddMinutes(22);
-                timeString = "22:00";
+                endTime = DateTime.Now.AddMinutes(20);
+                timeString = "20:00";
                 timer = new Timer(1000);
                 timer.Elapsed += OnTimerElapsed;
                 timer.Start();
             }
-            if (user.Semester.Rank == "C")
+            if (user.Semester.Rank == "C1")
             {
                 id_monhoc_01 = _context.Questions
                     .Include(x => x.TypeNavigation)
@@ -516,7 +516,7 @@
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Domain == "id_monhoc_03")
                     .OrderBy(x => Guid.NewGuid())
-                    .Take(7)
+                    .Take(8)
                     .ToList();
                 foreach (var item in id_monhoc_03)
                 {
@@ -568,7 +568,7 @@
                    .Include(x => x.TypeNavigation)
                    .Where(x => x.TypeNavigation.Domain == "id_monhoc_07")
                    .OrderBy(x => Guid.NewGuid())
-                   .Take(2)
+                   .Take(1)
                    .ToList();
                 foreach (var item in id_monhoc_07)
                 {
@@ -579,6 +579,7 @@
                     userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
                     _context.SaveChanges();
                 }
+
                 id_monhoc_08 = _context.Questions
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Domain == "id_monhoc_08")
@@ -623,8 +624,8 @@
                     _context.SaveChanges();
                 }
 
-                endTime = DateTime.Now.AddMinutes(24);
-                timeString = "24:00";
+                endTime = DateTime.Now.AddMinutes(22);
+                timeString = "22:00";
                 timer = new Timer(1000);
                 timer.Elapsed += OnTimerElapsed;
                 timer.Start();
@@ -722,7 +723,7 @@
         var allQuestions = user.UserQuestions
                         .FirstOrDefault(x => x.IdQuestionNavigation.TypeNavigation.Domain == "id_monhoc_02");
         bool allQuestionsValid = allQuestions.Status;
-        if (user.Semester.Rank == "B11")
+        if (user.Semester.Rank == "B.01")
         {
             if (user.Score >= 27 && allQuestionsValid == true)
             {
@@ -733,7 +734,7 @@
                 user.Result = false;
             }
         }
-        if (user.Semester.Rank == "B2")
+        if (user.Semester.Rank == "B")
         {
             if (user.Score >= 32 && allQuestionsValid == true)
             {
@@ -744,7 +745,7 @@
                 user.Result = false;
             }
         }
-        if (user.Semester.Rank == "C")
+        if (user.Semester.Rank == "C1")
         {
             if (user.Score >= 36 && allQuestionsValid == true)
             {
@@ -770,11 +771,11 @@
             result1 = "Không đạt";
         }
         string score = "";
-        if (user.Semester.Rank == "B11")
+        if (user.Semester.Rank == "B.01")
         {
             score = user.Score + "/30";
         }
-        if (user.Semester.Rank == "B2")
+        if (user.Semester.Rank == "B")
         {
             score = user.Score + "/35";
         }
@@ -813,7 +814,7 @@
         var allQuestions = user.UserQuestions
                         .FirstOrDefault(x => x.IdQuestionNavigation.TypeNavigation.Domain == "id_monhoc_02");
         bool allQuestionsValid = allQuestions.Status;
-        if (user.Semester.Rank == "B11")
+        if (user.Semester.Rank == "B.01")
         {
             if (user.Score >= 27 && allQuestionsValid == true)
             {
@@ -824,7 +825,7 @@
                 user.Result = false;
             }
         }
-        if (user.Semester.Rank == "B2")
+        if (user.Semester.Rank == "B")
         {
             if (user.Score >= 32 && allQuestionsValid == true)
             {
@@ -861,11 +862,11 @@
             result1 = "Không đạt";
         }
         string score = "";
-        if (user.Semester.Rank == "B11")
+        if (user.Semester.Rank == "B.01")
         {
             score = user.Score + "/30";
         }
-        if (user.Semester.Rank == "B2")
+        if (user.Semester.Rank == "B")
         {
             score = user.Score + "/35";
         }

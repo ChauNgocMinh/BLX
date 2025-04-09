@@ -83,9 +83,9 @@
                 <div>
                     <label for="licenseClass">Hạng GPLX:</label>
                     <select class="form-control" @bind="Rank">
-                        <option value="B11">Hạng B11</option>
-                        <option value="B2">Hạng B2</option>
-                        <option value="C">Hạng C</option>
+                        <option value="B.01">Hạng B.01</option>
+                        <option value="B">Hạng B</option>
+                        <option value="C1">Hạng C1</option>
                     </select>
                 </div>
                 <div>
@@ -105,7 +105,7 @@
 @code {
     private bool IsVisible { get; set; }
     private string Name { get; set; }
-    private string Rank = "B11";
+    private string Rank = "B.01";
     private DateTime TestDay = DateTime.Now;
     private Semester semester = new Semester();
     [Parameter] public EventCallback OnClose { get; set; }
