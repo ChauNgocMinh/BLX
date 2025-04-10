@@ -173,7 +173,7 @@
     Question id_monhoc_01 = new Question();
     Question id_monhoc_02 = new Question();
     List<Question> id_monhoc_03 = new List<Question>();
-    Question id_monhoc_04 = new Question();
+    List<Question> id_monhoc_04 = new List<Question>();
     Question id_monhoc_05;
     Question id_monhoc_06 = new Question();
     List<Question> id_monhoc_07 = new List<Question>();
@@ -254,13 +254,17 @@
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Equals("id_monhoc_04"))
                     .OrderBy(x => Guid.NewGuid())
-                    .FirstOrDefault();
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = id_monhoc_04.Id;
-                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
-                _context.SaveChanges();
+                    .Take(1)
+                    .ToList();
+                foreach (var item in id_monhoc_04)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
 
                 id_monhoc_06 = _context.Questions
                     .Include(x => x.TypeNavigation)
@@ -371,7 +375,7 @@
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Equals("id_monhoc_03"))
                     .OrderBy(x => Guid.NewGuid())
-                    .Take(7)
+                    .Take(5)
                     .ToList();
                 foreach (var item in id_monhoc_03)
                 {
@@ -387,13 +391,17 @@
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Domain == "id_monhoc_04")
                     .OrderBy(x => Guid.NewGuid())
-                    .FirstOrDefault();
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = id_monhoc_04.Id;
-                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
-                _context.SaveChanges();
+                    .Take(1)
+                    .ToList();
+                foreach (var item in id_monhoc_04)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
 
                 id_monhoc_05 = _context.Questions
                     .Include(x => x.TypeNavigation)
@@ -423,7 +431,7 @@
                    .Include(x => x.TypeNavigation)
                    .Where(x => x.TypeNavigation.Equals("id_monhoc_07"))
                    .OrderBy(x => Guid.NewGuid())
-                   .Take(2)
+                   .Take(1)
                    .ToList();
                 foreach (var item in id_monhoc_07)
                 {
@@ -451,7 +459,7 @@
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Equals("id_monhoc_09"))
                     .OrderBy(x => Guid.NewGuid())
-                    .Take(10)
+                    .Take(9)
                     .ToList();
                 foreach (var item in id_monhoc_09)
                 {
@@ -467,7 +475,7 @@
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Equals("id_monhoc_10"))
                     .OrderBy(x => Guid.NewGuid())
-                    .Take(10)
+                    .Take(9)
                     .ToList();
                 foreach (var item in id_monhoc_10)
                 {
@@ -516,7 +524,7 @@
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Domain == "id_monhoc_03")
                     .OrderBy(x => Guid.NewGuid())
-                    .Take(8)
+                    .Take(7)
                     .ToList();
                 foreach (var item in id_monhoc_03)
                 {
@@ -532,13 +540,18 @@
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Domain == "id_monhoc_04")
                     .OrderBy(x => Guid.NewGuid())
-                    .FirstOrDefault();
-                userQuestion.Id = Guid.NewGuid();
-                userQuestion.IdUser = Guid.Parse(UserId);
-                userQuestion.Status = false;
-                userQuestion.IdQuestion = id_monhoc_04.Id;
-                userQuestion.Number = Numbers; Numbers++; _context.Add(userQuestion);
-                _context.SaveChanges();
+                    .Take(2)
+                    .ToList();
+                foreach (var item in id_monhoc_04)
+                {
+                    userQuestion.Id = Guid.NewGuid();
+                    userQuestion.IdUser = Guid.Parse(UserId);
+                    userQuestion.Status = false;
+                    userQuestion.IdQuestion = item.Id;
+                    userQuestion.Number = Numbers; Numbers++; 
+                    _context.Add(userQuestion);
+                    _context.SaveChanges();
+                }
 
                 id_monhoc_05 = _context.Questions
                     .Include(x => x.TypeNavigation)
@@ -596,7 +609,7 @@
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Domain == "id_monhoc_09")
                     .OrderBy(x => Guid.NewGuid())
-                    .Take(14)
+                    .Take(10)
                     .ToList();
                 foreach (var item in id_monhoc_09)
                 {
@@ -612,7 +625,7 @@
                     .Include(x => x.TypeNavigation)
                     .Where(x => x.TypeNavigation.Domain == "id_monhoc_10")
                     .OrderBy(x => Guid.NewGuid())
-                    .Take(11)
+                    .Take(10)
                     .ToList();
                 foreach (var item in id_monhoc_10)
                 {
