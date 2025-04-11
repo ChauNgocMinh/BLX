@@ -29,22 +29,22 @@
     }
 
     .badge-primary {
-        background-color: #007bff; /* Màu nền cho Tổng thí sinh */
+        background-color: #007bff; 
         color: #fff;
     }
 
     .badge-info {
-        background-color: #17a2b8; /* Màu nền cho Chưa thi */
+        background-color: #17a2b8;
         color: #fff;
     }
 
     .badge-success {
-        background-color: #28a745; /* Màu nền cho Đạt */
+        background-color: #28a745;
         color: #fff;
     }
 
     .badge-danger {
-        background-color: #dc3545; /* Màu nền cho Không đạt */
+        background-color: #dc3545;
         color: #fff;
     }
     @@media (min-width: 1366px){
@@ -375,132 +375,83 @@ else
 
                 document.Add(new Paragraph("Ghi chú:     Đ: Đáp án đúng     X: Ý trả lời đúng     S: Ý trả lời sai\n\n", fontItalic));
 
-                int maxHorizontal = user.UserQuestions.Count(); // Maximum number of columns per table
-                int maxVertical = 4;    // Maximum number of rows per table
+                int totalColumns = user.UserQuestions.Count();
+                int totalRows = 4;
 
-                int totalColumns = user.UserQuestions.Count();  // Number of columns to render
-                int totalRows = 4;      // Number of rows to render
+                // Determine split
+                int topColumns = totalColumns <= 30 ? 15 : 20;
+                int bottomColumns = totalColumns - topColumns;
 
-                // Create a main table
-                PdfPTable mainTable = new PdfPTable(20);
-                mainTable.WidthPercentage = 100;
-                // Header row for questions
-                for (int col = 1; col <= totalColumns; col++)
+                // Create two tables
+                PdfPTable mainTableTop = new PdfPTable(topColumns);
+                mainTableTop.WidthPercentage = 100;
+
+                PdfPTable mainTableBottom = new PdfPTable(bottomColumns > 0 ? bottomColumns : 1); // avoid 0-cols
+                mainTableBottom.WidthPercentage = 100;
+
+                // Split questions
+                var topQuestions = user.UserQuestions.OrderBy(x => x.Number).Take(topColumns).ToList();
+                var bottomQuestions = user.UserQuestions.OrderBy(x => x.Number).Skip(topColumns).ToList();
+
+                // Add header cells for top table
+                for (int col = 1; col <= topQuestions.Count; col++)
                 {
-                    if (col <= 20)
-                    {
-                        PdfPCell cell = new PdfPCell(new Phrase($"{col}", new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
-                        cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                        mainTable.AddCell(cell);
-                    }
+                    PdfPCell cell = new PdfPCell(new Phrase($"{col}", new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
+                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                    mainTableTop.AddCell(cell);
                 }
 
-                // Body rows for answers
+                // Add header cells for bottom table
+                for (int col = topColumns + 1; col <= totalColumns; col++)
+                {
+                    PdfPCell cell = new PdfPCell(new Phrase($"{col}", new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
+                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                    mainTableBottom.AddCell(cell);
+                }
+
+                // Add rows to top table
                 for (int row = 1; row <= totalRows; row++)
                 {
-                    foreach (var item in user.UserQuestions)
+                    foreach (var item in topQuestions)
                     {
-                        if(item.Number <= 20)
-                        {
-                            if (item.Reply == row)
-                            {
-                                if (item.IdQuestionNavigation.Answers == row)
-                                {
-                                    PdfPCell cell = new PdfPCell(new Phrase("X", fontTable));
-                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                    mainTable.AddCell(cell);
-                                }
-                                else
-                                {
-                                    PdfPCell cell = new PdfPCell(new Phrase("S", fontTable));
-                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                    mainTable.AddCell(cell);
-                                }
-                            }
-                            else
-                            {
-                                if (item.IdQuestionNavigation.Answers == row)
-                                {
-                                    PdfPCell cell = new PdfPCell(new Phrase("Đ", fontTable));
-                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                    mainTable.AddCell(cell);
-                                }
-                                else
-                                {
-                                    PdfPCell cell = new PdfPCell(new Phrase(" ", fontTable));
-                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                    mainTable.AddCell(cell);
-                                }
-                            }
-                        }
-                    }
-                }
-                // Add the main table to the document
-                document.Add(mainTable);
-
-                PdfPTable spacerTable = new PdfPTable(1);
-                spacerTable.WidthPercentage = 100;
-                PdfPCell spacerCell = new PdfPCell(new Phrase(" "));
-                spacerCell.Border = PdfPCell.NO_BORDER;
-                spacerCell.FixedHeight = 20f; 
-                spacerTable.AddCell(spacerCell);
-                document.Add(spacerTable);
-
-                // Create a main table
-                PdfPTable mainTable1 = new PdfPTable(totalColumns - 20);
-                mainTable1.WidthPercentage = 100;
-                // Header row for questions
-                for (int col = 1; col <= totalColumns; col++)
-                {
-                    if (col > 20)
-                    {
-                        PdfPCell cell = new PdfPCell(new Phrase($"{col}", new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
-                        cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                        mainTable1.AddCell(cell);
+                        mainTableTop.AddCell(GetAnswerCell(item, row, fontTable));
                     }
                 }
 
-                // Body rows for answers
+                // Add rows to bottom table
                 for (int row = 1; row <= totalRows; row++)
                 {
-                    foreach (var item in user.UserQuestions)
+                    foreach (var item in bottomQuestions)
                     {
-                        if(item.Number > 20)
-                        {
-                            if (item.Reply == row)
-                            {
-                                if (item.IdQuestionNavigation.Answers == row)
-                                {
-                                    PdfPCell cell = new PdfPCell(new Phrase("X", fontTable));
-                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                    mainTable1.AddCell(cell);
-                                }
-                                else
-                                {
-                                    PdfPCell cell = new PdfPCell(new Phrase("S", fontTable));
-                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                    mainTable1.AddCell(cell);
-                                }
-                            }
-                            else
-                            {
-                                if (item.IdQuestionNavigation.Answers == row)
-                                {
-                                    PdfPCell cell = new PdfPCell(new Phrase("Đ", fontTable));
-                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                    mainTable1.AddCell(cell);
-                                }
-                                else
-                                {
-                                    PdfPCell cell = new PdfPCell(new Phrase(" ", fontTable));
-                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                                    mainTable1.AddCell(cell);
-                                }
-                            }
-                        }
+                        mainTableBottom.AddCell(GetAnswerCell(item, row, fontTable));
                     }
                 }
-                document.Add(mainTable1);
+
+                // Add both tables to the document
+                document.Add(mainTableTop);
+                if (bottomColumns > 0)
+                {
+                    document.Add(new Paragraph("\n")); // optional spacing
+                    document.Add(mainTableBottom);
+                }
+
+                // Helper method
+                PdfPCell GetAnswerCell(UserQuestion item, int row, Font font)
+                {
+                    string content = " ";
+                    if (item.Reply == row)
+                    {
+                        content = item.IdQuestionNavigation.Answers == row ? "X" : "S";
+                    }
+                    else if (item.IdQuestionNavigation.Answers == row)
+                    {
+                        content = "Đ";
+                    }
+
+                    var cell = new PdfPCell(new Phrase(content, font));
+                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                    return cell;
+                }
 
                 // Add conclusion section
                 PdfPTable table2 = new PdfPTable(2);
