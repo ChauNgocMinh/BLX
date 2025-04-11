@@ -236,7 +236,7 @@
 
                 id_monhoc_03 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_03"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_03"))
                     .OrderBy(x => Guid.NewGuid())
                     .Take(6)
                     .ToList();
@@ -252,7 +252,7 @@
 
                 id_monhoc_04 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_04"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_04"))
                     .OrderBy(x => Guid.NewGuid())
                     .Take(1)
                     .ToList();
@@ -268,7 +268,7 @@
 
                 id_monhoc_06 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_06"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_06"))
                     .OrderBy(x => Guid.NewGuid())
                     .FirstOrDefault();
                 userQuestion.Id = Guid.NewGuid();
@@ -280,7 +280,7 @@
 
                 id_monhoc_07 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_07"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_07"))
                     .OrderBy(x => Guid.NewGuid())
                     .Take(1)
                     .ToList();
@@ -296,7 +296,7 @@
 
                 id_monhoc_08 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_08"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_08"))
                     .OrderBy(x => Guid.NewGuid())
                     .FirstOrDefault();
                 userQuestion.Id = Guid.NewGuid();
@@ -324,7 +324,7 @@
 
                 id_monhoc_10 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_10"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_10"))
                     .OrderBy(x => Guid.NewGuid())
                     .Take(9)
                     .ToList();
@@ -348,7 +348,7 @@
             {
                 id_monhoc_01 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_01"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_01"))
                     .OrderBy(x => Guid.NewGuid())
                     .FirstOrDefault();
                 urlImage = "./img/" + id_monhoc_01.TypeNavigation.Domain + "/" + id_monhoc_01.Name + "";
@@ -361,7 +361,7 @@
 
                 id_monhoc_02 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_02"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_02"))
                     .OrderBy(x => Guid.NewGuid())
                     .FirstOrDefault();
                 userQuestion.Id = Guid.NewGuid();
@@ -373,7 +373,7 @@
 
                 id_monhoc_03 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_03"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_03"))
                     .OrderBy(x => Guid.NewGuid())
                     .Take(5)
                     .ToList();
@@ -405,7 +405,7 @@
 
                 id_monhoc_05 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_05"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_05"))
                     .OrderBy(x => Guid.NewGuid())
                     .FirstOrDefault();
                 userQuestion.Id = Guid.NewGuid();
@@ -417,7 +417,7 @@
 
                 id_monhoc_06 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_06"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_06"))
                     .OrderBy(x => Guid.NewGuid())
                     .FirstOrDefault();
                 userQuestion.Id = Guid.NewGuid();
@@ -429,7 +429,7 @@
 
                 id_monhoc_07 = _context.Questions
                    .Include(x => x.TypeNavigation)
-                   .Where(x => x.TypeNavigation.Equals("id_monhoc_07"))
+                   .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_07"))
                    .OrderBy(x => Guid.NewGuid())
                    .Take(1)
                    .ToList();
@@ -445,7 +445,7 @@
 
                 id_monhoc_08 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_08"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_08"))
                     .OrderBy(x => Guid.NewGuid())
                     .FirstOrDefault();
                 userQuestion.Id = Guid.NewGuid();
@@ -457,7 +457,7 @@
 
                 id_monhoc_09 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_09"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_09"))
                     .OrderBy(x => Guid.NewGuid())
                     .Take(9)
                     .ToList();
@@ -473,7 +473,7 @@
 
                 id_monhoc_10 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_10"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_10"))
                     .OrderBy(x => Guid.NewGuid())
                     .Take(9)
                     .ToList();
@@ -497,7 +497,7 @@
             {
                 id_monhoc_01 = _context.Questions
                     .Include(x => x.TypeNavigation)
-                    .Where(x => x.TypeNavigation.Equals("id_monhoc_01"))
+                    .Where(x => x.TypeNavigation.Domain.Equals("id_monhoc_01"))
                     .OrderBy(x => Guid.NewGuid())
                     .FirstOrDefault();
                 urlImage = "./img/" + id_monhoc_01.TypeNavigation.Domain + "/" + id_monhoc_01.Name + "";
