@@ -1,37 +1,73 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\minh.chau\\Desktop\\BLX\\",
+  "WorkspaceRootPath": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\pages\\vaothi.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\vaothi.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\pages\\admin\\classmanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\admin\\classmanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\models\\blxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\models\\blxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\pages\\admin\\createsemesterpopup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\admin\\createsemesterpopup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\properties\\publishprofiles\\uat.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\properties\\publishprofiles\\uat.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\properties\\publishprofiles\\uat.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\properties\\publishprofiles\\development.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\bin\\Release\\net6.0\\publish\\Uat\\appsettings.Uat.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BLX\\bin\\Release\\net6.0\\publish\\Uat\\appsettings.Uat.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\properties\\publishprofiles\\development.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\properties\\publishprofiles\\development.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\minh.chau\\desktop\\blx\\blx\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\appsettings.uat.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\appsettings.uat.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\pages\\admin\\usermanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\admin\\usermanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\wwwroot\\img\\id_monhoc_01\\600 cau hoi12.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\wwwroot\\img\\id_monhoc_01\\600 cau hoi12.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\models\\blxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\models\\blxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|c:\\users\\latitude 5300\\desktop\\blx\\blx\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E505F6C-E120-4E42-9133-CA9B52EBD5FE}|BLX\\BLX.csproj|solutionrelative:blx\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -42,123 +78,219 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VaoThi.razor",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\VaoThi.razor",
+              "RelativeDocumentMoniker": "BLX\\Pages\\VaoThi.razor",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\VaoThi.razor",
+              "RelativeToolTip": "BLX\\Pages\\VaoThi.razor",
+              "ViewState": "AgIAAGUDAAAAAAAAAAAQwPoCAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T14:59:02.889Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Uat.pubxml",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Uat.pubxml",
+              "RelativeDocumentMoniker": "BLX\\Properties\\PublishProfiles\\Uat.pubxml",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Uat.pubxml",
+              "RelativeToolTip": "BLX\\Properties\\PublishProfiles\\Uat.pubxml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-04-08T08:22:23.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserManage.razor",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\Admin\\UserManage.razor",
+              "RelativeDocumentMoniker": "BLX\\Pages\\Admin\\UserManage.razor",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\Admin\\UserManage.razor",
+              "RelativeToolTip": "BLX\\Pages\\Admin\\UserManage.razor",
+              "ViewState": "AgIAAGMBAAAAAAAAAAAgwHoBAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T15:07:15.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "BLX\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Properties\\launchSettings.json",
               "RelativeToolTip": "BLX\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-04-08T08:22:25.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Uat.pubxml",
-              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Uat.pubxml",
-              "RelativeDocumentMoniker": "BLX\\Properties\\PublishProfiles\\Uat.pubxml",
-              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Uat.pubxml",
-              "RelativeToolTip": "BLX\\Properties\\PublishProfiles\\Uat.pubxml",
+              "DocumentIndex": 13,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "BLX\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\Login.razor",
+              "RelativeToolTip": "BLX\\Pages\\Login.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-04-08T08:22:23.227Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T15:07:08.631Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Development.pubxml",
-              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Development.pubxml",
-              "RelativeDocumentMoniker": "BLX\\Properties\\PublishProfiles\\Development.pubxml",
-              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Development.pubxml",
-              "RelativeToolTip": "BLX\\Properties\\PublishProfiles\\Development.pubxml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-04-08T08:22:21.021Z",
-              "EditorCaption": ""
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Program.cs",
+              "RelativeDocumentMoniker": "BLX\\Program.cs",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Program.cs",
+              "RelativeToolTip": "BLX\\Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T08:18:27.495Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BLXContext.cs",
-              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Models\\BLXContext.cs",
-              "RelativeDocumentMoniker": "BLX\\Models\\BLXContext.cs",
-              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Models\\BLXContext.cs",
-              "RelativeToolTip": "BLX\\Models\\BLXContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T08:21:01.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "BLX\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\appsettings.Development.json*",
-              "RelativeToolTip": "BLX\\appsettings.Development.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-08T08:20:56.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\appsettings.json",
-              "RelativeDocumentMoniker": "BLX\\appsettings.json",
-              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\appsettings.json",
-              "RelativeToolTip": "BLX\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-08T08:20:54.9Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\App.razor",
-              "RelativeDocumentMoniker": "BLX\\App.razor",
-              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\App.razor",
-              "RelativeToolTip": "BLX\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CreateSemesterPopup.razor",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\Admin\\CreateSemesterPopup.razor",
+              "RelativeDocumentMoniker": "BLX\\Pages\\Admin\\CreateSemesterPopup.razor",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\Admin\\CreateSemesterPopup.razor",
+              "RelativeToolTip": "BLX\\Pages\\Admin\\CreateSemesterPopup.razor",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-08T08:20:54.156Z",
+              "WhenOpened": "2025-04-09T15:08:34.975Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Program.cs",
-              "RelativeDocumentMoniker": "BLX\\Program.cs",
-              "ToolTip": "C:\\Users\\minh.chau\\Desktop\\BLX\\BLX\\Program.cs",
-              "RelativeToolTip": "BLX\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T08:18:27.495Z",
+              "Title": "ClassManage.razor",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\Admin\\ClassManage.razor",
+              "RelativeDocumentMoniker": "BLX\\Pages\\Admin\\ClassManage.razor",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\Admin\\ClassManage.razor",
+              "RelativeToolTip": "BLX\\Pages\\Admin\\ClassManage.razor",
+              "ViewState": "AgIAANMAAAAAAAAAAAAAAGQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T16:32:09.284Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.Uat.json",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\appsettings.Uat.json",
+              "RelativeDocumentMoniker": "BLX\\appsettings.Uat.json",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\appsettings.Uat.json",
+              "RelativeToolTip": "BLX\\appsettings.Uat.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-10T16:29:28.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Uat.json",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\bin\\Release\\net6.0\\publish\\Uat\\appsettings.Uat.json",
+              "RelativeDocumentMoniker": "BLX\\bin\\Release\\net6.0\\publish\\Uat\\appsettings.Uat.json",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\bin\\Release\\net6.0\\publish\\Uat\\appsettings.Uat.json",
+              "RelativeToolTip": "BLX\\bin\\Release\\net6.0\\publish\\Uat\\appsettings.Uat.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-11T01:08:23.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Development.pubxml",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Development.pubxml",
+              "RelativeDocumentMoniker": "BLX\\Properties\\PublishProfiles\\Development.pubxml",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Properties\\PublishProfiles\\Development.pubxml",
+              "RelativeToolTip": "BLX\\Properties\\PublishProfiles\\Development.pubxml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-04-08T08:22:21.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "BLX\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\appsettings.Development.json",
+              "RelativeToolTip": "BLX\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T08:20:56.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "600 cau hoi12.jpg - Bitmap [943x309, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi12.jpg",
+              "RelativeDocumentMoniker": "BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi12.jpg",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi12.jpg - Bitmap [943x309, 24 bit, JPG]",
+              "RelativeToolTip": "BLX\\wwwroot\\img\\id_monhoc_01\\600 cau hoi12.jpg - Bitmap [943x309, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-04-10T16:36:37.75Z",
+              "EditorCaption": " - Bitmap [943x309, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "BLX\\Pages\\Index.razor",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Pages\\Index.razor",
+              "RelativeToolTip": "BLX\\Pages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T15:07:09.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BLXContext.cs",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Models\\BLXContext.cs",
+              "RelativeDocumentMoniker": "BLX\\Models\\BLXContext.cs",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\Models\\BLXContext.cs",
+              "RelativeToolTip": "BLX\\Models\\BLXContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T08:21:01.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\appsettings.json",
+              "RelativeDocumentMoniker": "BLX\\appsettings.json",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\appsettings.json",
+              "RelativeToolTip": "BLX\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T08:20:54.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\App.razor",
+              "RelativeDocumentMoniker": "BLX\\App.razor",
+              "ToolTip": "C:\\Users\\Latitude 5300\\Desktop\\BLX\\BLX\\App.razor",
+              "RelativeToolTip": "BLX\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T08:20:54.156Z"
             }
           ]
         }

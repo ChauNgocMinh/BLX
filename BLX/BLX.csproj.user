@@ -3,8 +3,8 @@
   <PropertyGroup>
     <RazorPage_SelectedScaffolderID>RazorPageScaffolder</RazorPage_SelectedScaffolderID>
     <RazorPage_SelectedScaffolderCategoryPath>root/Common/RazorPage</RazorPage_SelectedScaffolderCategoryPath>
-    <ActiveDebugProfile>BLX.Dev</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>C:\Users\PC\Downloads\BLX\BLX\BLX\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
+    <ActiveDebugProfile>BLX.Uat</ActiveDebugProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\Latitude 5300\Desktop\BLX\BLX\Properties\PublishProfiles\Uat.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

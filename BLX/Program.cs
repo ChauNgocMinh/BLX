@@ -34,16 +34,16 @@ builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<BLXContext>();
+//using (var scope = app.Services.CreateScope())
+//{
+//    var dbContext = scope.ServiceProvider.GetRequiredService<BLXContext>();
 
-    // Kiểm tra nếu database chưa tồn tại, sẽ tạo và apply migrations
-    if (dbContext.Database.GetPendingMigrations().Any())
-    {
-        dbContext.Database.Migrate();
-    }
-}
+//    // Kiểm tra nếu database chưa tồn tại, sẽ tạo và apply migrations
+//    if (dbContext.Database.GetPendingMigrations().Any())
+//    {
+//        dbContext.Database.Migrate();
+//    }
+//}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
